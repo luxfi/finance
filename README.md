@@ -1,12 +1,12 @@
-# Alchemix V2 UI
+# finance
 
-Repository for the v2 UI of Alchemix.
+Repository for the v2 UI of lux.
 
 ## Setup
 
 ```bash
-git clone https://github.com/alchemix-finance/alchemix-v2-frontend
-cd alchemix-v2-frontend
+git clone https://github.com/lux-finance/lux-v2-frontend
+cd lux-v2-frontend
 cp .env.demo .env
 yarn install
 ```
@@ -23,18 +23,18 @@ The app should be accessible on [localhost:5005](http://localhost:5005) by defau
 
 This repository is using two main branches for deployments:
 
-- The [production deployment](https://alchemix.fi/) is built using `prod` branch codebase
-- The [staging deployment](https://staging.alchemix.fi/) is built using `staging` branch codebase
+- The [production deployment](https://lux.finance/) is built using `main` branch codebase
+- The [beta deployment](https://beta.lux.finance/) is built using `beta` branch codebase
 
 New branches, when pushed, will also be built using our Vercel CI/CD pipeline, so minimize unneccessary pushes to tracked branches.
 
 In general the process to contribute to the codebase looks like this:
 
-- Find [issue](https://github.com/alchemix-finance/alchemix-v2-frontend/issues) or new feature you want to work on
-- Branch off of `staging` and use that as your working branch
-- Once ready, a pull request is supposed to be opened to merge your branch into `staging`
+- Find [issue](https://github.com/luxdefi/finance/issues) or new feature you want to work on
+- Branch off of `beta` and use that as your working branch
+- Once ready, a pull request is supposed to be opened to merge your branch into `beta`
 
-With the next deployment cycle, `staging` and all changes in it will be merged into `prod`.
+With the next deployment cycle, `beta` and all changes in it will be merged into `prod`.
 
 Use descriptive language in your commit messages. Nobody likes to chase down changes to understand what is supposed to be changed.
 

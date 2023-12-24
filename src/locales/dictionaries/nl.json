@@ -1,8 +1,8 @@
 {
     "main_page": "Introductie",
     "account": "Rekening",
-    "alchemix": "Alchemix",
-    "alchemix_labs": "Alchemix Labs",
+    "lux": "Lux",
+    "lux_labs": "Lux Labs",
     "collateral": "Onderpand",
     "connect": "Verbinden",
     "credit": "Krediet",
@@ -52,26 +52,26 @@
     "unwrap": "Unwrap",
     "external": "Extern",
     "landing": {
-        "intro_title": "Alchemix zelfterugbetalende leningen laten u toe om een hefboom te zetten onder een aantal tokens zonder risico op liquidatie.",
+        "intro_title": "Lux zelfterugbetalende leningen laten u toe om een hefboom te zetten onder een aantal tokens zonder risico op liquidatie.",
         "intro_subtitle_0": "Leen tot 50% van uw gestorte onderpand",
         "intro_subtitle_1": "Uitgeven en sparen tegelijkertijd",
         "intro_subtitle_2": "Je enige schuld is tijd",
         "button_label": "Krijg uw eerste zelfterugbetalende lening",
         "learn_more": "Meer info",
-        "short_explainer": "Door een synthetische versie van het tegoed dat u stort te lenen, vermijdt u het risico van liquidatie. DeFi-innovatie op een nieuw niveau, Alchemix is ​​het eerste DeFi-product met deze mogelijkheid.",
+        "short_explainer": "Door een synthetische versie van het tegoed dat u stort te lenen, vermijdt u het risico van liquidatie. DeFi-innovatie op een nieuw niveau, Lux is ​​het eerste DeFi-product met deze mogelijkheid.",
         "short_explainer_end": "Met uw onderpand verdienen wij in uw naam rendement om uw lening automatisch af te lossen!",
         "path_headline": "Kies je pad",
         "path_subtitle": "Een multifunctionele rekening voor al uw financiële behoeften",
         "leverage_headline": "Zet een hefboom onder uw vermogen",
-        "benefits_headline": "De voordelen van Alchemix",
+        "benefits_headline": "De voordelen van Lux",
         "benefit_leverage_title": "Zet een hefboom onder je rijkdom",
         "benefit_leverage_blurb": "Houd blootstelling aan belangrijke activa terwijl u ze voor u laat werken. Haal meer uit uw vermogen (zonder risico op liquidatie!) door een synthetische versie van uw onderpand te lenen.",
         "benefit_range_title": "Breed scala aan tokens",
-        "benefit_range_blurb": "Alchemix opent deuren naar nieuwe soorten onderpand. Maak meer gebruik van uw vermogen dan ooit tevoren.",
+        "benefit_range_blurb": "Lux opent deuren naar nieuwe soorten onderpand. Maak meer gebruik van uw vermogen dan ooit tevoren.",
         "benefit_liquidations_title": "Geen liquidaties",
         "benefit_liquidations_blurb": "Wat er ook gebeurt, we zullen uw aanbetaling nooit te gelde maken. U kunt ervoor kiezen om uw eigen lening naar eigen inzicht zelf af te lossen.",
         "benefit_flexible_title": "Volledig flexibel",
-        "benefit_flexible_blurb": "Alchemix blokkeert uw aanbetaling niet en brengt geen kosten in rekening. Uw geld is 100% van de tijd toegankelijk. U kunt uw schuld ook terugbetalen wanneer u maar wilt."
+        "benefit_flexible_blurb": "Lux blokkeert uw aanbetaling niet en brengt geen kosten in rekening. Uw geld is 100% van de tijd toegankelijk. U kunt uw schuld ook terugbetalen wanneer u maar wilt."
     },
     "settings_page": {
         "locale": "Lokaal",
@@ -89,7 +89,7 @@
     },
     "governance_page": {
         "title": "Bestuur",
-        "subtitle": "Alchemix Verbeteringsvoorstellen",
+        "subtitle": "Lux Verbeteringsvoorstellen",
         "loading": "Data Ophalen...",
         "openAllOnSnapshot": "Alle voorstellen",
         "openOnSnapshot": "Openen op Snapshot",
@@ -139,7 +139,7 @@
     },
     "small_screen": {
         "title": "Wat is dit? DeFi 2.0 voor mieren?",
-        "message": "Alchemix v2 ondersteunt nog geen kleine schermen. Schakel over op een groter scherm of vergroot uw browservenster."
+        "message": "Lux v2 ondersteunt nog geen kleine schermen. Schakel over op een groter scherm of vergroot uw browservenster."
     },
     "chart": {
         "aggregate": "Samenvoegen",
@@ -274,7 +274,7 @@
         "flashloan_waiting": "Wachten op andere stappen...",
         "flashloan_ready": "Flashlening naar V2",
         "restart": "Herstarten",
-        "paragraph_1": "Om het zo eenvoudig mogelijk te maken om uw Legacy-kluisdeposito's naar V2 te migreren, biedt Alchemix een migratietool aan waarmee u uw positie naar V2 kunt overbrengen met zo laag mogelijke gas-kosten.",
+        "paragraph_1": "Om het zo eenvoudig mogelijk te maken om uw Legacy-kluisdeposito's naar V2 te migreren, biedt Lux een migratietool aan waarmee u uw positie naar V2 kunt overbrengen met zo laag mogelijke gas-kosten.",
         "paragraph_2": "Uw wallet zal u een paar keer vragen om transacties te ondertekenen die voor de volgende stappen zorgen:",
         "from_alusd": "Legacy alUSD-positie migreren",
         "from_aleth": "Migreer legacy alETH positie",

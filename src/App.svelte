@@ -62,8 +62,8 @@
 
 =============================[ v2 ]=================================
 
-GitHub:   https://github.com/alchemix-finance
-Twitter:  https://twitter.com/alchemixfi
+GitHub:   https://github.com/luxdefi
+Twitter:  https://twitter.com/luxdefi
 Telegram: lmao no
 
 Make sure you're running this on ${
@@ -94,15 +94,13 @@ Use at your own risk.
 
 <style>
   .regularBg {
-    background: linear-gradient(171.08deg, #010101 -11.16%, #141921 6.1%, #0a0d11 49.05%, #000000 93.22%)
-      no-repeat fixed;
-    color: #f5f5f5;
+    background-color: black;
+    color: white;
   }
 
   .inverseBg {
-    background: linear-gradient(171.08deg, #fefefe -11.16%, #ebe6de 6.1%, #f5f2ee 49.05%, #fff 93.22%)
-      no-repeat fixed;
-    color: #0a0a0a;
+    background-color: white;
+    color: #000000;
   }
 </style>
 
@@ -114,8 +112,8 @@ Use at your own risk.
           <div class="grid grid-cols-12 font-alcxFlow">
             <div
               class="col-span-12 md:pl-8 md:pt-5 md:pb-5 {$settings.invertColors
-                ? 'bg-grey30inverse border-grey5inverse'
-                : 'bg-grey30 border-grey5'} border-b"
+                ? 'bg-white border-grey5inverse'
+                : 'bg-black border-grey5'} border-b"
             >
               <HeaderBar />
             </div>

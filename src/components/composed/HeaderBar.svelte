@@ -28,12 +28,12 @@
   }
 
   const goToHelp = () => {
-    window.open('https://alchemix-finance.gitbook.io/v2/', '_blank');
+    window.open('https://luxdefi.gitbook.io/v2/', '_blank');
   };
 
   const reportBug = () => {
     window.open(
-      'https://github.com/alchemix-finance/alchemix-v2-frontend/issues/new?assignees=&labels=bug&template=BUG-REPORT.yml&title=%5BBUG%5D+',
+      'https://github.com/luxdefi/finance/issues/new?assignees=&labels=bug&template=BUG-REPORT.yml&title=%5BBUG%5D+',
       '_blank',
     );
   };
@@ -77,7 +77,7 @@
         <img
           src="./images/icons/ALCX_Std_logo.svg"
           class="h-11 {$settings.invertColors ? 'invertIcons' : ''}"
-          alt="The Alchemix logo"
+          alt="The Lux logo"
         />
       </div>
     </Link>

@@ -1,8 +1,8 @@
 {
     "main_page": "Einleitung",
     "account": "Account",
-    "alchemix": "Alchemix",
-    "alchemix_labs": "Alchemix Labs",
+    "lux": "Lux",
+    "lux_labs": "Lux Labs",
     "collateral": "Sicherheit",
     "connect": "Verbinden",
     "credit": "Darlehen",
@@ -52,26 +52,26 @@
     "unwrap": "Entpacken",
     "external": "Externe",
     "landing": {
-        "intro_title": "Alchemix Selbst-Tilgende Darlehen ermöglichen es dir, eine Reihe von Token ohne das Risiko der Liquidation zu hebeln.",
+        "intro_title": "Lux Selbst-Tilgende Darlehen ermöglichen es dir, eine Reihe von Token ohne das Risiko der Liquidation zu hebeln.",
         "intro_subtitle_0": "Beleihe bis zu 50% deiner hinterlegten Sicherheiten",
         "intro_subtitle_1": "Gleichzeitig Ausgeben und Sparen",
         "intro_subtitle_2": "Deine einzige Schuld ist die Zeit",
         "button_label": "Hole dir dein erstes selbst tilgendes Darlehen",
         "learn_more": "Erfahre mehr",
-        "short_explainer": "Indem du eine synthetische Version des von dir hinterlegten Assets leihst, vermeidest du das Risiko einer Liquidation. DeFi-Innovation auf einem völlig neuen Niveau. Alchemix ist das erste DeFi-\"Darlehensprodukt\", das auf dem selben Asset basiert.",
+        "short_explainer": "Indem du eine synthetische Version des von dir hinterlegten Assets leihst, vermeidest du das Risiko einer Liquidation. DeFi-Innovation auf einem völlig neuen Niveau. Lux ist das erste DeFi-\"Darlehensprodukt\", das auf dem selben Asset basiert.",
         "short_explainer_end": "Mit deinen Sicherheiten erwirtschaften wir in deinem Namen Erträge, um dein Darlehen automagisch zu tilgen!",
         "path_headline": "Wähle deinen Weg",
         "path_subtitle": "Ein multifunktionaler Account für all deine finanziellen Bedürfnisse",
         "leverage_headline": "Hebel deine Assets",
-        "benefits_headline": "Die Vorteile von Alchemix",
+        "benefits_headline": "Die Vorteile von Lux",
         "benefit_leverage_title": "Hebel deinen Einsatz",
         "benefit_leverage_blurb": "Bleib in wichtigen Vermögenswerten investiert und lass sie für dich arbeiten. Hebel mehr deines Vermögens (ohne das Risiko der Liquidation!), indem du eine synthetische Version deiner Sicherheiten ausleihst.",
         "benefit_range_title": "Breites Angebot an Token",
-        "benefit_range_blurb": "Alchemix öffnet Türen zu neuen Arten von Sicherheiten. Setze mehr von deinem Vermögen ein als je zuvor.",
+        "benefit_range_blurb": "Lux öffnet Türen zu neuen Arten von Sicherheiten. Setze mehr von deinem Vermögen ein als je zuvor.",
         "benefit_liquidations_title": "Keine Liquidationen",
         "benefit_liquidations_blurb": "Egal, was passiert, wir werden deine Einlage niemals liquidieren. Du kannst dein Darlehen nach eigenem Ermessen selbst liquidieren.",
         "benefit_flexible_title": "Völlig flexibel",
-        "benefit_flexible_blurb": "Weder sperrt Alchemix deine Einlage noch werden Gebühren berechnet. Dein Guthaben ist immer zu 100 % verfügbar. Du kannst deine Schulden jederzeit tilgen."
+        "benefit_flexible_blurb": "Weder sperrt Lux deine Einlage noch werden Gebühren berechnet. Dein Guthaben ist immer zu 100 % verfügbar. Du kannst deine Schulden jederzeit tilgen."
     },
     "settings_page": {
         "locale": "Standort",
@@ -89,7 +89,7 @@
     },
     "governance_page": {
         "title": "Abstimmungen",
-        "subtitle": "Verbesserungsvorschläge für Alchemix",
+        "subtitle": "Verbesserungsvorschläge für Lux",
         "loading": "Daten abrufen...",
         "openAllOnSnapshot": "Alle Vorschläge",
         "openOnSnapshot": "Bei Snapshot öffnen",
@@ -139,7 +139,7 @@
     },
     "small_screen": {
         "title": "Was soll das sein? DeFi 2.0 für Ameisen?",
-        "message": "Alchemix v2 unterstützt noch keine kleinen Bildschirme. Bitte nutze einen größeren Bildschirm oder ändere die Größe des Browserfensters."
+        "message": "Lux v2 unterstützt noch keine kleinen Bildschirme. Bitte nutze einen größeren Bildschirm oder ändere die Größe des Browserfensters."
     },
     "chart": {
         "aggregate": "Gesamt",
@@ -274,7 +274,7 @@
         "flashloan_waiting": "Warten auf weitere Schritte...",
         "flashloan_ready": "Blitzkredit in v2",
         "restart": "Neustart",
-        "paragraph_1": "Um die Migration deiner ursprünglichen Vault-Einlagen zu v2 so einfach wie möglich zu gestalten, stellt Alchemix ein Migrationstool. Es ermöglicht dir, deine Positionen in v2 zu übertragen und dabei so gaskosteneffizient wie möglich zu bleiben.",
+        "paragraph_1": "Um die Migration deiner ursprünglichen Vault-Einlagen zu v2 so einfach wie möglich zu gestalten, stellt Lux ein Migrationstool. Es ermöglicht dir, deine Positionen in v2 zu übertragen und dabei so gaskosteneffizient wie möglich zu bleiben.",
         "paragraph_2": "Deine Wallet wird dich einige Male auffordern Transaktionen zu unterzeichnen, die die folgenden Schritte umfassen:",
         "from_alusd": "Ursprüngliche alUSD Position migrieren",
         "from_aleth": "Ursprüngliche alETH-Position migrieren",

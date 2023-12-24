@@ -1,14 +1,14 @@
 export const utilities = [
   {
-    label: 'Alchemix Stats',
+    label: 'Lux Stats',
     author: 'Barree',
-    url: 'https://alchemix-stats.com/',
-    image: 'alchemix_stats.png',
+    url: 'https://lux-stats.com/',
+    image: 'lux_stats.png',
   },
   {
     label: 'Self-Repaying-ENS',
     author: 'Wary',
-    url: 'https://ens.alchemix.fi/',
+    url: 'https://ens.lux.finance/',
     image: 'srens.png',
   },
 ];

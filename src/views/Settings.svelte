@@ -33,7 +33,7 @@
   const createBugReport = (bug) => {
     const title = `${bug.message.slice(0, 64)}${bug.message.length > 64 ? '...' : ''}`;
     window.open(
-      `https://github.com/alchemix-finance/alchemix-v2-frontend/issues/new?assignees=&labels=bug&template=BUG-REPORT.yml&title=%5BBUG%5D+${escapeSemicolon(
+      `https://github.com/luxdefi/finance/issues/new?assignees=&labels=bug&template=BUG-REPORT.yml&title=%5BBUG%5D+${escapeSemicolon(
         title,
       )}&description=${escapeSemicolon(bug.message)}`,
       '_blank',

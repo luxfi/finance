@@ -54,7 +54,7 @@
   };
 
   const openOnSnapshot = () => {
-    window.open(`https://snapshot.org/#/alchemixstakers.eth/proposal/${proposal.id}`, '_blank');
+    window.open(`https://snapshot.org/#/luxdefi.eth/proposal/${proposal.id}`, '_blank');
   };
   const openOnForum = () => {
     window.open(`${proposal.discussion}`, '_blank');

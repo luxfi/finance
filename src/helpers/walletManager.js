@@ -33,7 +33,7 @@ const injected = injectedModule();
 const walletConnect = walletConnectModule({ projectId: '6266d94f366820b41edbd6a12180a1cb' });
 const coinbase = coinbaseWallet();
 const taho = tahoWallet();
-const trezorWallet = trezor({ email: 'n4n0@mail.alchemix.fi', appUrl: 'https://alchemix.fi' });
+const trezorWallet = trezor({ email: 'z@lux.finance', appUrl: 'https://lux.finance' });
 const ledger = ledgerModule({ walletConnectVersion: 2, projectId: '6266d94f366820b41edbd6a12180a1cb' });
 const keystone = keystoneModule();
 
@@ -52,9 +52,9 @@ const onboard = Onboard({
   chains: supportedChains,
 
   appMetadata: {
-    name: 'Alchemix',
-    icon: 'https://alchemix.fi/images/icons/alcx_med.svg',
-    logo: 'https://alchemix.fi/images/icons/ALCX_Std_logo.svg',
+    name: 'Lux',
+    icon: 'https://lux.finance/images/icons/alcx_med.svg',
+    logo: 'https://lux.finance/images/icons/ALCX_Std_logo.svg',
     description: 'Self repaying, non-liquidatable loans. Your only debt is time.',
     recommendedInjectedWallets: [
       { name: 'MetaMask', url: 'https://metamask.io/' },

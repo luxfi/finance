@@ -113,7 +113,7 @@ export async function fetchDataForVault(
       apy = 0;
     }
   }
-  // reduce values by 10% cut taken by Alchemix
+  // reduce values by 10% cut taken by Lux
   apy *= 0.9;
 
   return {
@@ -269,7 +269,7 @@ export async function fetchDataForInternalFarm(
     tokenAddress,
     rewards: [
       {
-        iconName: 'alchemix',
+        iconName: 'lux',
         tokenName: 'ALCX',
       },
     ],
@@ -327,7 +327,7 @@ export async function fetchDataForSushiFarm(
     uuid: uuidv4(),
     rewards: [
       {
-        iconName: 'alchemix',
+        iconName: 'lux',
         tokenName: 'ALCX',
       },
       {
@@ -396,7 +396,7 @@ export async function fetchDataForCrvFarm(
     userUnclaimed: [rewardsAlcx, rewardsCrv],
     rewards: [
       {
-        iconName: 'alchemix',
+        iconName: 'lux',
         tokenName: 'ALCX',
       },
       {

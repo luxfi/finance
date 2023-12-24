@@ -47,7 +47,7 @@
             address: tokenAddress,
             symbol: tokenSymbol,
             decimals: tokenDecimals,
-            image: `https://alchemix.fi${tokenIcon}`,
+            image: `https://lux.finance${tokenIcon}`,
           },
         },
       });

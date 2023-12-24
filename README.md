@@ -5,8 +5,8 @@ Repository for the v2 UI of lux.
 ## Setup
 
 ```bash
-git clone https://github.com/lux-finance/lux-v2-frontend
-cd lux-v2-frontend
+git clone https://github.com/luxdefi/finance
+cd finance
 cp .env.demo .env
 yarn install
 ```

@@ -26,7 +26,7 @@ export async function getData(_signer: Signer) {
 
 export async function getAllowance([_ownerAddress, _signer]: [string, Signer]) {
   try {
-    const { instance: alcxInstance } = await contractWrapper('AlchemixToken', _signer, 'ethereum');
+    const { instance: alcxInstance } = await contractWrapper('LuxToken', _signer, 'ethereum');
     const { address: galcxAddress } = await externalContractWrapper('galcx', _signer);
     const allowance = await alcxInstance.allowance(_ownerAddress, galcxAddress);
     return { allowance };
@@ -39,7 +39,7 @@ export async function getAllowance([_ownerAddress, _signer]: [string, Signer]) {
 
 export async function setAllowance(_signer: Signer) {
   try {
-    const { address: alcxAddress } = await await contractWrapper('AlchemixToken', _signer, 'ethereum');
+    const { address: alcxAddress } = await await contractWrapper('LuxToken', _signer, 'ethereum');
     const { address: galcxAddress } = await externalContractWrapper('galcx', _signer);
     setPendingApproval();
     // @ts-ignore
@@ -63,7 +63,7 @@ export async function stake(
   try {
     const maxAllowance = BN.from(2).pow(256).sub(1);
     if (_allowance.lt(_amount)) {
-      const { instance: alcxInstance } = await contractWrapper('AlchemixToken', _signer, 'ethereum');
+      const { instance: alcxInstance } = await contractWrapper('LuxToken', _signer, 'ethereum');
       setPendingApproval();
       const sendApe = (await alcxInstance.approve(
         galcxAddress,

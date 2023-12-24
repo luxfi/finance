@@ -1,8 +1,8 @@
 {
     "main_page": "Giriş",
     "account": "Hesap",
-    "alchemix": "Alchemix",
-    "alchemix_labs": "Alchemix Labs",
+    "lux": "Lux",
+    "lux_labs": "Lux Labs",
     "collateral": "Teminat",
     "connect": "Bağlan",
     "credit": "Kredi",
@@ -52,13 +52,13 @@
     "unwrap": "Unwrap",
     "external": "Dış",
     "landing": {
-        "intro_title": "Alchemix Kendini ödeyen borçlar, birden fazla tokeni, likidasyom riski olmadan kullanmanıza olanak tanır.",
+        "intro_title": "Lux Kendini ödeyen borçlar, birden fazla tokeni, likidasyom riski olmadan kullanmanıza olanak tanır.",
         "intro_subtitle_0": "Yatırdığın ana paranın %50si kadar borçlan",
         "intro_subtitle_1": "Aynı anda heö harca, hem kazan",
         "intro_subtitle_2": "Tek borcun zaman",
         "button_label": "İlk kendini ödeyen borcunu al",
         "learn_more": "Daha fazla",
-        "short_explainer": "Teminat gösterdiğin tokenlarım sentetik versiyonları ile borçlanarak likidasyom riskinden kurtulabilirsin. Alchemix aynı tokenla borçlanmanı sağlayan ilk DeFi ürünü.",
+        "short_explainer": "Teminat gösterdiğin tokenlarım sentetik versiyonları ile borçlanarak likidasyom riskinden kurtulabilirsin. Lux aynı tokenla borçlanmanı sağlayan ilk DeFi ürünü.",
         "short_explainer_end": "Ana paranı kullanarak senin yerine faiz kazanıp, bu faiz ile borcunu sihirli şekilde kapatıyoruz!",
         "path_headline": "Yolu kapat",
         "path_subtitle": "Tüm finansal ihtiyaçlarınız için bir multifonksiyonel DeFi hesabi",
@@ -67,11 +67,11 @@
         "benefit_leverage_title": "Varlığını kullan",
         "benefit_leverage_blurb": "Önemli kripto varlıkların değerlenmesinden faydalanırken, varlıkların senin için çalışsın. Varlıklarını likidasyon riski olmadan borçlanmak için kullan.",
         "benefit_range_title": "Geniş Token Seçenekleri",
-        "benefit_range_blurb": "Alchemix, yeni token türlerini teminat kabul ediyor ve varlıklarınızım daha fazlasını kullanmanıza olanak tanıyor.",
+        "benefit_range_blurb": "Lux, yeni token türlerini teminat kabul ediyor ve varlıklarınızım daha fazlasını kullanmanıza olanak tanıyor.",
         "benefit_liquidations_title": "Likidasyon riski yok",
         "benefit_liquidations_blurb": "Fiyat ne olursa olsun, trminat için yatırdılklarınızı asla likide etmeyeceğiz. Siz isterseniz borç sürecinde kendinizi likide edip borcu dilediğiniz an sonlandirabilirsiniz.",
         "benefit_flexible_title": "Tamamen Esnek",
-        "benefit_flexible_blurb": "Alchemix temşnatımızı kilitlemez yahut sizden bir yatırma ücreti almaz. Varlıkşarınız istediğiniz an 100% sizin konttolünüzde."
+        "benefit_flexible_blurb": "Lux temşnatımızı kilitlemez yahut sizden bir yatırma ücreti almaz. Varlıkşarınız istediğiniz an 100% sizin konttolünüzde."
     },
     "settings_page": {
         "locale": "Konum",
@@ -89,7 +89,7 @@
     },
     "governance_page": {
         "title": "Yönetim",
-        "subtitle": "Alchemix Iyileştirme Tasarisi",
+        "subtitle": "Lux Iyileştirme Tasarisi",
         "loading": "Veri Alınıyor...",
         "openAllOnSnapshot": "Tüm öneriler",
         "openOnSnapshot": "Snapshot aç",
@@ -139,7 +139,7 @@
     },
     "small_screen": {
         "title": "Bu nedir? Karıncalar için DeFi 2.0?",
-        "message": "Alchemix v2 ufak ekranları desteklememektedir. Lütfen ekran çözünürlüğünüzü yükseltin yahut daha büyük bir ekrana geçin."
+        "message": "Lux v2 ufak ekranları desteklememektedir. Lütfen ekran çözünürlüğünüzü yükseltin yahut daha büyük bir ekrana geçin."
     },
     "chart": {
         "aggregate": "Topla",

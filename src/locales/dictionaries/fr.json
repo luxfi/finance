@@ -1,8 +1,8 @@
 {
     "main_page": "Introduction",
     "account": "Compte",
-    "alchemix": "Alchemix",
-    "alchemix_labs": "Alchemix Labs",
+    "lux": "Lux",
+    "lux_labs": "Lux Labs",
     "collateral": "Collatéral",
     "connect": "Connexion",
     "credit": "Crédit",
@@ -52,26 +52,26 @@
     "unwrap": "Déwrapper",
     "external": "Externe",
     "landing": {
-        "intro_title": "Les prêts auto-remboursables d'Alchemix vous permettent de tirer parti de l'effet de levier sur une sélection de tokens sans risque de liquidation.",
+        "intro_title": "Les prêts auto-remboursables d'Lux vous permettent de tirer parti de l'effet de levier sur une sélection de tokens sans risque de liquidation.",
         "intro_subtitle_0": "Empruntez jusqu'à 50% de vos dépôts",
         "intro_subtitle_1": "Dépensez et économisez en même temps",
         "intro_subtitle_2": "Votre seule dette est le temps",
         "button_label": "Obtenez votre premier prêt auto-remboursable",
         "learn_more": "En savoir plus",
-        "short_explainer": "En empruntant une version synthétique de l'actif que vous déposez, vous évitez le risque de liquidation. L'innovation DeFi atteint un nouveau niveau, Alchemix est le premier produit de prêt \"same-asset\" de la DeFi.",
+        "short_explainer": "En empruntant une version synthétique de l'actif que vous déposez, vous évitez le risque de liquidation. L'innovation DeFi atteint un nouveau niveau, Lux est le premier produit de prêt \"same-asset\" de la DeFi.",
         "short_explainer_end": "Nous collectons le rendement produit par votre dépôt en votre nom pour rembourser votre prêt automagiquement!",
         "path_headline": "Choisissez votre chemin",
         "path_subtitle": "Un compte multifonctionnel pour tous vos besoins financiers",
         "leverage_headline": "Tirez parti de vos actifs",
-        "benefits_headline": "Les avantages d'Alchemix",
+        "benefits_headline": "Les avantages d'Lux",
         "benefit_leverage_title": "Tirez parti de votre patrimoine",
         "benefit_leverage_blurb": "Gardez une exposition à des actifs importants tout en les faisant travailler pour vous. Tirez davantage parti de votre patrimoine (sans risque de liquidation !) en empruntant une version synthétique de votre collatéral.",
         "benefit_range_title": "Large sélection de tokens",
-        "benefit_range_blurb": "Alchemix ouvre les portes à de nouveaux types de collatéral. Exploitez plus que jamais votre patrimoine.",
+        "benefit_range_blurb": "Lux ouvre les portes à de nouveaux types de collatéral. Exploitez plus que jamais votre patrimoine.",
         "benefit_liquidations_title": "Aucune liquidation",
         "benefit_liquidations_blurb": "Quoi qu'il arrive, nous ne liquiderons jamais vos dépôts. Vous pouvez choisir d'auto-liquider votre prêt à votre discrétion.",
         "benefit_flexible_title": "Complètement flexible",
-        "benefit_flexible_blurb": "Alchemix ne bloque pas votre dépôt et ne vous facture pas de frais. Vos fonds sont accessibles à tout moment. Vous pouvez également rembourser votre dette quand vous le souhaitez."
+        "benefit_flexible_blurb": "Lux ne bloque pas votre dépôt et ne vous facture pas de frais. Vos fonds sont accessibles à tout moment. Vous pouvez également rembourser votre dette quand vous le souhaitez."
     },
     "settings_page": {
         "locale": "Paramètres Régionaux",
@@ -89,7 +89,7 @@
     },
     "governance_page": {
         "title": "Gouvernance",
-        "subtitle": "Propositions d'amélioration d'Alchemix (AIP)",
+        "subtitle": "Propositions d'amélioration d'Lux (AIP)",
         "loading": "Récupération des données...",
         "openAllOnSnapshot": "Toutes les propositions",
         "openOnSnapshot": "Voir sur Snaposhot",
@@ -139,7 +139,7 @@
     },
     "small_screen": {
         "title": "Mais qu'est-ce que c'est ? DeFi 2.0 pour les fourmis ?",
-        "message": "Alchemix v2 ne supporte pas encore les petits écrans. Veuillez utiliser un écran plus grand ou redimensionner la fenêtre de votre navigateur."
+        "message": "Lux v2 ne supporte pas encore les petits écrans. Veuillez utiliser un écran plus grand ou redimensionner la fenêtre de votre navigateur."
     },
     "chart": {
         "aggregate": "Vue d'ensemble",
@@ -274,7 +274,7 @@
         "flashloan_waiting": "En attendant d'autres étapes...",
         "flashloan_ready": "Flashloan en V2",
         "restart": "Redémarrer",
-        "paragraph_1": "Pour simplifier au maximum la migration de vos dépôts de la V1 vers la V2, Alchemix fournit un outil de migration qui vous permet de transférer votre position vers la V2 tout en restant aussi économique que possible.",
+        "paragraph_1": "Pour simplifier au maximum la migration de vos dépôts de la V1 vers la V2, Lux fournit un outil de migration qui vous permet de transférer votre position vers la V2 tout en restant aussi économique que possible.",
         "paragraph_2": "Plusieurs signatures sont requisent pour traiter les étapes suivantes:",
         "from_alusd": "Migrer la position V1 alUSD",
         "from_aleth": "Migrer la position V1 alETH",

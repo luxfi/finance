@@ -10,7 +10,7 @@ export async function getQuote(fromChain, toChain, fromToken, toToken, fromAmoun
         toToken,
         fromAmount,
         fromAddress,
-        integrator: 'Alchemix',
+        integrator: 'Lux',
       },
     })
     .catch((error) => {

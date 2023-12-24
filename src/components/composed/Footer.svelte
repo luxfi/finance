@@ -3,7 +3,7 @@
   import { Link } from 'svelte-routing';
 
   const copyrightYear = () => {
-    return `2020 - ${new Date().getFullYear()}`;
+    return `${new Date().getFullYear()}`;
   };
 </script>
 
@@ -14,10 +14,10 @@
         src="./images/icons/ALCX_Std_logo.svg"
         class="h-9 mb-5"
         style="filter:saturate(0);"
-        alt="The Alchemix logo"
+        alt="The Lux logo"
       />
 
-      <p class="text-sm mb-3 opacity-50">&copy; {copyrightYear()} {$_('alchemix_labs')}</p>
+      <p class="text-sm mb-3 opacity-50">&copy; {copyrightYear()} {$_('lux_labs')}</p>
       <p class="text-sm mb-3 text-justify opacity-50">
         {$_('footer_disclaimer')}
       </p>
@@ -30,12 +30,12 @@
           <Link to="/">{$_('main_page')}</Link>
         </li>
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://github.com/orgs/alchemix-finance/" class="flex space-x-4" target="_blank">
+          <a href="https://github.com/orgs/luxdefi/" class="flex space-x-4" target="_blank">
             <span>{$_('github')}</span>
           </a>
         </li>
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://alchemix-finance.gitbook.io/user-docs/" class="flex space-x-4" target="_blank">
+          <a href="https://luxdefi.gitbook.io/user-docs/" class="flex space-x-4" target="_blank">
             <span>{$_('documentation')}</span></a
           >
         </li>
@@ -52,7 +52,7 @@
       <p class="uppercase text-sm alcxTitle mb-5">{$_('social')}</p>
       <ul class="text-sm space-y-3">
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://alchemixfi.medium.com/" class="flex space-x-4" target="_blank">
+          <a href="https://luxdefi.medium.com/" class="flex space-x-4" target="_blank">
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -68,7 +68,7 @@
           </a>
         </li>
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://discord.com/invite/alchemix" class="flex space-x-4" target="_blank">
+          <a href="https://discord.com/invite/lux" class="flex space-x-4" target="_blank">
             <svg
               class="w-5 h-5"
               fill="currentColor"
@@ -84,7 +84,7 @@
           </a>
         </li>
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://forum.alchemix.fi/public/" class="flex space-x-4" target="_blank">
+          <a href="https://forum.lux.finance/public/" class="flex space-x-4" target="_blank">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M20 32C28.8366 32 36 26.6274 36 20C36 13.3726 28.8366 8 20 8C11.1634 8 4 13.3726 4 20C4 22.6842 5.17509 25.1626 7.16049 27.1616C6.35561 29.4537 5.31284 31.1723 4.6499 32.1319C4.4071 32.4834 4.65714 32.9802 5.08289 32.9453C6.78453 32.8058 10.1224 32.3105 12.3741 30.5519C14.6411 31.4754 17.2389 32 20 32Z"
@@ -98,7 +98,7 @@
           </a>
         </li>
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://twitter.com/AlchemixFi" class="flex space-x-4" target="_blank">
+          <a href="https://twitter.com/LuxFi" class="flex space-x-4" target="_blank">
             <svg
               class="h-5 w-5"
               fill="currentColor"
@@ -116,7 +116,7 @@
         </li>
 
         <li class="opacity-50 hover:opacity-100">
-          <a href="https://alchemixfi.substack.com/" class="flex space-x-4" target="_blank">
+          <a href="https://luxdefi.substack.com/" class="flex space-x-4" target="_blank">
             <svg
               class="h-5 w-5"
               fill="currentColor"
@@ -165,7 +165,7 @@
             <img
               src="./images/integrations/klima.svg"
               class="w-32"
-              alt="Alchemix pledged to offset 4,390.96 Carbon Tonnes"
+              alt="Lux pledged to offset 4,390.96 Carbon Tonnes"
             />
           </a>
         </li>

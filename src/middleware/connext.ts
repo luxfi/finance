@@ -83,7 +83,7 @@ export const xcall = async (
     };
     const { sdkBase } = await create(sdkConfig);
 
-    const { address: gatewayAddress } = await contractWrapper('AlchemixConnextGateway', signer, path);
+    const { address: gatewayAddress } = await contractWrapper('LuxConnextGateway', signer, path);
 
     const xcallParams = {
       origin: origin,
@@ -158,7 +158,7 @@ export const gatewayCall = async (
   setPendingWallet();
   try {
     const { instance: gatewayInstance, address: gatewayAddress } = await contractWrapper(
-      'AlchemixConnextGateway',
+      'LuxConnextGateway',
       signer,
       origin,
     );
@@ -166,7 +166,7 @@ export const gatewayCall = async (
     const { instance: canonicalInstance } = await contractWrapper(selectors['canonical'], signer, origin);
     let receiverAddress = targetAddress;
     if (toEth) {
-      const { address: targetGateway } = await contractWrapper('AlchemixConnextGateway', signer, path);
+      const { address: targetGateway } = await contractWrapper('LuxConnextGateway', signer, path);
       receiverAddress = targetGateway;
     }
 

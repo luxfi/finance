@@ -65,7 +65,7 @@
   </div>
 </BorderContainer>
 <div class="flex justify-between mb-6">
-  <a href="https://snapshot.org/#/alchemixstakers.eth/proposal/{expandedRow.proposalEntry.id}" target="_blank"
+  <a href="https://snapshot.org/#/luxdefi.eth/proposal/{expandedRow.proposalEntry.id}" target="_blank"
     >View proposal on Snapshot</a
   >
 </div>

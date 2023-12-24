@@ -88,17 +88,6 @@
 
 <ViewContainer>
   <div class="flex flex-col space-y-14">
-    <div class="text-center text-5xl font-alcxTitles leading-tight font-medium mt-12">
-      <span
-        style="color: transparent"
-        class="bg-clip-text bg-gradient-to-br {$settings.invertColors
-          ? 'from-bronze4 via-bronze3 to-bronze4'
-          : 'from-orange4 via-lightbronze1 to-orange4'}"
-      >
-        {$_('landing.intro_title')}
-      </span>
-    </div>
-
     <p class="text-center opacity-50 font-thin text-3xl" transition:fade>
       {$_(`landing.${carouselItem}`)}
     </p>
@@ -137,44 +126,13 @@
       </button>
     </div>
 
-    <div
-      class="w-full flex relative justify-center text-orange4 h-auto overflow-hidden group cursor-pointer "
-      on:click="{() => playVideo()}"
-    >
-      <img
-        src="./images/landing-page/ad.jpg"
-        alt="Watch the Alchemix cinematic ad"
-        class="w-full transition-all"
-      />
-      <svg
-        role="img"
-        class="w-32 h-32 absolute self-center opacity-50 transition-all group-hover:opacity-100"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-      >
-        <path
-          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-        ></path>
-      </svg>
-    </div>
-
-    <div>
-      <p class="text-center font-alcxFlow text-lg opacity-75 mb-4">{$_('landing.short_explainer')}</p>
-      <p class="text-center font-alcxFlow text-lg opacity-75">{$_('landing.short_explainer_end')}</p>
-    </div>
-
     <div class="w-full flex flex-col">
-      <p class="text-center font-alcxTitles text-3xl opacity-75">{$_('landing.path_headline')}</p>
-      <p class="text-center text-lg opacity-75">{$_('landing.path_subtitle')}</p>
       <img
         class="w-3/4 self-center {$settings.invertColors ? 'filter invert' : ''}"
         src="./images/landing-page/diagram.svg"
-        alt="A diagram depicting the possibilities of Alchemix"
+        alt="A diagram depicting the possibilities of Lux"
       />
-      <a class="text-center underline" href="https://alchemix-finance.gitbook.io/v2/"
-        >{$_('landing.learn_more')}</a
-      >
+      <a class="text-center underline" href="https://luxdefi.gitbook.io/v2/">{$_('landing.learn_more')}</a>
     </div>
 
     <div
@@ -201,9 +159,7 @@
           </div>
         {/each}
       </div>
-      <a class="text-center underline" href="https://alchemix-finance.gitbook.io/v2/"
-        >{$_('landing.learn_more')}</a
-      >
+      <a class="text-center underline" href="https://luxdefi.gitbook.io/v2/">{$_('landing.learn_more')}</a>
     </div>
 
     <div class="w-full flex flex-col space-y-4">
@@ -218,9 +174,8 @@
             {$_('landing.benefit_leverage_title')}
           </p>
           <p class="font-light text-lg opacity-75 mb">{$_('landing.benefit_leverage_blurb')}</p>
-          <a
-            href="https://alchemix-finance.gitbook.io/v2/"
-            class="text-center absolute bottom-4 inset-x-0 underline">{$_('landing.learn_more')}</a
+          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute bottom-4 inset-x-0 underline"
+            >{$_('landing.learn_more')}</a
           >
         </div>
         <div
@@ -230,9 +185,8 @@
         >
           <p class="text-2xl font-light font-alcxTitles text-orange4">{$_('landing.benefit_range_title')}</p>
           <p class="font-light text-lg opacity-75">{$_('landing.benefit_range_blurb')}</p>
-          <a
-            href="https://alchemix-finance.gitbook.io/v2/"
-            class="absolute bottom-4 inset-x-0 text-center underline">{$_('landing.learn_more')}</a
+          <a href="https://luxdefi.gitbook.io/v2/" class="absolute bottom-4 inset-x-0 text-center underline"
+            >{$_('landing.learn_more')}</a
           >
         </div>
         <div
@@ -244,9 +198,8 @@
             {$_('landing.benefit_liquidations_title')}
           </p>
           <p class="font-light text-lg opacity-75">{$_('landing.benefit_liquidations_blurb')}</p>
-          <a
-            href="https://alchemix-finance.gitbook.io/v2/"
-            class="text-center absolute inset-x-0 bottom-4 underline">{$_('landing.learn_more')}</a
+          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute inset-x-0 bottom-4 underline"
+            >{$_('landing.learn_more')}</a
           >
         </div>
         <div
@@ -258,9 +211,8 @@
             {$_('landing.benefit_flexible_title')}
           </p>
           <p class="font-light text-lg opacity-75">{$_('landing.benefit_flexible_blurb')}</p>
-          <a
-            href="https://alchemix-finance.gitbook.io/v2/"
-            class="text-center absolute bottom-4 inset-x-0 underline">{$_('landing.learn_more')}</a
+          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute bottom-4 inset-x-0 underline"
+            >{$_('landing.learn_more')}</a
           >
         </div>
       </div>

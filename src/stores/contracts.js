@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 
 const contracts = writable({
   chainId: undefined,
-  alchemix: {
+  lux: {
     alchemist: {
       address: undefined,
       eth: undefined,

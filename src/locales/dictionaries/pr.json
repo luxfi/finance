@@ -1,7 +1,7 @@
 {
   "account": "حساب کاربری",
-  "alchemix": "الکمیکس",
-  "alchemix_labs": "Alchemix آزمایشگاهای",
+  "lux": "الکمیکس",
+  "lux_labs": "Lux آزمایشگاهای",
   "collateral": "وثیقه",
   "connect": "متصل شوید",
   "credit": "اعتبار",
@@ -46,7 +46,7 @@
   "landing": {
     "intro_title": "برداشت وام خود پرداز",
     "intro_subtitle": "با استقراض بازدهی آتی سپرده خود امروز، کارایی سرمایه را افزایش دهید.",
-    "button_label": "ورود به Alchemix"
+    "button_label": "ورود به Lux"
   },
   "settings_page": {
     "locale": "داخلی",
@@ -58,7 +58,7 @@
   },
   "governance_page": {
     "title": "اداره امور",
-    "subtitle": "توصیه های پیشبرد Alchemix",
+    "subtitle": "توصیه های پیشبرد Lux",
     "loading": "دریافت اطلاعات",
     "openAllOnSnapshot": "مشاهده همه پیشنهادات در اسنپ شات",
     "openOnSnapshot": "مشاهده همه پیشنهادات در اسنپ شات",
@@ -100,7 +100,7 @@
   },
   "small_screen": {
     "title": "What is this? DeFi 2.0 for ants?",
-    "message": "Alchemix v2 does not yet support small screens. Please get a larger screen or resize your browser window."
+    "message": "Lux v2 does not yet support small screens. Please get a larger screen or resize your browser window."
   },
   "chart": {
     "aggregate": "جمع",

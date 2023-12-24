@@ -137,7 +137,7 @@ export const poolLookup = [
   {
     address: '0xbc6da0fe9ad5f3b0d58160288917aa56653660e9',
     title: 'alUSD',
-    subtitle: 'Alchemix alUSD',
+    subtitle: 'Lux alUSD',
     farmIcon: 'alusd_med.svg',
     tokenIcon: undefined,
     network: '0x1',
@@ -145,7 +145,7 @@ export const poolLookup = [
   {
     address: '0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6',
     title: 'alETH',
-    subtitle: 'Alchemix alETH',
+    subtitle: 'Lux alETH',
     farmIcon: 'aleth_med.svg',
     tokenIcon: undefined,
     network: '0x1',
@@ -153,7 +153,7 @@ export const poolLookup = [
   {
     address: '0xdbdb4d16eda451d0503b854cf79d55697f90c8df',
     title: 'ALCX',
-    subtitle: 'Alchemix ALCX',
+    subtitle: 'Lux ALCX',
     farmIcon: undefined,
     tokenIcon: undefined,
     network: '0x1',

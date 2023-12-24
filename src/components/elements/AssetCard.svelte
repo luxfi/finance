@@ -1,5 +1,5 @@
 <script>
-  export let assetName = 'Alchemix Asset';
+  export let assetName = 'Lux Asset';
   export let assetTicker = 'alASS';
   export let currency;
   export let assetIcon;

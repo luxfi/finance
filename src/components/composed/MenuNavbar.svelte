@@ -10,20 +10,20 @@
   import Wallet from './Wallet.svelte';
 </script>
 
-<div class="lg:hidden flex flex-col w-full fixed bottom-0 z-10 bg-grey20">
+<div class="lg:hidden flex flex-col w-full fixed bottom-0 z-10 bg-black">
   <div class="border-t border-grey30">
     <Wallet />
   </div>
-  <div class="overflow-scroll flex flex-row justify-start border-t border-grey30 gap-2">
+  <div class="overflow-scroll flex flex-row justify-start border-t bg-black gap-2">
     {#each sidebarSetup()
       .filter((key) => key.label !== 'sentinel')
       .filter((key) => key.label !== 'Cows')
       .filter((key) => key.supportedChains.includes($networkStore)) as navbarItem}
       <button
         on:click="{() => updatePath(navbarItem.path, (pathname) => routerGuard(pathname))}"
-        class="flex-col flex w-56 gap-1 items-center p-2 hover:bg-grey15 {$navigationStore.currentPathname ===
+        class="flex-col flex w-56 gap-1 items-center p-2 hover:bg-black {$navigationStore.currentPathname ===
         navbarItem.path
-          ? ' bg-grey30'
+          ? ' bg-black'
           : ''}"
       >
         <img
@@ -43,7 +43,7 @@
           on:click="{() => updatePath(navbarItem.path, (pathname) => routerGuard(pathname))}"
           class="flex-col flex w-56 gap-1 items-center p-2 hover:bg-grey15 {$navigationStore.currentPathname ===
           navbarItem.path
-            ? ' bg-grey30'
+            ? ' bg-black'
             : ''}"
         >
           <img

@@ -1,8 +1,8 @@
 import { flarum } from '@stores/flarum';
 import axios from 'axios';
 
-const slugUrl = 'https://forum.alchemix.fi/public/d/';
-const queryUrl = 'https://forum.alchemix.fi/public/api/discussions?filter%5Btag%5D=aip';
+const slugUrl = 'https://forum.lux.finance/public/d/';
+const queryUrl = 'https://forum.lux.finance/public/api/discussions?filter%5Btag%5D=aip';
 
 export const fetchPosts = async () => {
   await axios.get(queryUrl).then((result) => {

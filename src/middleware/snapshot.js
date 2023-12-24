@@ -8,7 +8,7 @@ import { reverseLookup } from '@helpers/ensResolver';
 
 const snapshotHubUrl = 'https://hub.snapshot.org';
 const snapshotSubgraphUrl = 'https://api.thegraph.com/subgraphs/name/snapshot-labs/snapshot';
-const space = 'alchemixstakers.eth';
+const space = 'luxdefi.eth';
 const client = new snapshot.Client712(snapshotHubUrl);
 
 let _governance;
@@ -42,7 +42,7 @@ export async function getVotesForAddress() {
       skip: 0
       where: {
         voter: "${_account.address}",
-        space: "alchemixstakers.eth"
+        space: "luxdefi.eth"
       }
     ) {
       id
@@ -149,7 +149,7 @@ export async function sendVote(voteData) {
   if (debugging) console.log(_account.signer);
   try {
     await client.vote(_account.provider, utils.getAddress(_account.address), {
-      app: 'alchemix',
+      app: 'lux',
       proposal: voteData.proposal,
       choice: voteData.choice,
       space: space,

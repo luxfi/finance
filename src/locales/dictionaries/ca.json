@@ -1,8 +1,8 @@
 {
     "main_page": "Introducció",
     "account": "Compte",
-    "alchemix": "Alchemix",
-    "alchemix_labs": "Alchemix Labs",
+    "lux": "Lux",
+    "lux_labs": "Lux Labs",
     "collateral": "Garantia",
     "connect": "Connecta't",
     "credit": "Crèdit",
@@ -52,26 +52,26 @@
     "unwrap": "Desembolicar",
     "external": "Extern",
     "landing": {
-        "intro_title": "Els préstecs autopagat d'Alchemix et permeten aprofitar una sèrie de tokens sense risc de liquidació.",
+        "intro_title": "Els préstecs autopagat d'Lux et permeten aprofitar una sèrie de tokens sense risc de liquidació.",
         "intro_subtitle_0": "Demana un préstec fins a un 50% del seu dipostit de garantia",
         "intro_subtitle_1": "Gasta i estalvia alhora",
         "intro_subtitle_2": "El teu únic deute és el temps",
         "button_label": "Obtén el teu primer préstec que es paga a si mateix",
         "learn_more": "Aprèn més",
-        "short_explainer": "En agafar un préstec en una versió sintètica de l'actiu que és dipositat s'evita el risc de liquidació. És una innovació DeFi a un nivell completament nou, Alchemix és el primer producte de préstec sobre el mateix actiu a DeFi.",
-        "short_explainer_end": "Usant la seva garantia, Alchemix obté un rendiment que s'utilitza per pagar el seu préstec automàticament!",
+        "short_explainer": "En agafar un préstec en una versió sintètica de l'actiu que és dipositat s'evita el risc de liquidació. És una innovació DeFi a un nivell completament nou, Lux és el primer producte de préstec sobre el mateix actiu a DeFi.",
+        "short_explainer_end": "Usant la seva garantia, Lux obté un rendiment que s'utilitza per pagar el seu préstec automàticament!",
         "path_headline": "Triï el seu camí",
         "path_subtitle": "Un compte multifuncional per a totes les teves necessitats financeres",
         "leverage_headline": "Aprofita els teus actius",
-        "benefits_headline": "Els beneficis d'Alchemix",
+        "benefits_headline": "Els beneficis d'Lux",
         "benefit_leverage_title": "Aprofita la teva riquesa",
-        "benefit_leverage_blurb": "Mantén l'exposició als actius importants mentre Alchemix els fa treballar per tu. Aprofita el teu patrimoni (sense risc de liquidació!) mitjançant l'utilització d'una versió sintètica de la teva garantia.",
+        "benefit_leverage_blurb": "Mantén l'exposició als actius importants mentre Lux els fa treballar per tu. Aprofita el teu patrimoni (sense risc de liquidació!) mitjançant l'utilització d'una versió sintètica de la teva garantia.",
         "benefit_range_title": "Àmplia gamma de tokens",
-        "benefit_range_blurb": "Alchemix està obrint les portes a nous tipus de garantia. Aprofita més que mai la teva riquesa.",
+        "benefit_range_blurb": "Lux està obrint les portes a nous tipus de garantia. Aprofita més que mai la teva riquesa.",
         "benefit_liquidations_title": "Sense liquidacions",
         "benefit_liquidations_blurb": "Passi el que passi, mai liquidarem el teu dipòsit. Pots optar per autoliquidar el teu préstec a discreció.",
         "benefit_flexible_title": "Totalment flexible",
-        "benefit_flexible_blurb": "Alchemix no bloqueja el teu dipòsit ni cobra comissions. Els teus fons són accessibles el 100% del temps. També pots pagar el teu deute quan vulgui."
+        "benefit_flexible_blurb": "Lux no bloqueja el teu dipòsit ni cobra comissions. Els teus fons són accessibles el 100% del temps. També pots pagar el teu deute quan vulgui."
     },
     "settings_page": {
         "locale": "Local",
@@ -89,7 +89,7 @@
     },
     "governance_page": {
         "title": "Governança",
-        "subtitle": "Propostes de Millora d'Alchemix (AIP)",
+        "subtitle": "Propostes de Millora d'Lux (AIP)",
         "loading": "Obtenint Dades...",
         "openAllOnSnapshot": "Totes les propostes",
         "openOnSnapshot": "Obre al Snapshot",
@@ -139,7 +139,7 @@
     },
     "small_screen": {
         "title": "Què és això? DeFi 2.0 per a formigues?",
-        "message": "Alchemix v2 encara no admet pantalles petites. Aconsegueix una pantalla més gran o canvia la mida de la finestra del navegador."
+        "message": "Lux v2 encara no admet pantalles petites. Aconsegueix una pantalla més gran o canvia la mida de la finestra del navegador."
     },
     "chart": {
         "aggregate": "Agregat",
@@ -274,7 +274,7 @@
         "flashloan_waiting": "Esperant altres passos...",
         "flashloan_ready": "Flashloan a V2",
         "restart": "Reiniciar",
-        "paragraph_1": "Per simplificar al màxim possible la migració de les vostres caixes fortes antigues a la V2, Alchemix ofereix una eina de migració que us permet transferir la vostra posició a la V2 d'una forma eficient en gas",
+        "paragraph_1": "Per simplificar al màxim possible la migració de les vostres caixes fortes antigues a la V2, Lux ofereix una eina de migració que us permet transferir la vostra posició a la V2 d'una forma eficient en gas",
         "paragraph_2": "El vostre moneder us demanarà unes quantes vegades que signeu transaccions que tenen en consideració els passos següents:",
         "from_alusd": "Migrar la posició antiga d'alUSD",
         "from_aleth": "Migrar la posició antiga d'alETH",

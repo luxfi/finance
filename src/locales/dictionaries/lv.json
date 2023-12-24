@@ -1,8 +1,8 @@
 {
     "main_page": "Ievads",
     "account": "Konts",
-    "alchemix": "Alchemix",
-    "alchemix_labs": "Alchemix laboratorijas",
+    "lux": "Lux",
+    "lux_labs": "Lux laboratorijas",
     "collateral": "Nodrošinājumu",
     "connect": "Pievienojiet",
     "credit": "Kredīts",
@@ -52,26 +52,26 @@
     "unwrap": "Iztīt",
     "external": "Ārējais",
     "landing": {
-        "intro_title": "Alchemix pašatmaksātie aizdevumi ļauj izmantot daudzus tokeni bez likvidācijas riska.",
+        "intro_title": "Lux pašatmaksātie aizdevumi ļauj izmantot daudzus tokeni bez likvidācijas riska.",
         "intro_subtitle_0": "Aizņemieties līdz 50% no jūsu noguldītā nodrošinājuma",
         "intro_subtitle_1": "Tērējiet un ietaupiet vienlaikus",
         "intro_subtitle_2": "Jūsu vienīgais parāds ir laiks",
         "button_label": "Saņemiet savu pirmo pašatmaksājamo aizdevumu",
         "learn_more": "Uzziniet vairāk",
-        "short_explainer": "Tā kā jūs aizņematies sintētisko aktīvu, jūs izvairāties no likvidācijas riska. Alchemix ir Defi inovācija. Alchemix ir pirmais pats-aktīvu aizdevuma produkts DeFiā.",
+        "short_explainer": "Tā kā jūs aizņematies sintētisko aktīvu, jūs izvairāties no likvidācijas riska. Lux ir Defi inovācija. Lux ir pirmais pats-aktīvu aizdevuma produkts DeFiā.",
         "short_explainer_end": "Izmantojot jūsu nodrošinājumu, mēs nopelnām ienesīgumu jūsu vārdā, lai automātiski atmaksātu jūsu aizdevumu!",
         "path_headline": "Izvēlieties savu ceļu",
         "path_subtitle": "Šis ir daudzfunkcionāls konts visām jūsu finanšu vajadzībām",
         "leverage_headline": "Izmantojiet savus aktīvus",
-        "benefits_headline": "Alchemix priekšrocības",
+        "benefits_headline": "Lux priekšrocības",
         "benefit_leverage_title": "Izmantojiet savu bagātību",
         "benefit_leverage_blurb": "Saglabājiet pakļautību svarīgiem aktīviem, vienlaikus liekot tiem darboties jūsu labā. Izmantojiet vairāk savas bagātības (bez likvidācijas riska!), aizņemoties sava nodrošinājuma sintētisko versiju.",
         "benefit_range_title": "Plašs tokenu klāsts",
-        "benefit_range_blurb": "Alchemix atver durvis jauniem nodrošinājuma veidiem. Izmantojiet vairāk savas bagātības.",
+        "benefit_range_blurb": "Lux atver durvis jauniem nodrošinājuma veidiem. Izmantojiet vairāk savas bagātības.",
         "benefit_liquidations_title": "Nekādu likvidāciju",
         "benefit_liquidations_blurb": "Mēs nekad nelikvidēsim jūsu depozītu. Jūs varat izvēlēties pašlikvidāciju pēc saviem ieskatiem.",
         "benefit_flexible_title": "Pilnīgi elastīgs",
-        "benefit_flexible_blurb": "Alchemix nebloķē jūsu depozītu un neiekasē maksu. Jūsu līdzekļi vienmēr ir pieejami. Jūs varat arī atmaksāt parādu, kad vien vēlaties."
+        "benefit_flexible_blurb": "Lux nebloķē jūsu depozītu un neiekasē maksu. Jūsu līdzekļi vienmēr ir pieejami. Jūs varat arī atmaksāt parādu, kad vien vēlaties."
     },
     "settings_page": {
         "locale": "Lokalizācija",
@@ -89,7 +89,7 @@
     },
     "governance_page": {
         "title": "Valdīšana",
-        "subtitle": "Alchemix Uzlabojumu Priekšlikumi (AIP)",
+        "subtitle": "Lux Uzlabojumu Priekšlikumi (AIP)",
         "loading": "Saņemam Datus...",
         "openAllOnSnapshot": "Visi priekšlikumi",
         "openOnSnapshot": "Atvērt Snapšotā",
@@ -139,7 +139,7 @@
     },
     "small_screen": {
         "title": "Kas tar ir? DeFi 2.0 paredzēts skudrām?",
-        "message": "Alchemix v2 vēl neatbalsta mazos ekrānus. Lūdzu, izmantojiet lielāku ekrānu, vai mainiet tīmekļa pārlūkprogrammas izmērus."
+        "message": "Lux v2 vēl neatbalsta mazos ekrānus. Lūdzu, izmantojiet lielāku ekrānu, vai mainiet tīmekļa pārlūkprogrammas izmērus."
     },
     "chart": {
         "aggregate": "Agregāts",
@@ -274,7 +274,7 @@
         "flashloan_waiting": "Gaidām citus soļus...",
         "flashloan_ready": "Flashloan V2ā",
         "restart": "Restartēt",
-        "paragraph_1": "Lai vienkāršotu V1 migrāciju uz V2, Alchemix izveidoja rīku, kas ļauj pārnest savu pozīciju uz V2, vienlaikus saglabājot pēc iespējas lielāku gāzes izmaksu efektivitāti.",
+        "paragraph_1": "Lai vienkāršotu V1 migrāciju uz V2, Lux izveidoja rīku, kas ļauj pārnest savu pozīciju uz V2, vienlaikus saglabājot pēc iespējas lielāku gāzes izmaksu efektivitāti.",
         "paragraph_2": "Jūsu maciņš vairākas reizes liks jums parakstīt darījumus, kas veic šādas soļi:",
         "from_alusd": "Migrēt veco alUSD pozīciju",
         "from_aleth": "Migrēt veco alETH pozīciju",

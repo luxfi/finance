@@ -25,10 +25,10 @@
   import AvatarWithIndicator from '@components/elements/AvatarWithIndicator.svelte';
 
   const openAllOnSnapshot = () => {
-    window.open('https://snapshot.org/#/alchemixstakers.eth', '_blank');
+    window.open('https://snapshot.org/#/luxdefi.eth', '_blank');
   };
   const openDiscussions = () => {
-    window.open('https://forum.alchemix.fi/public/t/aip', '_blank');
+    window.open('https://forum.lux.finance/public/t/aip', '_blank');
   };
 
   const openDelegationOnSnapshot = () => {

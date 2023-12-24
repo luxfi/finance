@@ -118,3 +118,5 @@ package-lock.json
 # storybook build directory
 storybook-static/
 
+.env.development
+.env.production

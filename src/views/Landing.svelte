@@ -132,7 +132,6 @@
         src="./images/landing-page/diagram.svg"
         alt="A diagram depicting the possibilities of Lux"
       />
-      <a class="text-center underline" href="https://luxdefi.gitbook.io/v2/">{$_('landing.learn_more')}</a>
     </div>
 
     <div
@@ -159,7 +158,6 @@
           </div>
         {/each}
       </div>
-      <a class="text-center underline" href="https://luxdefi.gitbook.io/v2/">{$_('landing.learn_more')}</a>
     </div>
 
     <div class="w-full flex flex-col space-y-4">
@@ -174,7 +172,7 @@
             {$_('landing.benefit_leverage_title')}
           </p>
           <p class="font-light text-lg opacity-75 mb">{$_('landing.benefit_leverage_blurb')}</p>
-          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute bottom-4 inset-x-0 underline"
+          <a href="https://luxdefi.gitbook.io/v2/" class="absolute bottom-4 inset-x-0 text-center"
             >{$_('landing.learn_more')}</a
           >
         </div>
@@ -185,7 +183,7 @@
         >
           <p class="text-2xl font-light font-alcxTitles text-orange4">{$_('landing.benefit_range_title')}</p>
           <p class="font-light text-lg opacity-75">{$_('landing.benefit_range_blurb')}</p>
-          <a href="https://luxdefi.gitbook.io/v2/" class="absolute bottom-4 inset-x-0 text-center underline"
+          <a href="https://luxdefi.gitbook.io/v2/" class="absolute bottom-4 inset-x-0 text-center"
             >{$_('landing.learn_more')}</a
           >
         </div>
@@ -198,7 +196,7 @@
             {$_('landing.benefit_liquidations_title')}
           </p>
           <p class="font-light text-lg opacity-75">{$_('landing.benefit_liquidations_blurb')}</p>
-          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute inset-x-0 bottom-4 underline"
+          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute inset-x-0 bottom-4"
             >{$_('landing.learn_more')}</a
           >
         </div>
@@ -211,7 +209,7 @@
             {$_('landing.benefit_flexible_title')}
           </p>
           <p class="font-light text-lg opacity-75">{$_('landing.benefit_flexible_blurb')}</p>
-          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute bottom-4 inset-x-0 underline"
+          <a href="https://luxdefi.gitbook.io/v2/" class="text-center absolute bottom-4 inset-x-0"
             >{$_('landing.learn_more')}</a
           >
         </div>

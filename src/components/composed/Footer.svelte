@@ -17,7 +17,7 @@
         alt="The Lux logo"
       />
 
-      <p class="text-sm mb-3 opacity-50">&copy; {copyrightYear()} {$_('lux_labs')}</p>
+      <p class="text-sm mb-3 opacity-50">&copy; {copyrightYear()} {$_('lux_partners')}</p>
       <p class="text-sm mb-3 text-justify opacity-50">
         {$_('footer_disclaimer')}
       </p>

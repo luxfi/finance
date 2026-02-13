@@ -19,6 +19,7 @@ export default defineConfig({
       crypto: 'crypto-browserify',
       stream: 'stream-browserify',
       assert: 'assert',
+      'svelte-routing/src/history': fileURLToPath(new URL('./node_modules/svelte-routing/src/history.js', import.meta.url)),
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@stores': fileURLToPath(new URL('./src/stores', import.meta.url)),
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),

@@ -32,30 +32,51 @@ module.exports = {
       8: 8,
     },
     colors: {
+      // Monochrome design system
+      transparent: 'transparent',
+      current: 'currentColor',
+
+      // Core semantic colors (CSS variables)
+      background: 'var(--background)',
+      foreground: 'var(--foreground)',
+      card: 'var(--card)',
+      'card-foreground': 'var(--card-foreground)',
+      border: 'var(--border)',
+      input: 'var(--input)',
+      ring: 'var(--ring)',
+
+      // Muted
+      muted: 'var(--muted)',
+      'muted-foreground': 'var(--muted-foreground)',
+
+      // Primary (white in dark mode, black in light mode)
+      primary: 'var(--primary)',
+      'primary-foreground': 'var(--primary-foreground)',
+
+      // Secondary
+      secondary: 'var(--secondary)',
+      'secondary-foreground': 'var(--secondary-foreground)',
+
+      // Accent (subtle highlight)
+      accent: 'var(--accent)',
+      'accent-foreground': 'var(--accent-foreground)',
+
+      // Destructive
+      destructive: 'var(--destructive)',
+      'destructive-foreground': 'var(--destructive-foreground)',
+
+      // Success
+      success: '#10B981',
+      'success-foreground': '#000000',
+
+      // Legacy colors for compatibility
       black1: '#000000',
       black2: '#111111',
-      bronze1: '#eeeeee',
-      bronze1inverse: '#0a3a60',
-      bronze2: '#F7C19B',
-      bronze2inverse: '#113D61',
-      bronze3: '#ad937c',
-      bronze4: '#353130',
-      bronze4inverse: '#cacecf',
-      blue1: '#0E8AD0',
-      blue2: '#0557e8',
-      blue3: '#6C93C7',
-      blue4: '#0E8AD0',
-      blue5: '#0557E8',
-      green1: '#2ecc94',
-      green2: '#3EB88E',
-      green3: '#01FFD4',
-      green4: '#42B792',
-      green5: '#75FFD3',
-      green6: '#01FFD4',
-      green7: '#7eb79b',
-      darkgreen1: '#1C2E31',
-      darkgreen2: '#2B4246',
-      darkgrey1: '#909090',
+      white: '#ffffff',
+      white2: '#f5f5f5',
+      white2inverse: '#0A0A0A',
+
+      // Grey scale
       grey1: '#282828',
       grey1inverse: '#D6D2C6',
       grey2: '#b2b4b6',
@@ -73,7 +94,6 @@ module.exports = {
       grey20inverse: '#efebe5',
       grey30: '#000000',
       grey30inverse: '#F1EEE9',
-      lightbronze1: '#FFDFC9',
       lightgrey1: '#b7b7b7',
       lightgrey1inverse: '#484848',
       lightgrey5: '#b0b0b0',
@@ -82,6 +102,9 @@ module.exports = {
       lightgrey10inverse: '#68645d',
       lightgrey20: '#4d5466',
       lightgrey20inverse: '#b2ab99',
+      darkgrey1: '#909090',
+
+      // Status colors
       red1: '#fc4544',
       red2: '#220908',
       red3: '#DC1D1D',
@@ -89,20 +112,28 @@ module.exports = {
       red5: '#931c18',
       orange1: '#ec8339',
       orange2: '#FE6A02',
-      orange3: '#F4C19D',
-      orange4: '#F5C09A',
-      orange4inverse: '#103D61',
-      white2: '#f5f5f5',
-      white2inverse: '#0A0A0A',
+      green1: '#2ecc94',
+      green2: '#3EB88E',
+      green3: '#01FFD4',
+      green4: '#42B792',
+      blue1: '#0E8AD0',
+      blue2: '#0557e8',
+
+      // Social
       twitter: '#4CABFA',
       discord: '#7289DA',
-      iconsInverse: '#252736',
-      fantom: '#1969ff',
+
+      // Networks
       ethereum: '#647fe5',
       arbitrum: '#93b4d5',
       optimism: '#ed3a2a',
+      lux: '#ffffff',
+      zoo: '#10B981',
+      hanzo: '#8B5CF6',
     },
     fontFamily: {
+      sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+      mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
       alcxLogo: ['Inter', 'sans-serif'],
       alcxTitles: ['Inter', 'sans-serif'],
       alcxFlow: ['Inter', 'sans-serif'],
@@ -115,6 +146,11 @@ module.exports = {
       backgroundPosition: {
         'pos-0': '0% 0%',
         'pos-100': '100% 100%',
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
     },
   },

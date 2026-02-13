@@ -3,28 +3,89 @@
 <head>
   <meta charset='utf-8' />
   <meta name='viewport' content='width=device-width,initial-scale=1' />
-  <meta name='theme-color' content='#F5C09A' />
-  <meta name='description' content='Unlocking your future yield, now' />
+  <meta name='theme-color' content='#000000' />
+  <meta name='description' content='Liquid Protocol - Self-repaying loans without liquidation risk. Borrow up to 90% LTV against ETH, USDC, LUX, and more.' />
+  <meta name='keywords' content='DeFi, self-repaying loans, no liquidation, liquid protocol, xETH, xUSD, xLUX, yield' />
   <link rel='manifest' href='/images/favicons/manifest.json' />
 
-  <meta name='twitter:image' content='https://lux-site.vercel.app/Cyber_1.gif' />
-  <meta name='twitter:description' content='Alchemical Synthetic Tokens' />
-  <meta name='twitter:card' content='summary' />
-  <meta name='twitter:title' content='Lux' />
+  <!-- Open Graph / Facebook -->
+  <meta property='og:type' content='website' />
+  <meta property='og:url' content='https://lux.finance/' />
+  <meta property='og:title' content='Liquid Protocol - Self-Repaying DeFi Loans' />
+  <meta property='og:description' content='Borrow against your crypto without liquidation risk. Your loan repays itself using yield from your collateral.' />
+  <meta property='og:image' content='https://lux.finance/images/og-image.png' />
 
-  <title>Lux</title>
+  <!-- Twitter -->
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:site' content='@luxdefi' />
+  <meta name='twitter:title' content='Liquid Protocol - Self-Repaying DeFi Loans' />
+  <meta name='twitter:description' content='Borrow against your crypto without liquidation risk. Your loan repays itself using yield from your collateral.' />
+  <meta name='twitter:image' content='https://lux.finance/images/og-image.png' />
 
-  <link rel='icon' type='image/png' href='/images/favicons/favicon1.png' />
+  <title>Liquid Protocol | Self-Repaying Loans</title>
+
+  <link rel='icon' type='image/png' href='/images/favicons/favicon.png' />
+  <link rel='apple-touch-icon' href='/images/favicons/apple-touch-icon.png' />
+
+  <!-- Preload fonts -->
+  <link rel='preconnect' href='https://fonts.googleapis.com' />
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
 </head>
 
 <style>
+  /* Wallet connect modal z-index */
   .bn-onboard-custom {
     z-index: 1000;
+  }
+
+  /* Loading spinner */
+  #app-loading {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+  }
+
+  #app-loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #fafafa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 </style>
 
 <body>
-<div id='app'></div>
-<script type='module' src='/src/main.ts'></script>
+  <!-- Loading state -->
+  <div id='app-loading'>
+    <div class='loading-spinner'></div>
+  </div>
+
+  <div id='app'></div>
+
+  <script type='module' src='/src/main.ts'></script>
+  <script>
+    // Hide loading spinner when app is ready
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var loader = document.getElementById('app-loading');
+        if (loader) loader.classList.add('hidden');
+      }, 100);
+    });
+  </script>
 </body>
 </html>

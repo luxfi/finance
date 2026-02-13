@@ -1,178 +1,206 @@
 <script>
   import { _ } from 'svelte-i18n';
   import { Link } from 'svelte-routing';
+  import settings from '@stores/settings';
 
   const copyrightYear = () => {
     return `${new Date().getFullYear()}`;
   };
+
+  // Navigation links
+  const navLinks = [
+    { label: 'Vaults', href: '/vaults' },
+    { label: 'Transmuter', href: '/transmuter' },
+    { label: 'Farms', href: '/farms' },
+    { label: 'Governance', href: '/governance' },
+  ];
+
+  // Developer links
+  const devLinks = [
+    { label: 'Documentation', href: 'https://docs.lux.finance', external: true },
+    { label: 'GitHub', href: 'https://github.com/luxfi', external: true },
+    { label: 'Standard Library', href: 'https://github.com/luxfi/standard', external: true },
+    { label: 'API Reference', href: 'https://docs.lux.finance/api', external: true },
+  ];
+
+  // Social links
+  const socialLinks = [
+    {
+      label: 'X (Twitter)',
+      href: 'https://x.com/luxdefi',
+      icon: 'M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z',
+    },
+    {
+      label: 'Discord',
+      href: 'https://discord.gg/luxnetwork',
+      icon: 'M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z',
+    },
+    {
+      label: 'GitHub',
+      href: 'https://github.com/luxfi',
+      icon: 'M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z',
+    },
+  ];
 </script>
 
-<div class="flex flex-col">
-  <div class="flex flex-col space-y-4 lg:flex-row lg:space-x-11">
-    <div class="w-60">
-      <img
-        src="./images/icons/ALCX_Std_logo.svg"
-        class="h-9 mb-5"
-        style="filter:saturate(0);"
-        alt="The Lux logo"
-      />
+<style>
+  .footer-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    margin-bottom: 1.25rem;
+  }
 
-      <p class="text-sm mb-3 opacity-50">&copy; {copyrightYear()} {$_('lux_partners')}</p>
-      <p class="text-sm mb-3 text-justify opacity-50">
-        {$_('footer_disclaimer')}
+  .footer-link {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+    transition: color 0.15s ease;
+    padding: 0.25rem 0;
+  }
+
+  .footer-link:hover {
+    color: var(--foreground);
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--muted-foreground);
+    transition: all 0.15s ease;
+  }
+
+  .social-link:hover {
+    background: var(--accent);
+    border-color: var(--muted-foreground);
+    color: var(--foreground);
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--border);
+    margin: 2rem 0;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+  }
+
+  .copyright a {
+    color: var(--muted-foreground);
+    transition: color 0.15s ease;
+  }
+
+  .copyright a:hover {
+    color: var(--foreground);
+  }
+
+  /* Light mode - uses CSS variables which auto-invert */
+</style>
+
+<footer class="pr-8">
+  <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+    <!-- Brand Column -->
+    <div class="lg:w-64 space-y-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center bg-foreground">
+          <span class="text-background font-bold text-lg">L</span>
+        </div>
+        <span class="font-semibold text-lg text-foreground">Liquid</span>
+      </div>
+      <p class="text-sm text-muted-foreground leading-relaxed">
+        Self-repaying loans without liquidation risk. Built on the Liquid Protocol standard.
       </p>
     </div>
 
+    <!-- Navigation -->
     <div>
-      <p class="uppercase text-sm alcxTitle mb-5">{$_('navigation')}</p>
-      <ul class="text-sm space-y-3">
-        <li class="opacity-50 hover:opacity-100">
-          <Link to="/">{$_('main_page')}</Link>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://github.com/orgs/luxdefi/" class="flex space-x-4" target="_blank">
-            <span>{$_('github')}</span>
-          </a>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://luxdefi.gitbook.io/user-docs/" class="flex space-x-4" target="_blank">
-            <span>{$_('documentation')}</span></a
-          >
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a class="flex space-x-4" href="/governance">
-            <span>
-              {$_('table.snapshot')}
-            </span>
-          </a>
-        </li>
-      </ul>
+      <p class="footer-title">Protocol</p>
+      <nav class="space-y-1">
+        {#each navLinks as link}
+          <Link to={link.href} class="footer-link">{link.label}</Link>
+        {/each}
+      </nav>
     </div>
-    <div class="mr-11">
-      <p class="uppercase text-sm alcxTitle mb-5">{$_('social')}</p>
-      <ul class="text-sm space-y-3">
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://luxdefi.medium.com/" class="flex space-x-4" target="_blank">
-            <svg
-              class="w-5 h-5"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              ><title>Medium</title>
-              <path
-                d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"
-              ></path>
-            </svg>
-            <span>Medium</span>
-          </a>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://discord.com/invite/lux" class="flex space-x-4" target="_blank">
-            <svg
-              class="w-5 h-5"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
-              ></path>
-            </svg>
-            <span>{$_('discord')}</span>
-          </a>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://forum.lux.finance/public/" class="flex space-x-4" target="_blank">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M20 32C28.8366 32 36 26.6274 36 20C36 13.3726 28.8366 8 20 8C11.1634 8 4 13.3726 4 20C4 22.6842 5.17509 25.1626 7.16049 27.1616C6.35561 29.4537 5.31284 31.1723 4.6499 32.1319C4.4071 32.4834 4.65714 32.9802 5.08289 32.9453C6.78453 32.8058 10.1224 32.3105 12.3741 30.5519C14.6411 31.4754 17.2389 32 20 32Z"
-              ></path>
-              <path
-                d="M22.7843 33.8337C31.4033 32.7928 38 26.9957 38 20.0002C38 19.4632 37.9611 18.9333 37.8855 18.4121C41.5534 20.1003 44 23.136 44 26.6002C44 28.7476 43.0599 30.7303 41.4716 32.3295C42.068 34.0278 42.8276 35.3325 43.3579 36.1259C43.5953 36.481 43.3423 36.9779 42.917 36.9372C41.5041 36.8021 39.0109 36.3773 37.3007 35.0418C35.4872 35.7806 33.4089 36.2002 31.2 36.2002C27.9781 36.2002 25.0343 35.3074 22.7843 33.8337Z"
-              ></path>
-            </svg>
 
-            <span>{$_('forum')}</span>
-          </a>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://twitter.com/LuxFi" class="flex space-x-4" target="_blank">
-            <svg
-              class="h-5 w-5"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Twitter</title>
-              <path
-                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
-              ></path>
-            </svg>
-            <span>{$_('twitter')}</span>
-          </a>
-        </li>
+    <!-- Developers -->
+    <div>
+      <p class="footer-title">Developers</p>
+      <nav class="space-y-1">
+        {#each devLinks as link}
+          {#if link.external}
+            <a href={link.href} target="_blank" rel="noopener noreferrer" class="footer-link">
+              {link.label}
+            </a>
+          {:else}
+            <Link to={link.href} class="footer-link">{link.label}</Link>
+          {/if}
+        {/each}
+      </nav>
+    </div>
 
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://luxdefi.substack.com/" class="flex space-x-4" target="_blank">
-            <svg
-              class="h-5 w-5"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Substack</title>
-              <path
-                d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"
-              ></path>
-            </svg>
-            <span>{$_('newsletter')}</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <!-- Networks -->
     <div>
-      <p class="uppercase text-sm alcxTitle mb-5">{$_('proudly_using')}</p>
-      <ul class="text-sm space-y-3">
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://www.connext.network/" target="_blank">
-            <img src="./images/integrations/connext.svg" class="w-32" alt="The logo of Connext" />
-          </a>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://defillama.com/" target="_blank">
-            <img src="./images/integrations/defillama.svg" class="w-32" alt="The logo of DefiLlama" />
-          </a>
-        </li>
-        <li class="opacity-50 hover:opacity-100">
-          <a href="https://snapshot.org/" target="_blank">
-            <img src="./images/integrations/snapshot.svg" class="w-32" alt="The logo of Snapshot" />
-          </a>
-        </li>
-      </ul>
+      <p class="footer-title">Networks</p>
+      <nav class="space-y-1">
+        <a href="https://lux.network" target="_blank" rel="noopener noreferrer" class="footer-link">
+          LUX Network
+        </a>
+        <a href="https://zoo.network" target="_blank" rel="noopener noreferrer" class="footer-link">
+          Zoo Network
+        </a>
+        <a href="https://hanzo.network" target="_blank" rel="noopener noreferrer" class="footer-link">
+          Hanzo Network
+        </a>
+      </nav>
     </div>
+
+    <!-- Legal -->
     <div>
-      <p class="uppercase text-sm alcxTitle mb-5">{$_('carbon_footprint')}</p>
-      <ul class="text-sm space-y-3">
-        <li class="opacity-50 hover:opacity-100">
-          <a
-            href="https://www.klimadao.finance/pledge/0xffaa3cda4f169d33291dd9ddbea8578d1398430e"
-            target="_blank"
-          >
-            <img
-              src="./images/integrations/klima.svg"
-              class="w-32"
-              alt="Lux pledged to offset 4,390.96 Carbon Tonnes"
-            />
-          </a>
-        </li>
-      </ul>
-      <p class="text-sm mt-3 text-justify opacity-50 w-60">
-        {$_('carbon_blurb')}
-      </p>
+      <p class="footer-title">Legal</p>
+      <nav class="space-y-1">
+        <a href="/privacy" class="footer-link">Privacy Policy</a>
+        <a href="/terms" class="footer-link">Terms of Use</a>
+        <a href="/security" class="footer-link">Security</a>
+      </nav>
     </div>
   </div>
-</div>
+
+  <div class="divider"></div>
+
+  <!-- Bottom Row -->
+  <div class="flex flex-col lg:flex-row justify-between items-center gap-4">
+    <div class="copyright flex flex-wrap items-center gap-2">
+      <span>&copy; 2016-{copyrightYear()}</span>
+      <a href="https://lux.industries" target="_blank" rel="noopener noreferrer">Lux Industries</a>
+      <span class="opacity-50">|</span>
+      <span class="opacity-75">{$_('footer_disclaimer')}</span>
+    </div>
+
+    <!-- Social Links -->
+    <div class="flex items-center gap-3">
+      {#each socialLinks as link}
+        <a
+          href={link.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          aria-label={link.label}
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d={link.icon} />
+          </svg>
+        </a>
+      {/each}
+    </div>
+  </div>
+</footer>

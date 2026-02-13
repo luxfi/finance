@@ -13,95 +13,158 @@
   import navigationStore, { updatePath } from '@stores/navigation';
 </script>
 
-<div class="relative flex items-center justify-between">
-  <p class="flex flex-1 uppercase tracking-wider font-medium text-xs opacity-30 mb-4">
-    {$_('wallet')}
-  </p>
-</div>
-<Wallet />
+<style>
+  .section-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted-foreground);
+    margin-bottom: 12px;
+  }
 
-<div class=" sticky top-4">
-  <p class="uppercase tracking-wider font-medium text-xs opacity-30 my-4">
-    {$_('navigation')}
-  </p>
-  <ul>
-    {#each sidebarSetup()
-      .filter((key) => key.label !== 'sentinel')
-      .filter((key) => key.label !== 'Cows')
-      .filter((key) => key.supportedChains.includes($networkStore)) as sidebarItem}
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    color: var(--muted-foreground);
+    background: transparent;
+    border: 1px solid transparent;
+    margin-bottom: 8px;
+  }
+
+  .nav-item:hover {
+    color: var(--foreground);
+    background: var(--accent);
+    border-color: var(--border);
+  }
+
+  .nav-item.active {
+    color: var(--foreground);
+    background: var(--accent);
+    border-color: var(--border);
+  }
+
+  .nav-item.active:hover {
+    background: var(--secondary);
+    border-color: var(--muted-foreground);
+  }
+
+  .nav-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+  }
+
+  .nav-item.active .nav-icon {
+    opacity: 1;
+  }
+
+  /* Light mode - uses CSS variables which auto-invert */
+
+  :global(.inverseBg) .nav-item.active {
+    color: var(--foreground);
+    background: var(--accent);
+    border-color: var(--border);
+  }
+
+  :global(.inverseBg) .nav-item.active:hover {
+    background: var(--secondary);
+    border-color: var(--muted-foreground);
+  }
+</style>
+
+<aside class="flex flex-col gap-6">
+  <!-- Wallet Section -->
+  <div>
+    <p class="section-title">{$_('wallet')}</p>
+    <Wallet />
+  </div>
+
+  <!-- Navigation Section -->
+  <nav class="sticky top-4">
+    <p class="section-title">{$_('navigation')}</p>
+    <ul>
+      {#each sidebarSetup()
+        .filter((key) => key.label !== 'sentinel')
+        .filter((key) => key.label !== 'Cows')
+        .filter((key) => key.supportedChains.includes($networkStore)) as sidebarItem}
+        <li
+          class="nav-item"
+          class:active={$navigationStore.currentPathname === `${sidebarItem.path}`}
+          on:click="{() => updatePath(sidebarItem.path, (pathname) => routerGuard(pathname))}"
+        >
+          <span class="nav-label">{$_(sidebarItem.label)}</span>
+          <img
+            src="./images/icons/{sidebarItem.icon}"
+            class="nav-icon {$settings.invertColors ? 'invertIcons' : ''}"
+            alt="{sidebarItem.label}"
+          />
+        </li>
+      {/each}
+
+      <!-- Utilities -->
       <li
-        class="p-4 rounded-xl mb-5 cursor-pointer flex justify-between transition-opacity {$navigationStore.currentPathname ===
-        `${sidebarItem.path}`
-          ? `${$settings.invertColors ? 'bg-grey10inverse' : 'bg-grey10'} opacity-100`
-          : 'opacity-40'} hover:{$settings.invertColors ? 'bg-grey10inverse' : 'bg-grey10'} hover:opacity-100"
-        on:click="{() => updatePath(sidebarItem.path, (pathname) => routerGuard(pathname))}"
+        class="nav-item"
+        class:active={$navigationStore.currentPathname === 'utilities'}
+        on:click="{() => updatePath('utilities', (pathname) => routerGuard(pathname))}"
       >
-        <span>{$_(sidebarItem.label)}</span>
+        <span class="nav-label">{$_('utilities')}</span>
         <img
-          src="./images/icons/{sidebarItem.icon}"
-          class="w-7 h-7 {$settings.invertColors ? 'invertIcons' : ''}"
-          alt="{sidebarItem.label}"
+          src="./images/icons/utilities_med.svg"
+          class="nav-icon {$settings.invertColors ? 'invertIcons' : ''}"
+          alt="{$_('utilities')}"
         />
       </li>
-    {/each}
-    <li
-      class="p-4 rounded-xl mb-5 cursor-pointer flex justify-between transition-opacity {$navigationStore.currentPathname ===
-      'utilities'
-        ? `${$settings.invertColors ? 'bg-grey10inverse' : 'bg-grey10'} opacity-100`
-        : 'opacity-40'} hover:{$settings.invertColors ? 'bg-grey10inverse' : 'bg-grey10'} hover:opacity-100"
-      on:click="{() => updatePath('utilities', (pathname) => routerGuard(pathname))}"
-    >
-      <span>{$_('utilities')}</span>
-      <img
-        src="./images/icons/utilities_med.svg"
-        class="w-7 h-7 {$settings.invertColors ? 'invertIcons' : ''}"
-        alt="{$_('utilities')}"
-      />
-    </li>
-    {#each sidebarSetup()
-      .filter((key) => key.label === 'sentinel')
-      .filter((key) => key.supportedChains.includes($networkStore)) as sidebarItem}
-      {#if $sentinelStore}
-        <li
-          class="p-4 rounded-xl mb-5 cursor-pointer flex justify-between transition-opacity {$navigationStore.currentPathname ===
-          `${sidebarItem.path}`
-            ? `${$settings.invertColors ? 'bg-grey10inverse' : 'bg-grey10'} opacity-100`
-            : 'opacity-40'} hover:{$settings.invertColors
-            ? 'bg-grey10inverse'
-            : 'bg-grey10'} hover:opacity-100"
-          on:click="{() => updatePath(sidebarItem.path, (pathname) => routerGuard(pathname))}"
-          transition:fade|local
-        >
-          <span>{$_(sidebarItem.label)}</span>
-          <img
-            src="./images/icons/{sidebarItem.icon}"
-            class="w-7 h-7 {$settings.invertColors ? 'invertIcons' : ''}"
-            alt="{sidebarItem.label}"
-          />
-        </li>
-      {/if}
-    {/each}
-    {#each sidebarSetup().filter((key) => key.label === 'Cows') as sidebarItem}
-      {#if $secret.unlocked}
-        <li
-          class="p-4 rounded-xl mb-5 cursor-pointer flex justify-between transition-opacity {$navigationStore.currentPathname.slice(
-            1,
-          ) === `${sidebarItem.path}`
-            ? `${$settings.invertColors ? 'bg-grey10inverse' : 'bg-grey10'} opacity-100`
-            : 'opacity-40'} hover:{$settings.invertColors
-            ? 'bg-grey10inverse'
-            : 'bg-grey10'} hover:opacity-100"
-          on:click="{() => updatePath(sidebarItem.path, (pathname) => routerGuard(pathname))}"
-          transition:fade|local
-        >
-          <span>{$_(sidebarItem.label)}</span>
-          <img
-            src="./images/icons/{sidebarItem.icon}"
-            class="w-7 h-7 {$settings.invertColors ? 'invertIcons' : ''}"
-            alt="{sidebarItem.label}"
-          />
-        </li>
-      {/if}
-    {/each}
-  </ul>
-</div>
+
+      <!-- Sentinel (conditional) -->
+      {#each sidebarSetup()
+        .filter((key) => key.label === 'sentinel')
+        .filter((key) => key.supportedChains.includes($networkStore)) as sidebarItem}
+        {#if $sentinelStore}
+          <li
+            class="nav-item"
+            class:active={$navigationStore.currentPathname === `${sidebarItem.path}`}
+            on:click="{() => updatePath(sidebarItem.path, (pathname) => routerGuard(pathname))}"
+            transition:fade|local
+          >
+            <span class="nav-label">{$_(sidebarItem.label)}</span>
+            <img
+              src="./images/icons/{sidebarItem.icon}"
+              class="nav-icon {$settings.invertColors ? 'invertIcons' : ''}"
+              alt="{sidebarItem.label}"
+            />
+          </li>
+        {/if}
+      {/each}
+
+      <!-- Secret section (conditional) -->
+      {#each sidebarSetup().filter((key) => key.label === 'Cows') as sidebarItem}
+        {#if $secret.unlocked}
+          <li
+            class="nav-item"
+            class:active={$navigationStore.currentPathname.slice(1) === `${sidebarItem.path}`}
+            on:click="{() => updatePath(sidebarItem.path, (pathname) => routerGuard(pathname))}"
+            transition:fade|local
+          >
+            <span class="nav-label">{$_(sidebarItem.label)}</span>
+            <img
+              src="./images/icons/{sidebarItem.icon}"
+              class="nav-icon {$settings.invertColors ? 'invertIcons' : ''}"
+              alt="{sidebarItem.label}"
+            />
+          </li>
+        {/if}
+      {/each}
+    </ul>
+  </nav>
+</aside>

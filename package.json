@@ -8,11 +8,19 @@
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 vite build",
     "build:gha": "cross-env NODE_OPTIONS=--max-old-space-size=8192 NODE_ENV=ipfs vite build",
     "vercel_debug_build": "echo $DEBUG_MODE; yarn makeEnv && yarn build",
-    "dev:noabi": "node -v && yarn format && cross-env NODE_ENV=development NODE_OPTIONS=--max-old-space-size=8192 vite --port 5005",
+    "dev:noabi": "node -v && cross-env NODE_ENV=development NODE_OPTIONS=--max-old-space-size=8192 vite --port 5005",
+    "dev:test": "cross-env NODE_ENV=development NODE_OPTIONS=--max-old-space-size=8192 vite --port 5005",
     "dev": "node -v && yarn abi && yarn format && cross-env NODE_ENV=development NODE_OPTIONS=--max-old-space-size=8192 vite --port 5005",
     "format": "yarn run prettier && yarn run lint",
     "lint": "yarn run eslint ./src/ --ext .js,.ts,.svelte",
-    "prettier": "npx prettier --write src/**/*.{js,svelte,ts,html} --write public/*.html --no-error-on-unmatched-pattern"
+    "prettier": "npx prettier --write src/**/*.{js,svelte,ts,html} --write public/*.html --no-error-on-unmatched-pattern",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:report": "playwright show-report"
   },
   "pre-push": {
     "run": "lint",
@@ -21,6 +29,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@babel/helper-compilation-targets": "^7.18.9",
+    "@playwright/test": "^1.57.0",
     "@sveltejs/vite-plugin-svelte": "^2.5.2",
     "@tsconfig/svelte": "^5.0.2",
     "@types/node": "^20.9.0",
@@ -32,6 +41,7 @@
     "eslint-plugin-import": "^2.22.1",
     "graphql-request": "^6.1.0",
     "path": "^0.12.7",
+    "playwright": "^1.57.0",
     "postcss": "^8.2.10",
     "postcss-load-config": "^4.0.1",
     "pre-push": "^0.1.3",

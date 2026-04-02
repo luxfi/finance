@@ -18,7 +18,7 @@
     vaultsStore,
     adaptersStore,
     networkStore,
-  } from '@stores/v2/alcxStore';
+  } from '@stores/v2/liquidStore';
   import { VaultTypes } from '@stores/v2/types';
   import { VaultTypesInfos } from '@stores/v2/constants';
   import { liquidate, getVaultMaxLoss } from '@stores/v2/vaultActions';

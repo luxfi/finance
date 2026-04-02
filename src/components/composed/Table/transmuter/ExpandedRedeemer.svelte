@@ -4,7 +4,7 @@
   import { BigNumber, utils } from 'ethers';
   import InputNumber from '../../../elements/inputs/InputNumber.svelte';
   import { getTokenDataFromBalances } from '@stores/v2/helpers';
-  import { addressStore, balancesStore, networkStore } from '@stores/v2/alcxStore';
+  import { addressStore, balancesStore, networkStore } from '@stores/v2/liquidStore';
   import { claim, deposit, withdraw } from '@stores/v2/transmuterActions';
   import { signer } from '@stores/v2/derived';
   import { fetchBalanceByAddress, fetchTransmuterBySelector } from '@stores/v2/asyncMethods';

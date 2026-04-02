@@ -13,7 +13,7 @@
   import { routerGuard } from '@helpers/routerGuard';
   import { VaultTypes } from '@stores/v2/types';
   import { makeSelectorStore } from '@stores/v2/selectorStore';
-  import { balancesStore, vaultsStore } from '@stores/v2/alcxStore';
+  import { balancesStore, vaultsStore } from '@stores/v2/liquidStore';
   import { calculateVaultDebt, getTokenDataFromBalances } from '@stores/v2/helpers';
   import global from '@stores/global';
   import settings from '@stores/settings';

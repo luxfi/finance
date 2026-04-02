@@ -4,7 +4,7 @@
 
   import settings from '@stores/settings';
   import { utilities } from '@stores/utilities';
-  import { networkStore } from '@stores/v2/alcxStore';
+  import { networkStore } from '@stores/v2/liquidStore';
 
   import ViewContainer from '@components/elements/ViewContainer.svelte';
   import PageHeader from '@components/elements/PageHeader.svelte';

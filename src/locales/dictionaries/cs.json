@@ -31,7 +31,7 @@
   "my_account": "My Accounts",
   "my": "My",
   "vaults": "Vaults",
-  "transmuter": "Transmuter",
+  "redeemer": "Redeemer",
   "farms": "Farms",
   "submit": "Submit",
   "base": "Base",
@@ -105,15 +105,15 @@
   "farm_page": {
     "title": "Farms",
     "subtitle": "Earn yield on your deposits",
-    "saddle_text": "Deposit alUSD, FEI, FRAX, and/or LUSD to earn ALCX, TRIBE, FXS and LQTY",
-    "sushi_text": "Deposit alUSD and ETH on Sushiswap to earn SUSHI",
-    "mstable_text": "Deposit alUSD to earn MTA"
+    "saddle_text": "Deposit LUSD, FEI, FRAX, and/or LUSD to earn LUX, TRIBE, FXS and LQTY",
+    "sushi_text": "Deposit LUSD and ETH on Sushiswap to earn SUSHI",
+    "mstable_text": "Deposit LUSD to earn MTA"
   },
-  "transmuter_page": {
-    "title": "Transmuter",
+  "redeemer_page": {
+    "title": "Redeemer",
     "subtitle": "Convert your synthetic tokens to their counterpart at a 1:1 ratio",
     "external_swaps": "External Swap Providers",
-    "all_transmuter": "All Transmuter"
+    "all_redeemer": "All Redeemer"
   },
   "vaults_page": {
     "title": "Vaults",
@@ -172,7 +172,7 @@
     "active_select": "Active",
     "retired_select": "Retired",
     "external_select": "External",
-    "galcx": "gALCX",
+    "glux": "gLUX",
     "yield": "Yield"
   },
   "expanded": {
@@ -241,13 +241,13 @@
     "open_credit": "Available Credit",
     "global_tvl": "Global TVL"
   },
-  "galcx": {
-    "title": "gALCX Wrapper",
-    "leading": "A liquid ALCX wrapper for single-sided staking.",
-    "p_1": "Wrap your ALCX into gALCX and have your ALCX work for you in the single sided staking pool while staying in control of your gALCX.",
-    "p_2": "Autocompounding increases the amount of ALCX you can unwrap per gALCX.",
-    "galcx_supply": "gALCX Token Supply",
-    "wrapped_alcx": "Wrapped ALCX"
+  "glux": {
+    "title": "gLUX Wrapper",
+    "leading": "A liquid LUX wrapper for single-sided staking.",
+    "p_1": "Wrap your LUX into gLUX and have your LUX work for you in the single sided staking pool while staying in control of your gLUX.",
+    "p_2": "Autocompounding increases the amount of LUX you can unwrap per gLUX.",
+    "galcx_supply": "gLUX Token Supply",
+    "wrapped_alcx": "Wrapped LUX"
   },
   "migration": {
     "title": "Legacy Migration",
@@ -265,8 +265,8 @@
     "restart": "Restart",
     "paragraph_1": "To make it as simple as possible to migrate your Legacy vault deposits into V2, Lux is providing a migration tool which enables you to transfer your position into V2 while staying as gas-cost efficient as possible.",
     "paragraph_2": "Your wallet will prompt you a few times to sign transactions that take care of the following steps:",
-    "from_alusd": "Migrate Legacy alUSD position",
-    "from_aleth": "Migrate Legacy alETH position",
+    "from_lusd": "Migrate Legacy LUSD position",
+    "from_leth": "Migrate Legacy LETH position",
     "no_position": "No legacy positions detected, you're all good!",
     "cus_explain": "Choose an amount that you want to flashloan into a new V2 position, as well as the desired LTV amount which is used to determine how much debt to take up with each debt token mint.",
     "target_ltv": "Target LTV",

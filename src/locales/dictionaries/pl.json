@@ -31,7 +31,7 @@
     "my_account": "Moje konta",
     "my": "Moje",
     "vaults": "Skarbce",
-    "transmuter": "Transmuter",
+    "redeemer": "Redeemer",
     "farms": "Farmy",
     "submit": "Prześlij",
     "base": "Opłata bazowa",
@@ -111,16 +111,16 @@
     "farm_page": {
         "title": "Farmy",
         "subtitle": "Uzyskaj zysk z twoich depozytów",
-        "saddle_text": "Wpłać alUSD, FEI, FRAX i/lub LUSD, aby zarobić ALCX, TRIBE, FXS i LQTY",
-        "sushi_text": "Wpłać alUSD i ETH na Sushiswap, aby zarobić SUSHI",
-        "mstable_text": "Wpłać alUSD, aby zarobić MTA"
+        "saddle_text": "Wpłać LUSD, FEI, FRAX i/lub LUSD, aby zarobić LUX, TRIBE, FXS i LQTY",
+        "sushi_text": "Wpłać LUSD i ETH na Sushiswap, aby zarobić SUSHI",
+        "mstable_text": "Wpłać LUSD, aby zarobić MTA"
     },
-    "transmuter_page": {
-        "title": "Transmuter",
+    "redeemer_page": {
+        "title": "Redeemer",
         "subtitle": "Konwertuj swoje syntetyczne tokeny na ich odpowiedniki w stosunku 1:1",
         "external_swaps": "Zewnętrzni dostawcy usługi swap",
-        "all_transmuter": "Wszystkie transmutery",
-        "disclaimer": "Transmuter operations are paused for the benefit of the AMO, in accordance with AIP-39."
+        "all_redeemer": "Wszystkie redeemery",
+        "disclaimer": "Redeemer operations are paused for the benefit of the AMO, in accordance with AIP-39."
     },
     "vaults_page": {
         "title": "Skarbce",
@@ -182,7 +182,7 @@
         "active_select": "Active",
         "retired_select": "Retired",
         "external_select": "External",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Yield"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Available Credit",
         "global_tvl": "Global TVL"
     },
-    "galcx": {
-        "title": "gALCX Wrapper",
-        "leading": "A liquid ALCX wrapper for single-sided staking.",
-        "p_1": "Wrap your ALCX into gALCX and have your ALCX work for you in the single sided staking pool while staying in control of your gALCX.",
-        "p_2": "Autocompounding increases the amount of ALCX you can unwrap per gALCX.",
-        "galcx_supply": "gALCX Token Supply",
-        "wrapped_alcx": "Wrapped ALCX"
+    "glux": {
+        "title": "gLUX Wrapper",
+        "leading": "A liquid LUX wrapper for single-sided staking.",
+        "p_1": "Wrap your LUX into gLUX and have your LUX work for you in the single sided staking pool while staying in control of your gLUX.",
+        "p_2": "Autocompounding increases the amount of LUX you can unwrap per gLUX.",
+        "galcx_supply": "gLUX Token Supply",
+        "wrapped_alcx": "Wrapped LUX"
     },
     "migration": {
         "title": "Legacy Migration",
@@ -276,14 +276,14 @@
         "restart": "Restart",
         "paragraph_1": "To make it as simple as possible to migrate your Legacy vault deposits into V2, Lux is providing a migration tool which enables you to transfer your position into V2 while staying as gas-cost efficient as possible.",
         "paragraph_2": "Your wallet will prompt you a few times to sign transactions that take care of the following steps:",
-        "from_alusd": "Migrate Legacy alUSD position",
-        "from_aleth": "Migrate Legacy alETH position",
+        "from_lusd": "Migrate Legacy LUSD position",
+        "from_leth": "Migrate Legacy LETH position",
         "no_position": "No legacy positions detected, you're all good!",
         "cus_explain": "Choose an amount that you want to flashloan into a new v2 position, as well as the desired leverage for your new deposit.",
         "target_ltv": "Leverage",
         "ltv_ratio": "LTV Ratio",
-        "skip_legacy_alusd": "Manual alUSD flashloan",
-        "skip_legacy_aleth": "Manual alETH flashloan"
+        "skip_legacy_lusd": "Manual LUSD flashloan",
+        "skip_legacy_leth": "Manual LETH flashloan"
     },
     "error_page": {
         "subtitle": "This doesn't look right...",

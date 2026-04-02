@@ -16,7 +16,7 @@
   name="Balance Entry"
   id="BalanceEntryStory"
   args="{{
-    tokenSymbol: 'alUSD',
+    tokenSymbol: 'LUSD',
     tokenName: 'Lux USD',
     tokenBalance: '123456789012345678901234567890',
   }}"

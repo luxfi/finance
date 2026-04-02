@@ -5,7 +5,7 @@
 
   const props = {
     debtToken: {
-      symbol: 'alUSD',
+      symbol: 'LUSD',
       address: '',
     },
     maxDebt: 100,

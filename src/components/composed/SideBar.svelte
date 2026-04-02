@@ -5,7 +5,7 @@
   import { _ } from 'svelte-i18n';
   import Wallet from './Wallet.svelte';
   import { routerGuard } from '@helpers/routerGuard';
-  import { sentinelStore, networkStore } from '@stores/v2/alcxStore';
+  import { sentinelStore, networkStore } from '@stores/v2/liquidStore';
   import settings from '@stores/settings';
   import { sidebarSetup } from '@stores/sidebarSetup';
   import secret from '@stores/secret';

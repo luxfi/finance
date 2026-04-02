@@ -4,7 +4,7 @@
   import settings from '@stores/settings';
   import { routerGuard } from '@helpers/routerGuard';
 
-  import { sentinelStore, networkStore } from '@stores/v2/alcxStore';
+  import { sentinelStore, networkStore } from '@stores/v2/liquidStore';
 
   import navigationStore, { updatePath } from '@stores/navigation';
   import Wallet from './Wallet.svelte';

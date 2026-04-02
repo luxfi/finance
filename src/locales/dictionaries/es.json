@@ -31,7 +31,7 @@
   "my_account": "Mis Cuentas",
   "my": "Mi",
   "vaults": "Valores",
-  "transmuter": "Transmutar",
+  "redeemer": "Transmutar",
   "farms": "Granjas",
   "submit": "Enviar",
   "base": "Base",
@@ -105,15 +105,15 @@
   "farm_page": {
     "title": "Granjas",
     "subtitle": "Obtenga rendimiento de sus depósitos",
-    "saddle_text": "Deposite alUSD, FEI, FRAX y/o LUSD para ganar ALCX, TRIBE, FXS y LQTY",
-    "sushi_text": "Deposite alUSD y ETH en Sushiswap para ganar SUSHI",
-    "mstable_text": "Deposite alUSD para ganar MTA"
+    "saddle_text": "Deposite LUSD, FEI, FRAX y/o LUSD para ganar LUX, TRIBE, FXS y LQTY",
+    "sushi_text": "Deposite LUSD y ETH en Sushiswap para ganar SUSHI",
+    "mstable_text": "Deposite LUSD para ganar MTA"
   },
-  "transmuter_page": {
+  "redeemer_page": {
     "title": "Transmutador",
     "subtitle": "Convierta sus tokens sintéticos en su contraparte en una proporción de 1: 1",
     "external_swaps": "Proveedores de intercambio externos",
-    "all_transmuter": "Todos los transmutadores"
+    "all_redeemer": "Todos los transmutadores"
   },
   "vaults_page": {
     "title": "Bóvedas",
@@ -172,7 +172,7 @@
     "active_select": "Activo",
     "retired_select": "Retirado",
     "external_select": "Externo",
-    "galcx": "gALCX",
+    "glux": "gLUX",
     "yield": "Rendimiento"
   },
   "expanded": {
@@ -241,13 +241,13 @@
     "open_credit": "Crédito Disponible",
     "global_tvl": "TVL Global"
   },
-  "galcx": {
-    "title": "Envoltura gALCX",
-    "leading": "Una envoltura líquida ALCX para staking de un solo lado.",
-    "p_1": "Envuelva su ALCX en gALCX y haga que su ALCX trabaje para staking de un solo lado mientras mantiene el control de su gALCX.",
-    "p_2": "Los interéses compuestos automaticamente aumentan la cantidad de ALCX que puede desenvolver por gALCX.",
-    "galcx_supply": "Suministro de Tokens gALCX",
-    "wrapped_alcx": "ALCX Envuelto"
+  "glux": {
+    "title": "Envoltura gLUX",
+    "leading": "Una envoltura líquida LUX para staking de un solo lado.",
+    "p_1": "Envuelva su LUX en gLUX y haga que su LUX trabaje para staking de un solo lado mientras mantiene el control de su gLUX.",
+    "p_2": "Los interéses compuestos automaticamente aumentan la cantidad de LUX que puede desenvolver por gLUX.",
+    "galcx_supply": "Suministro de Tokens gLUX",
+    "wrapped_alcx": "LUX Envuelto"
   },
   "migration": {
     "title": "Migración Antigua",
@@ -265,8 +265,8 @@
     "restart": "Reiniciar",
     "paragraph_1": "Para que sea lo más simple posible migrar sus depósitos de bóveda heredados a V2, Lux proporciona una herramienta de migración que le permite transferir su posición a V2 mientras se mantiene lo más eficiente posible en terminos de gas.",
     "paragraph_2": "Su monedero le pedirá varias veces que firme transacciones que se encarguen de los siguientes pasos:",
-    "from_alusd": "Migrar posición heredada de alUSD",
-    "from_aleth": "Migrar posición heredada de alETH",
+    "from_lusd": "Migrar posición heredada de LUSD",
+    "from_leth": "Migrar posición heredada de LETH",
     "no_position": "No se detectaron posiciones heredadas, ¡todo está bien!",
     "cus_explain": "Elija una cantidad para hacer un flashloan para obtener una nueva posición V2, así como la cantidad LTV deseada que se utilizará para determinar cuánta deuda asumir con cada moneda de token de deuda.",
     "target_ltv": "LTV Objetivo",

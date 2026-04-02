@@ -7,7 +7,7 @@
   import { erc20Contract, externalContractWrapper } from '@helpers/contractWrapper';
   import { signer } from '@stores/v2/derived';
   import getUserGas from '@helpers/getUserGas';
-  import { addressStore } from '@stores/v2/alcxStore';
+  import { addressStore } from '@stores/v2/liquidStore';
 
   export let farm;
 

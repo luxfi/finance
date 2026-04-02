@@ -10,7 +10,7 @@
   import {
     createRedemptionV3,
     claimRedemptionV3,
-    fetchTransmuterPositionV3,
+    fetchRedeemerPositionV3,
   } from '@stores/v3/vaultActions';
   import { VaultTypes, type TransmuterPositionType, type TransmuterV3Type } from '@stores/v3/types';
   import {
@@ -18,7 +18,7 @@
     balancesStore,
     transmuterPositionsStore,
     providerStore,
-  } from '@stores/v3/alcxStore';
+  } from '@stores/v3/liquidStore';
   import {
     V3_DEFAULT_TIME_TO_TRANSMUTE,
     V3_DEFAULT_TRANSMUTATION_FEE,
@@ -57,7 +57,7 @@
 
   // Calculate arbitrage yield (fixed-rate)
   function calculateArbitrageYield(amount: BigNumber): { apy: number; absoluteYield: BigNumber } {
-    // If alToken is trading at 0.98, and duration is 90 days:
+    // If lToken is trading at 0.98, and duration is 90 days:
     // Effective APY = ((1 - 0.98) / 0.98) * (365 / 90) * 100 = ~8.27%
     // For simplicity, assume 2% discount and 90-day duration
     const discount = 0.02; // 2% discount
@@ -111,15 +111,15 @@
         transmuter.contractAddress,
       );
 
-      console.log('[TransmuterV3] Redemption created:', tx.hash, 'NFT ID:', nftId.toString());
+      console.log('[RedeemerV3] Redemption created:', tx.hash, 'NFT ID:', nftId.toString());
 
       // Fetch the new position
-      const newPosition = await fetchTransmuterPositionV3(nftId, signer, transmuter.contractAddress);
+      const newPosition = await fetchRedeemerPositionV3(nftId, signer, transmuter.contractAddress);
       transmuterPositionsStore.update((positions) => [...positions, newPosition]);
 
       depositAmount = '';
     } catch (error: any) {
-      console.error('[TransmuterV3] Error:', error);
+      console.error('[RedeemerV3] Error:', error);
       errorMessage = error.message || 'Failed to create redemption';
     } finally {
       isLoading = false;
@@ -142,14 +142,14 @@
         transmuter.contractAddress,
       );
 
-      console.log('[TransmuterV3] Claimed:', tx.hash, 'Amount:', utils.formatEther(amountClaimed));
+      console.log('[RedeemerV3] Claimed:', tx.hash, 'Amount:', utils.formatEther(amountClaimed));
 
       // Remove position from store
       transmuterPositionsStore.update((positions) =>
         positions.filter((p) => !p.id.eq(position.id))
       );
     } catch (error: any) {
-      console.error('[TransmuterV3] Error:', error);
+      console.error('[RedeemerV3] Error:', error);
       errorMessage = error.message || 'Failed to claim redemption';
     } finally {
       isLoading = false;
@@ -166,11 +166,11 @@
   <div class="transmuter-header">
     <div class="title-section">
       <h2>
-        {TransmuterNameAliasesV3[vaultType === VaultTypes.alLUX ? 'lux' : vaultType === VaultTypes.alETH ? 'eth' : 'usd']}
-        <span class="subtitle">Transmuter V3</span>
+        {TransmuterNameAliasesV3[vaultType === VaultTypes.xLUX ? 'lux' : vaultType === VaultTypes.xETH ? 'eth' : 'usd']}
+        <span class="subtitle">Redeemer V3</span>
       </h2>
       <p class="description">
-        Fixed-duration redemptions for {transmuter.debtTokenSymbol || 'alTokens'}
+        Fixed-duration redemptions for {transmuter.debtTokenSymbol || 'Liquid Tokens'}
       </p>
     </div>
 
@@ -214,10 +214,10 @@
       <div class="info-card">
         <h3>How Fixed-Duration Redemptions Work</h3>
         <ol>
-          <li>Deposit your synthetic tokens (e.g., alETH, alUSD)</li>
+          <li>Deposit your synthetic tokens (e.g., LETH, LUSD)</li>
           <li>Wait for the fixed duration (~90 days)</li>
           <li>Claim 1:1 redemption for underlying tokens</li>
-          <li>Earn fixed yield from arbitrage if alToken trades below peg</li>
+          <li>Earn fixed yield from arbitrage if Liquid Token trades below peg</li>
         </ol>
       </div>
 
@@ -225,13 +225,13 @@
         <label class="section-label">
           <span>Deposit Amount</span>
           <span class="balance">
-            Balance: {utils.formatEther(synthBalance)} {transmuter.debtTokenSymbol || 'alToken'}
+            Balance: {utils.formatEther(synthBalance)} {transmuter.debtTokenSymbol || 'lToken'}
           </span>
         </label>
 
         <ComplexInput
           bind:inputValue={depositAmount}
-          tokenSymbol={transmuter.debtTokenSymbol || 'alToken'}
+          tokenSymbol={transmuter.debtTokenSymbol || 'lToken'}
           tokenDecimals={18}
           on:max={setMaxDeposit}
         />
@@ -262,7 +262,7 @@
           </div>
 
           <p class="note">
-            * Yield depends on the current alToken discount. You can exit early with a {(V3_DEFAULT_EXIT_FEE * 100).toFixed(1)}% fee.
+            * Yield depends on the current Liquid Token discount. You can exit early with a {(V3_DEFAULT_EXIT_FEE * 100).toFixed(1)}% fee.
           </p>
         </div>
       {/if}

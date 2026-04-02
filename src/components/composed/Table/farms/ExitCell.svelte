@@ -10,7 +10,7 @@
     FarmTypes,
   } from '@stores/v2/types';
   import { BigNumber, utils } from 'ethers';
-  import { addressStore } from '@stores/v2/alcxStore';
+  import { addressStore } from '@stores/v2/liquidStore';
   import { fetchCrvFarmByUuid, fetchInternalFarmByUuid, fetchSushiFarmByUuid } from '@stores/v2/asyncMethods';
   import settings from '@stores/settings';
 

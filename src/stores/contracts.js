@@ -16,12 +16,12 @@ const contracts = writable({
       yearnEthVaultAdapter: undefined,
     },
     token: {
-      alEth: undefined,
-      alUsd: undefined,
-      alcx: undefined,
+      lEth: undefined,
+      lUsd: undefined,
+      lux: undefined,
       wEth: undefined,
       dai: undefined,
-      alcxEthSlp: undefined,
+      luxEthSlp: undefined,
     },
     pool: {
       staking: undefined,
@@ -35,12 +35,12 @@ const contracts = writable({
   },
   curve: {
     gauge: {
-      alUsd: undefined,
+      lUsd: undefined,
     },
     minter: undefined,
     rewarder: undefined,
     pool: {
-      alUsd: undefined,
+      lUsd: undefined,
     },
   },
   sushi: {
@@ -48,12 +48,12 @@ const contracts = writable({
     mcv2: undefined,
     mcv1: undefined,
     onsenRewarder: {
-      alcx: undefined,
+      lux: undefined,
     },
   },
   saddle: {
     pool: {
-      alEth: undefined,
+      lEth: undefined,
     },
   },
 });

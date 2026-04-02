@@ -7,7 +7,7 @@
   import { calculateParams, beginMigration } from '@stores/v2/liquidityMigrator';
   import { getTokenDataFromBalancesBySymbol } from '@stores/v2/helpers';
   import { signer } from '@stores/v2/derived';
-  import { balancesStore, addressStore } from '@stores/v2/alcxStore';
+  import { balancesStore, addressStore } from '@stores/v2/liquidStore';
   import settings from '@stores/settings';
   import { utils } from 'ethers';
 

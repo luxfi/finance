@@ -9,7 +9,7 @@
   import { VaultTypes } from '@stores/v2/types';
   import { AllowedVaultTypes, VaultTypesInfos } from '@stores/v2/constants';
   import { calculateVaultDebt, getTokenDataFromBalances } from '@stores/v2/helpers';
-  import { balancesStore, vaultsStore } from '@stores/v2/alcxStore';
+  import { balancesStore, vaultsStore } from '@stores/v2/liquidStore';
 
   export let vaults;
 

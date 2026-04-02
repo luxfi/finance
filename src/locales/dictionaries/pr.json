@@ -30,7 +30,7 @@
   "my_account": "حساب من",
   "my": "برای من",
   "vaults": "والت ها",
-  "transmuter": "تبدیل کننده",
+  "redeemer": "تبدیل کننده",
   "farms": "مزرعه ها",
   "submit": "ثبت",
   "base": "پایه",
@@ -76,15 +76,15 @@
   "farm_page": {
     "title": "مزرعه ها",
     "subtitle": "بر روی سپرده خود سود بگیرید",
-    "saddle_text": "Deposit alUSD, FEI, FRAX, and/or LUSD to earn ALCX, TRIBE, FXS and LQTY",
-    "sushi_text": "Deposit alUSD and ETH on Sushiswap to earn SUSHI",
-    "mstable_text": "Deposit alUSD to earn MTA"
+    "saddle_text": "Deposit LUSD, FEI, FRAX, and/or LUSD to earn LUX, TRIBE, FXS and LQTY",
+    "sushi_text": "Deposit LUSD and ETH on Sushiswap to earn SUSHI",
+    "mstable_text": "Deposit LUSD to earn MTA"
   },
-  "transmuter_page": {
+  "redeemer_page": {
     "title": "تبدیل کننده",
     "subtitle": "توکن های مصنوعی خود را با نسبت 1:1 به همتای خود تبدیل کنید",
     "external_swaps": "External Swap Providers",
-    "all_transmuter": "All Transmuter"
+    "all_redeemer": "All Redeemer"
   },
   "vaults_page": {
     "title": "گاوصندق ها",

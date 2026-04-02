@@ -12,7 +12,7 @@
     borrowLimit: BigNumber.from('148508682229694948963'),
     userShares: utils.parseUnits('99.005828484942579537', 18),
     openDebtAmount: BigNumber.from('148508682229694948963').div(2),
-    openDebtSymbol: 'alUSD',
+    openDebtSymbol: 'LUSD',
     underlyingPricePerShare: utils.parseUnits('1.010041545333956048', 18),
     yieldPricePerShare: utils.parseUnits('0.999999999999999999', 18),
     vaultIndex: 0,

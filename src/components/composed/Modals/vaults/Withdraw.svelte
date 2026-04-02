@@ -17,7 +17,7 @@
     balancesStore,
     adaptersStore,
     networkStore,
-  } from '@stores/v2/alcxStore';
+  } from '@stores/v2/liquidStore';
   import { signer, vaultsAggregatedDeposits } from '@stores/v2/derived';
   import {
     fetchBalanceByAddress,

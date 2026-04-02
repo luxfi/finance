@@ -2,7 +2,7 @@
   import { utils, BigNumber } from 'ethers';
   import { getVaultCapacity } from '@stores/v2/vaultActions';
   import numeral from 'numeral';
-  import { networkStore } from '@stores/v2/alcxStore';
+  import { networkStore } from '@stores/v2/liquidStore';
   import settings from '@stores/settings';
 
   export let yieldTokenAddress;

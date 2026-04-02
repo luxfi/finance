@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { addressStore, networkStore, tokensStore } from '@stores/v2/alcxStore';
+  import { addressStore, networkStore, tokensStore } from '@stores/v2/liquidStore';
   import { fullTokenList, signer } from '@stores/v2/derived';
   import {
     fetchAdaptersForVaultType,
@@ -90,7 +90,7 @@
       });
 
       if (execute.vaultTypes.length > 0) {
-        await fetchAlchemistSentinelRole(VaultTypes.alUSD, [$signer, $addressStore], netId);
+        await fetchAlchemistSentinelRole(VaultTypes.LUSD, [$signer, $addressStore], netId);
       }
 
       let adapters = [];

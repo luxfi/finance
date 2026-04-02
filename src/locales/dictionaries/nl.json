@@ -31,7 +31,7 @@
     "my_account": "Mijn Rekening",
     "my": "Mijn",
     "vaults": "Kluizen",
-    "transmuter": "Transmutatie",
+    "redeemer": "Transmutatie",
     "farms": "Farms",
     "submit": "Indienen",
     "base": "Basis",
@@ -111,16 +111,16 @@
     "farm_page": {
         "title": "Boerderijen",
         "subtitle": "Verdien rendement op uw stortingen",
-        "saddle_text": "Stort alUSD, FEI, FRAX, en/of LUSD om ALCX, TRIBE, FXS en LQTY te verdienen",
-        "sushi_text": "Stort alUSD en ETH op Sushiswap om SUSHI te verdienen",
-        "mstable_text": "Stort alUSD om MTA te verdienen"
+        "saddle_text": "Stort LUSD, FEI, FRAX, en/of LUSD om LUX, TRIBE, FXS en LQTY te verdienen",
+        "sushi_text": "Stort LUSD en ETH op Sushiswap om SUSHI te verdienen",
+        "mstable_text": "Stort LUSD om MTA te verdienen"
     },
-    "transmuter_page": {
+    "redeemer_page": {
         "title": "Transmutatie",
         "subtitle": "Converteer uw synthetische tokens naar hun tegenhanger in een verhouding van 1:1",
         "external_swaps": "Externe Swap Aanbieders",
-        "all_transmuter": "Alle Transmuters",
-        "disclaimer": "Transmuter operations are paused for the benefit of the AMO, in accordance with AIP-39."
+        "all_redeemer": "Alle Redeemers",
+        "disclaimer": "Redeemer operations are paused for the benefit of the AMO, in accordance with AIP-39."
     },
     "vaults_page": {
         "title": "Kluizen",
@@ -182,7 +182,7 @@
         "active_select": "Actief",
         "retired_select": "Non-actief",
         "external_select": "Extern",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Opbrengst"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Beschikbaar Krediet",
         "global_tvl": "Globaal TVL"
     },
-    "galcx": {
-        "title": "gALCX Wrapper",
-        "leading": "Een liquide ALCX-wrapper voor enkelzijdige staking.",
-        "p_1": "Wrap uw ALCX in gALCX en laat uw ALCX voor u werken in de enkelzijdige staking pool terwijl u de controle over uw gALCX behoudt.",
-        "p_2": "Autocompounding verhoogt de hoeveelheid ALCX die u per gALCX kunt unwrappen.",
-        "galcx_supply": "gALCX-Tokenvoorraad",
-        "wrapped_alcx": "Wrapped ALCX"
+    "glux": {
+        "title": "gLUX Wrapper",
+        "leading": "Een liquide LUX-wrapper voor enkelzijdige staking.",
+        "p_1": "Wrap uw LUX in gLUX en laat uw LUX voor u werken in de enkelzijdige staking pool terwijl u de controle over uw gLUX behoudt.",
+        "p_2": "Autocompounding verhoogt de hoeveelheid LUX die u per gLUX kunt unwrappen.",
+        "galcx_supply": "gLUX-Tokenvoorraad",
+        "wrapped_alcx": "Wrapped LUX"
     },
     "migration": {
         "title": "Verouderde Migratie",
@@ -276,14 +276,14 @@
         "restart": "Herstarten",
         "paragraph_1": "Om het zo eenvoudig mogelijk te maken om uw Legacy-kluisdeposito's naar V2 te migreren, biedt Lux een migratietool aan waarmee u uw positie naar V2 kunt overbrengen met zo laag mogelijke gas-kosten.",
         "paragraph_2": "Uw wallet zal u een paar keer vragen om transacties te ondertekenen die voor de volgende stappen zorgen:",
-        "from_alusd": "Legacy alUSD-positie migreren",
-        "from_aleth": "Migreer legacy alETH positie",
+        "from_lusd": "Legacy LUSD-positie migreren",
+        "from_leth": "Migreer legacy LETH positie",
         "no_position": "Geen legacy-posities gedetecteerd, alles ziet er goed uit!",
         "cus_explain": "Kies een bedrag dat u wilt flashlenen naar een nieuwe V2-positie, evenals het gewenste LTV-bedrag dat wordt gebruikt om te bepalen hoeveel schuld u wilt opnemen met elke schuld token mint.",
         "target_ltv": "Doel-LTV",
         "ltv_ratio": "LTV-ratio",
-        "skip_legacy_alusd": "Handmatige alUSD flitslening",
-        "skip_legacy_aleth": "Handmatige alETH flitslening"
+        "skip_legacy_lusd": "Handmatige LUSD flitslening",
+        "skip_legacy_leth": "Handmatige LETH flitslening"
     },
     "error_page": {
         "subtitle": "Dit ziet er niet goed uit...",

@@ -17,7 +17,7 @@
   import Error from '@views/Error.svelte';
   // import Accounts from '@views/Accounts.svelte';
   import Vaults from '@views/Vaults.svelte';
-  import Transmuter from '@views/Transmuter.svelte';
+  import Redeemer from '@views/Redeemer.svelte';
   import Farms from '@views/Farms.svelte';
   import Governance from '@views/Governance.svelte';
   import Settings from '@views/Settings.svelte';
@@ -133,7 +133,7 @@ Use at your own risk.
                 {#if walletChecked}
                   <!--                <Route path='/accounts' component='{Accounts}' />-->
                   <Route path="/vaults" component="{Vaults}" />
-                  <Route path="/transmuter" component="{Transmuter}" />
+                  <Route path="/transmuter" component="{Redeemer}" />
                   <Route path="/swap" component="{Swap}" />
 
                   <Route path="/farms" component="{Farms}" />

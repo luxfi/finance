@@ -90,7 +90,7 @@ export async function toggleAlchemistStatus(
       path,
     );
     const { instance: alchemistInstance } = await contractWrapper(
-      VaultConstants[VaultTypes[vaultType]].alToken,
+      VaultConstants[VaultTypes[vaultType]].lToken,
       signerStore,
       path,
     );

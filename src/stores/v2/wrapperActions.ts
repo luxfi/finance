@@ -12,10 +12,10 @@ import {
 
 export async function getData(_signer: Signer) {
   try {
-    const { instance: galcxInstance } = await externalContractWrapper('galcx', _signer);
-    const supply = await galcxInstance.totalSupply();
-    const exchangeRate = await galcxInstance.exchangeRate();
-    const symbol = await galcxInstance.symbol();
+    const { instance: gluxInstance } = await externalContractWrapper('glux', _signer);
+    const supply = await gluxInstance.totalSupply();
+    const exchangeRate = await gluxInstance.exchangeRate();
+    const symbol = await gluxInstance.symbol();
     return { supply, exchangeRate, symbol };
   } catch (error) {
     setError(error.data ? await error.data.message : error.message, error);
@@ -26,9 +26,9 @@ export async function getData(_signer: Signer) {
 
 export async function getAllowance([_ownerAddress, _signer]: [string, Signer]) {
   try {
-    const { instance: alcxInstance } = await contractWrapper('LuxToken', _signer, 'ethereum');
-    const { address: galcxAddress } = await externalContractWrapper('galcx', _signer);
-    const allowance = await alcxInstance.allowance(_ownerAddress, galcxAddress);
+    const { instance: luxInstance } = await contractWrapper('LuxToken', _signer, 'ethereum');
+    const { address: gluxAddress } = await externalContractWrapper('glux', _signer);
+    const allowance = await luxInstance.allowance(_ownerAddress, gluxAddress);
     return { allowance };
   } catch (error) {
     setError(error.data ? await error.data.message : error.message, error);
@@ -39,11 +39,11 @@ export async function getAllowance([_ownerAddress, _signer]: [string, Signer]) {
 
 export async function setAllowance(_signer: Signer) {
   try {
-    const { address: alcxAddress } = await await contractWrapper('LuxToken', _signer, 'ethereum');
-    const { address: galcxAddress } = await externalContractWrapper('galcx', _signer);
+    const { address: luxAddress } = await await contractWrapper('LuxToken', _signer, 'ethereum');
+    const { address: gluxAddress } = await externalContractWrapper('glux', _signer);
     setPendingApproval();
     // @ts-ignore
-    const approval = (await setTokenAllowance(alcxAddress, galcxAddress)) as ContractTransaction;
+    const approval = (await setTokenAllowance(luxAddress, gluxAddress)) as ContractTransaction;
     setPendingTx();
     return approval;
   } catch (error) {
@@ -59,20 +59,20 @@ export async function stake(
   _useInfinite: boolean,
   _signer: Signer,
 ) {
-  const { instance: galcxInstance, address: galcxAddress } = await externalContractWrapper('galcx', _signer);
+  const { instance: gluxInstance, address: gluxAddress } = await externalContractWrapper('glux', _signer);
   try {
     const maxAllowance = BN.from(2).pow(256).sub(1);
     if (_allowance.lt(_amount)) {
-      const { instance: alcxInstance } = await contractWrapper('LuxToken', _signer, 'ethereum');
+      const { instance: luxInstance } = await contractWrapper('LuxToken', _signer, 'ethereum');
       setPendingApproval();
-      const sendApe = (await alcxInstance.approve(
-        galcxAddress,
+      const sendApe = (await luxInstance.approve(
+        gluxAddress,
         _useInfinite ? maxAllowance : _amount,
       )) as ContractTransaction;
       await sendApe.wait();
     }
     setPendingWallet();
-    const tx = (await galcxInstance.stake(_amount)) as ContractTransaction;
+    const tx = (await gluxInstance.stake(_amount)) as ContractTransaction;
     setPendingTx();
     return await tx.wait().then((transaction) => {
       setSuccessTx(transaction.transactionHash);
@@ -86,10 +86,10 @@ export async function stake(
 }
 
 export async function unstake(_amount: BigNumber, _signer: Signer) {
-  const { instance: galcxInstance } = await externalContractWrapper('galcx', _signer);
+  const { instance: gluxInstance } = await externalContractWrapper('glux', _signer);
   try {
     setPendingWallet();
-    const tx = (await galcxInstance.unstake(_amount)) as ContractTransaction;
+    const tx = (await gluxInstance.unstake(_amount)) as ContractTransaction;
     setPendingTx();
     return await tx.wait().then((transaction) => {
       setSuccessTx(transaction.transactionHash);

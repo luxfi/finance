@@ -1,5 +1,5 @@
 <script>
-  import { sentinelStore, tokensStore, networkStore } from '@stores/v2/alcxStore';
+  import { sentinelStore, tokensStore, networkStore } from '@stores/v2/liquidStore';
   import { signer } from '@stores/v2/derived';
   import { VaultTypes } from '@stores/v2/types';
   import { onMount } from 'svelte';
@@ -24,15 +24,15 @@
       alUSD: true,
       alETH: true,
       transmuters: [
-        { token: 'DAI', transmuter: 'alUSD' },
-        { token: 'USDC', transmuter: 'alUSD' },
-        { token: 'USDT', transmuter: 'alUSD' },
-        { token: 'ETH', transmuter: 'alETH' },
-        { token: 'FRAX', transmuter: 'alUSD' },
+        { token: 'DAI', transmuter: 'LUSD' },
+        { token: 'USDC', transmuter: 'LUSD' },
+        { token: 'USDT', transmuter: 'LUSD' },
+        { token: 'ETH', transmuter: 'LETH' },
+        { token: 'FRAX', transmuter: 'LUSD' },
       ],
       alTokens: [
-        { token: 'AlToken', alchemist: 'alUSD' },
-        { token: 'AlEth', alchemist: 'alETH' },
+        { token: 'AlToken', alchemist: 'LUSD' },
+        { token: 'AlEth', alchemist: 'LETH' },
       ],
     },
     {
@@ -40,14 +40,14 @@
       alUSD: true,
       alETH: true,
       transmuters: [
-        { token: 'DAI', transmuter: 'alUSD' },
-        { token: 'USDC', transmuter: 'alUSD' },
-        { token: 'USDT', transmuter: 'alUSD' },
-        { token: 'ETH', transmuter: 'alETH' },
+        { token: 'DAI', transmuter: 'LUSD' },
+        { token: 'USDC', transmuter: 'LUSD' },
+        { token: 'USDT', transmuter: 'LUSD' },
+        { token: 'ETH', transmuter: 'LETH' },
       ],
       alTokens: [
-        { token: 'CrossChainCanonicalAlchemicTokenV2_alUSD', alchemist: 'alUSD' },
-        { token: 'CrossChainCanonicalAlchemicTokenV2_alETH', alchemist: 'alETH' },
+        { token: 'CrossChainCanonicalAlchemicTokenV2_alUSD', alchemist: 'LUSD' },
+        { token: 'CrossChainCanonicalAlchemicTokenV2_alETH', alchemist: 'LETH' },
       ],
     },
     {
@@ -55,11 +55,11 @@
       alUSD: true,
       alETH: false,
       transmuters: [
-        { token: 'DAI', transmuter: 'alUSD' },
-        { token: 'USDC', transmuter: 'alUSD' },
-        { token: 'USDT', transmuter: 'alUSD' },
+        { token: 'DAI', transmuter: 'LUSD' },
+        { token: 'USDC', transmuter: 'LUSD' },
+        { token: 'USDT', transmuter: 'LUSD' },
       ],
-      alTokens: [{ token: 'CrossChainCanonicalAlchemicTokenV2_alUSD', alchemist: 'alUSD' }],
+      alTokens: [{ token: 'CrossChainCanonicalAlchemicTokenV2_alUSD', alchemist: 'LUSD' }],
     },
   ];
   $: currentSentinel = sentinelConfig.filter((entry) => entry.chainId === $networkStore)[0];
@@ -93,11 +93,11 @@
     });
   };
 
-  const initTransmuters = () => {
+  const initRedeemers = () => {
     if (!!currentSentinel) {
       currentSentinel.transmuters.forEach(async (transmuter) => {
         try {
-          const contract = await getContract(`TransmuterV2_${transmuter.token}`, abiPath);
+          const contract = await getContract(`RedeemerV2_${transmuter.token}`, abiPath);
           const isPaused = await contract.isPaused();
           transmuterList = [
             ...transmuterList,
@@ -131,10 +131,10 @@
 
   const tokenInitSelection = () => {
     if (currentSentinel.alUSD) {
-      initTokenData($tokensStore[0]?.underlyingTokens.concat($tokensStore[0]?.yieldTokens), 'alUSD');
+      initTokenData($tokensStore[0]?.underlyingTokens.concat($tokensStore[0]?.yieldTokens), 'LUSD');
     }
     if (currentSentinel.alETH) {
-      initTokenData($tokensStore[1]?.underlyingTokens.concat($tokensStore[1]?.yieldTokens), 'alETH');
+      initTokenData($tokensStore[1]?.underlyingTokens.concat($tokensStore[1]?.yieldTokens), 'LETH');
     }
   };
 
@@ -145,11 +145,11 @@
     });
   };
 
-  const toggleTransmuter = async (vaultType, tokenName, state) => {
+  const toggleRedeemer = async (vaultType, tokenName, state) => {
     await toggleTransmuterStatus(VaultTypes[vaultType], tokenName, state, [$signer], $networkStore).then(
       () => {
         transmuterList.length = 0;
-        initTransmuters();
+        initRedeemers();
       },
     );
   };
@@ -167,7 +167,7 @@
     if (!$sentinelStore) {
       routerGuard('accounts');
     } else {
-      initTransmuters();
+      initRedeemers();
       initAlTokens();
     }
   });
@@ -211,7 +211,7 @@
     </ContainerWithHeader>
 
     <ContainerWithHeader canToggle="{true}" isVisible="{false}">
-      <p class="inline-block self-center" slot="header">Transmuters</p>
+      <p class="inline-block self-center" slot="header">Redeemers</p>
       <div
         slot="body"
         class="p-4 {$settings.invertColors ? 'bg-grey15inverse' : 'bg-grey15'} flex flex-col space-y-4"
@@ -223,7 +223,7 @@
               : 'bg-lightgrey20'} transition-all"
           >
             <div class="flex flex-col w-max self-center">
-              <p class="text-sm">Transmuter</p>
+              <p class="text-sm">Redeemer</p>
               <p>{transmuter.name}</p>
             </div>
             <div class="flex flex-col w-max self-center">
@@ -234,8 +234,8 @@
               class="w-80 rounded border py-2 px-4 self-center transition-all {!transmuter.isPaused
                 ? `border-red1 ${$settings.invertColors ? 'bg-red5' : 'bg-red2'} hover:bg-red3`
                 : `border-green1 ${$settings.invertColors ? 'bg-green7' : 'bg-black2'} hover:bg-green2`}"
-              on:click="{() => toggleTransmuter(transmuter.type, transmuter.name, !transmuter.isPaused)}"
-              >{transmuter.isPaused ? 'Resume' : 'Pause'} {transmuter.name} Transmuter
+              on:click="{() => toggleRedeemer(transmuter.type, transmuter.name, !transmuter.isPaused)}"
+              >{transmuter.isPaused ? 'Resume' : 'Pause'} {transmuter.name} Redeemer
             </button>
           </div>
         {/each}

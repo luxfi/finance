@@ -31,7 +31,7 @@
     "my_account": "Mes comptes",
     "my": "Mon",
     "vaults": "Coffres",
-    "transmuter": "Transmutateur",
+    "redeemer": "Transmutateur",
     "farms": "Fermes",
     "submit": "Soumettre",
     "base": "Base",
@@ -111,15 +111,15 @@
     "farm_page": {
         "title": "Fermes",
         "subtitle": "Touchez des intérêts sur vos dépôts",
-        "saddle_text": "Déposez des alUSD, FEI, FRAX et/ou LUSD pour gagner des ALCX, TRIBE, FXS et LQTY",
-        "sushi_text": "Déposez des alUSD et des ETH sur Sushiswap pour gagner des SUSHI",
-        "mstable_text": "Déposez des alUSD pour gagner des MTA"
+        "saddle_text": "Déposez des LUSD, FEI, FRAX et/ou LUSD pour gagner des LUX, TRIBE, FXS et LQTY",
+        "sushi_text": "Déposez des LUSD et des ETH sur Sushiswap pour gagner des SUSHI",
+        "mstable_text": "Déposez des LUSD pour gagner des MTA"
     },
-    "transmuter_page": {
+    "redeemer_page": {
         "title": "Transmutateur",
         "subtitle": "Échangez vos tokens synthétiques contre leurs contreparties, un pour un",
         "external_swaps": "Fournisseurs de change externe",
-        "all_transmuter": "Tous les Transmutateurs",
+        "all_redeemer": "Tous les Transmutateurs",
         "disclaimer": "Les opérations de transmutation sont en pause au profit de l'AMO, en accord avec l'AIP-39"
     },
     "vaults_page": {
@@ -182,7 +182,7 @@
         "active_select": "Active",
         "retired_select": "Retiré",
         "external_select": "Externe",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Rendement"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Crédit disponible",
         "global_tvl": "TVL Globale"
     },
-    "galcx": {
-        "title": "gALCX Wrapper",
-        "leading": "Un wrappeur liquide pour le staking unilatéral d'ALCX.",
-        "p_1": "Wrappez vos ALCX en gALCX et laissez vos ALCX travailler pour vous dans le pool de staking unilatéral tout en gardant le contrôle de vos gALCX.",
-        "p_2": "L'accumulation automatique augmente la quantité d'ALCX que vous récupérez en unwrappant vos gALCX.",
-        "galcx_supply": "Quantité de gALCX",
-        "wrapped_alcx": "ALCX Wrappés"
+    "glux": {
+        "title": "gLUX Wrapper",
+        "leading": "Un wrappeur liquide pour le staking unilatéral d'LUX.",
+        "p_1": "Wrappez vos LUX en gLUX et laissez vos LUX travailler pour vous dans le pool de staking unilatéral tout en gardant le contrôle de vos gLUX.",
+        "p_2": "L'accumulation automatique augmente la quantité d'LUX que vous récupérez en unwrappant vos gLUX.",
+        "galcx_supply": "Quantité de gLUX",
+        "wrapped_alcx": "LUX Wrappés"
     },
     "migration": {
         "title": "Migration",
@@ -276,14 +276,14 @@
         "restart": "Redémarrer",
         "paragraph_1": "Pour simplifier au maximum la migration de vos dépôts de la V1 vers la V2, Lux fournit un outil de migration qui vous permet de transférer votre position vers la V2 tout en restant aussi économique que possible.",
         "paragraph_2": "Plusieurs signatures sont requisent pour traiter les étapes suivantes:",
-        "from_alusd": "Migrer la position V1 alUSD",
-        "from_aleth": "Migrer la position V1 alETH",
+        "from_lusd": "Migrer la position V1 LUSD",
+        "from_leth": "Migrer la position V1 LETH",
         "no_position": "Aucune position V1 détectée, vous n'avez rien à faire !",
         "cus_explain": "Choisissez un montant que vous souhaitez déposer dans une nouvelle position V2, ainsi que la LTV souhaitée qui est utilisé pour déterminer le montant de la dette à contracter.",
         "target_ltv": "LTV visée",
         "ltv_ratio": "Ratio LTV",
-        "skip_legacy_alusd": "Flashloan alUSD manuel",
-        "skip_legacy_aleth": "Flashloan alETH manuel"
+        "skip_legacy_lusd": "Flashloan LUSD manuel",
+        "skip_legacy_leth": "Flashloan LETH manuel"
     },
     "error_page": {
         "subtitle": "Une erreur s'est produite...",

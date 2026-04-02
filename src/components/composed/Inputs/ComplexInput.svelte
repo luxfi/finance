@@ -6,7 +6,7 @@
   import InputNumber from '@components/elements/inputs/InputNumber.svelte';
   import Button from '@components/elements/Button.svelte';
   import settings from '@stores/settings';
-  import { balancesStore, networkStore } from '@stores/v2/alcxStore';
+  import { balancesStore, networkStore } from '@stores/v2/liquidStore';
   import { getTokenDataFromBalancesBySymbol, aaveStaticToDynamicAmount } from '@stores/v2/helpers';
   import { signer } from '@stores/v2/derived';
 

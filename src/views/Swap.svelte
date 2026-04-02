@@ -7,7 +7,7 @@
   import ContainerWithHeader from '@components/elements/ContainerWithHeader.svelte';
   import Button from '@components/elements/Button.svelte';
   import { BarLoader } from 'svelte-loading-spinners';
-  import { addressStore, balancesStore, networkStore } from '@stores/v2/alcxStore';
+  import { addressStore, balancesStore, networkStore } from '@stores/v2/liquidStore';
   import { signer } from '@stores/v2/derived';
   import { getTokenDataFromBalancesBySymbol } from '@stores/v2/helpers';
   import { chainIds } from '@stores/v2/constants';
@@ -21,7 +21,7 @@
 
   const supportedTokens = {
     alUSD: {
-      name: 'alUSD',
+      name: 'LUSD',
       address: {
         ethereum: '0xbc6da0fe9ad5f3b0d58160288917aa56653660e9',
         arbitrum: '0xCB8FA9a76b8e203D8C3797bF438d8FB81Ea3326A',
@@ -37,7 +37,7 @@
   // todo: re-enable when pegging issue is resolved by big tiddy goth mommies with fat strap-ons
   const iaiacthulhufthagn = {
     alETH: {
-      name: 'alETH',
+      name: 'LETH',
       address: {
         ethereum: '0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6',
         arbitrum: '0x17573150d67d820542EFb24210371545a4868B03',
@@ -61,7 +61,7 @@
     },
   ];
 
-  let selectedToken = 'alUSD';
+  let selectedToken = 'LUSD';
   let fetchingQuote = false;
   let quoteReceived = false;
   let bridgeAmount;

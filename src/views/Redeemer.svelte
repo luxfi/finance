@@ -15,14 +15,14 @@
     transmutersStore,
     networkStore,
     tokenPriceStore,
-  } from '@stores/v2/alcxStore';
+  } from '@stores/v2/liquidStore';
   import { getTokenDataFromBalances } from '@stores/v2/helpers';
   import { fetchTransmutersForVaultType } from '@stores/v2/asyncMethods';
   import { signer } from '@stores/v2/derived';
   import settings from '@stores/settings';
-  import TransmuterEntry from '@components/composed/TransmuterEntry.svelte';
+  import RedeemerEntry from '@components/composed/RedeemerEntry.svelte';
 
-  const currentTransmuterCategories = makeSelectorStore([VaultTypes.alUSD, VaultTypes.alETH]);
+  const currentRedeemerCategories = makeSelectorStore([VaultTypes.alUSD, VaultTypes.alETH]);
   const goTo = (url) => {
     window.open(url, '_blank');
   };
@@ -35,7 +35,7 @@
   $: currentRowsForSelectedType = Object.keys($transmutersStore)
     .map(
       (vaultId) =>
-        $currentTransmuterCategories.includes(parseInt(vaultId)) &&
+        $currentRedeemerCategories.includes(parseInt(vaultId)) &&
         $transmutersStore[parseInt(vaultId)].transmuters,
     )
     .filter((elm) => elm !== undefined)
@@ -188,13 +188,13 @@
           label="{$_('transmuter_page.all_transmuter')}"
           class="w-full lg:w-max"
           canToggle="{true}"
-          selected="{currentTransmuterCategories.isSelectedAll(
-            $currentTransmuterCategories,
+          selected="{currentRedeemerCategories.isSelectedAll(
+            $currentRedeemerCategories,
             allowedVaultTypes,
           )}"
           solid="{false}"
           borderSize="0"
-          on:clicked="{() => currentTransmuterCategories.select(allowedVaultTypes)}"
+          on:clicked="{() => currentRedeemerCategories.select(allowedVaultTypes)}"
         >
           <p slot="leftSlot">
             <img src="./images/icons/alcx_med.svg" alt="all vaultAlUsd" class="w-5 h-5" />
@@ -206,13 +206,13 @@
               label="{VaultTypesInfos[transmuterType].name}"
               class="w-full lg:w-max"
               canToggle="{true}"
-              selected="{currentTransmuterCategories.isSelected(
-                $currentTransmuterCategories,
+              selected="{currentRedeemerCategories.isSelected(
+                $currentRedeemerCategories,
                 transmuterType,
               )}"
               solid="{false}"
               borderSize="0"
-              on:clicked="{() => currentTransmuterCategories.select([transmuterType])}"
+              on:clicked="{() => currentRedeemerCategories.select([transmuterType])}"
             >
               <p slot="leftSlot">
                 <img
@@ -233,7 +233,7 @@
         {:else if currentRowsForSelectedType.length > 0}
           <div class="flex flex-col space-y-4 py-4">
             {#each currentRowsForSelectedType as transmuter}
-              <TransmuterEntry transmuter="{transmuter}" />
+              <RedeemerEntry transmuter="{transmuter}" />
             {/each}
           </div>
         {:else}

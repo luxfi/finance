@@ -93,7 +93,7 @@ export interface TransmuterPositionType {
 /**
  * V3 Transmuter state
  */
-export interface TransmuterV3Type {
+export interface RedeemerV3Type {
   type: VaultTypes;
   contractAddress: string;
   alchemistAddress: string;
@@ -184,7 +184,7 @@ export interface AdapterV3Type {
  */
 export interface TransmutersV3Type {
   [key: number]: {
-    transmuters: TransmuterV3Type[];
+    transmuters: RedeemerV3Type[];
   };
 }
 
@@ -228,9 +228,9 @@ export interface FarmStoreType {
 }
 
 /**
- * V3 Alchemist initialization params (for reference)
+ * V3 Liquid Vault initialization params (for reference)
  */
-export interface AlchemistV3InitParams {
+export interface LiquidV3InitParams {
   admin: string;
   debtToken: string;
   underlyingToken: string;

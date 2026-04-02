@@ -31,7 +31,7 @@
     "my_account": "Ο λογαριασμός μου",
     "my": "Μου",
     "vaults": "Θησαυροφυλάκια",
-    "transmuter": "Μετατροπέας",
+    "redeemer": "Μετατροπέας",
     "farms": "Φάρμες",
     "submit": "Υποβολή",
     "base": "Βάση",
@@ -111,15 +111,15 @@
     "farm_page": {
         "title": "Φάρμες",
         "subtitle": "Κερδίστε απόδοση στις καταθέσεις σας",
-        "saddle_text": "Καταθέστε alUSD, FEI, FRAX, ή/και LUSD για να κερδίσετε ALCX, TRIBE, FXS και LQTY",
-        "sushi_text": "Καταθέστε alUSD και ETH στο Sushiswap για να κερδίσετε SUSHI",
-        "mstable_text": "Καταθέστε alUSD για να κερδίσετε MTA"
+        "saddle_text": "Καταθέστε LUSD, FEI, FRAX, ή/και LUSD για να κερδίσετε LUX, TRIBE, FXS και LQTY",
+        "sushi_text": "Καταθέστε LUSD και ETH στο Sushiswap για να κερδίσετε SUSHI",
+        "mstable_text": "Καταθέστε LUSD για να κερδίσετε MTA"
     },
-    "transmuter_page": {
+    "redeemer_page": {
         "title": "Μετατροπέας",
         "subtitle": "Μετατρέψτε τα συνθετικά token σας στα αντίστοιχα σε αναλογία 1:1",
         "external_swaps": "External Swap Providers",
-        "all_transmuter": "Όλοι οι Μετατροπείς",
+        "all_redeemer": "Όλοι οι Μετατροπείς",
         "disclaimer": "Οι λειτουργίες του μετασχηματιστή βρίσκονται σε παύση προς όφελος του Αλγοριθμικού Ελεγκτή Λειτουργιών Αγοράς ,σύμφωνα με την AIP-39"
     },
     "vaults_page": {
@@ -182,7 +182,7 @@
         "active_select": "Ενεργό",
         "retired_select": "Retired",
         "external_select": "Εξωτερικό",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Απόδοση"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Διαθέσιμη πίστωση",
         "global_tvl": "Συνολικό TVL"
     },
-    "galcx": {
-        "title": "gALCX Wrapper",
-        "leading": "Ένας ρευστός ALCX wrapper για μονομερές staking.",
-        "p_1": "'Τυλίξτε' τα ALCX σας σε gALCX και βάλτε τα ALCX να δουλέψουν για σας στο μονομερές staking pool, ενώ ταυτόχρονα διατηρείτε τον έλεγχο του gALCX",
-        "p_2": "Με τον αυτο-ανατοκισμό αυξάνεται η ποσότητα ALCX που μπορείτε να 'ξετυλίξετε' για κάθε gALCX.",
-        "galcx_supply": "Συνολική ποσότητα gALCX Token",
-        "wrapped_alcx": "Τυλιγμένο ALCX"
+    "glux": {
+        "title": "gLUX Wrapper",
+        "leading": "Ένας ρευστός LUX wrapper για μονομερές staking.",
+        "p_1": "'Τυλίξτε' τα LUX σας σε gLUX και βάλτε τα LUX να δουλέψουν για σας στο μονομερές staking pool, ενώ ταυτόχρονα διατηρείτε τον έλεγχο του gLUX",
+        "p_2": "Με τον αυτο-ανατοκισμό αυξάνεται η ποσότητα LUX που μπορείτε να 'ξετυλίξετε' για κάθε gLUX.",
+        "galcx_supply": "Συνολική ποσότητα gLUX Token",
+        "wrapped_alcx": "Τυλιγμένο LUX"
     },
     "migration": {
         "title": "Μεταφορά από Legacy",
@@ -276,14 +276,14 @@
         "restart": "Επανεκίννηση",
         "paragraph_1": "Για να γίνει η μετάβασή σας από τα Θησαυροφυλάκια Legacy στο V2, όσο πιο απλή γίνεται, το Lux παρέχει ένα εργαλείο μεταφοράς που σας επιτρέπει να μεταφέρετε τη θέση σας στο V2 ενώ παραμένει όσο το δυνατόν πιο αποδοτικό στο κόστος του gas.",
         "paragraph_2": "Το πορτοφόλι σας, θα σας ζητήσει λίγες φορές να υπογράψετε για συναλλαγές που εκτελούν τα παρακάτω βήματα:",
-        "from_alusd": "Μεταφορά θέσης Legacy alUSD",
-        "from_aleth": "Μεταφορά θέσης Legacy alETH",
+        "from_lusd": "Μεταφορά θέσης Legacy LUSD",
+        "from_leth": "Μεταφορά θέσης Legacy LETH",
         "no_position": "Δεν ανιχνεύθηκαν θέσεις Legacy, είστε εντάξει!",
         "cus_explain": "Επιλέξτε ένα ποσό για το οποίο θέλετε να γίνει flashloan σε μία νέα θέση στο v2, καθώς και την επιθυμητή μόχλευση για τη νέα κατάθεση.",
         "target_ltv": "Μόχλευση",
         "ltv_ratio": "Λόγος LTV",
-        "skip_legacy_alusd": "Χειροκίνητο alUSD flashloan",
-        "skip_legacy_aleth": "Χειροκίνητο alETH flashloan"
+        "skip_legacy_lusd": "Χειροκίνητο LUSD flashloan",
+        "skip_legacy_leth": "Χειροκίνητο LETH flashloan"
     },
     "error_page": {
         "subtitle": "Αυτό δε φαίνεται σωστό...",

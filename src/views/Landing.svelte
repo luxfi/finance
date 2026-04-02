@@ -407,7 +407,7 @@
             <div class="text-sm opacity-70 mb-3">{token.description}</div>
             <div class="flex items-center justify-between text-sm">
               <span class="opacity-50">Max LTV</span>
-              <span class="text-foreground" class="font-semibold">{token.ltv}%</span>
+              <span class="text-foreground font-semibold">{token.ltv}%</span>
             </div>
             <div class="flex flex-wrap gap-1 mt-3">
               {#each token.strategies as strat}
@@ -431,7 +431,7 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center space-y-4">
           <div class="w-16 h-16 mx-auto rounded-full bg-secondary border border-border flex items-center justify-center">
-            <span class="text-2xl font-bold" class="text-foreground">1</span>
+            <span class="text-2xl font-bold text-foreground">1</span>
           </div>
           <h3 class="text-xl font-semibold">Deposit Collateral</h3>
           <p class="opacity-60">
@@ -442,7 +442,7 @@
 
         <div class="text-center space-y-4">
           <div class="w-16 h-16 mx-auto rounded-full bg-secondary border border-border flex items-center justify-center">
-            <span class="text-2xl font-bold" class="text-foreground">2</span>
+            <span class="text-2xl font-bold text-foreground">2</span>
           </div>
           <h3 class="text-xl font-semibold">Borrow x-Tokens</h3>
           <p class="opacity-60">
@@ -453,7 +453,7 @@
 
         <div class="text-center space-y-4">
           <div class="w-16 h-16 mx-auto rounded-full bg-secondary border border-border flex items-center justify-center">
-            <span class="text-2xl font-bold" class="text-foreground">3</span>
+            <span class="text-2xl font-bold text-foreground">3</span>
           </div>
           <h3 class="text-xl font-semibold">Auto-Repay</h3>
           <p class="opacity-60">

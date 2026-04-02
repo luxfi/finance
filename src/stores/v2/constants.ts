@@ -1,7 +1,7 @@
 import { VaultTypes } from '@stores/v2/types';
 
 export const VaultConstants = {
-  [VaultTypes.alUSD]: {
+  [VaultTypes.LUSD]: {
     alchemistContractSelector: 'AlchemistV2_alUSD',
     gatewayContractSelector: {
       ATokenGateway_alUSD: [
@@ -66,11 +66,11 @@ export const VaultConstants = {
         },
       ],
     },
-    alToken: 'AlToken',
+    lToken: 'AlToken',
     legacy: 'Alchemist',
     transferAdapter: 'TransferAdapter_alUSD',
   },
-  [VaultTypes.alETH]: {
+  [VaultTypes.LETH]: {
     alchemistContractSelector: 'AlchemistV2_alETH',
     gatewayContractSelector: {
       WETHGateway: ['eth'],
@@ -91,14 +91,14 @@ export const VaultConstants = {
         },
       ],
     },
-    alToken: 'AlEth',
+    lToken: 'AlEth',
     legacy: 'AlchemistEth',
     transferAdapter: 'TransferAdapter_alETH',
   },
 };
 
 export const TransmuterConstants = {
-  [VaultTypes.alUSD]: {
+  [VaultTypes.LUSD]: {
     transmuterContractSelectors: [
       'TransmuterV2_DAI',
       'TransmuterV2_USDC',
@@ -106,16 +106,16 @@ export const TransmuterConstants = {
       'TransmuterV2_FRAX',
     ],
   },
-  [VaultTypes.alETH]: {
+  [VaultTypes.LETH]: {
     transmuterContractSelectors: ['TransmuterV2_ETH'],
   },
 };
 
 export const AdapterConstants = {
-  [VaultTypes.alUSD]: {
+  [VaultTypes.LUSD]: {
     adapterContractSelectors: ['YearnAdapter_DAI', 'YearnAdapter_USDC', 'YearnAdapter_USDT'],
   },
-  [VaultTypes.alETH]: {
+  [VaultTypes.LETH]: {
     adapterContractSelectors: ['YearnAdapter_WETH'],
   },
 };
@@ -129,9 +129,9 @@ export const TransmuterNameAliases = {
   frax: 'Flamel',
 };
 
-export const AllowedVaultTypes = [VaultTypes.alUSD, VaultTypes.alETH];
-export const AllowedTransmuterTypes = [VaultTypes.alUSD, VaultTypes.alETH];
-export const AllowedAdapterTypes = [VaultTypes.alUSD, VaultTypes.alETH];
+export const AllowedVaultTypes = [VaultTypes.LUSD, VaultTypes.LETH];
+export const AllowedTransmuterTypes = [VaultTypes.LUSD, VaultTypes.LETH];
+export const AllowedAdapterTypes = [VaultTypes.LUSD, VaultTypes.LETH];
 
 export const HiddenVaults = [
   '0x59417c1b2085e086f1EEB1AF0F40eE1dFD9c097f',
@@ -140,8 +140,8 @@ export const HiddenVaults = [
   '0x400509D00888c46903CF01495BB2eeAfD24F0f80',
 ];
 export const VaultTypesInfos = {
-  [VaultTypes.alUSD]: {
-    name: 'alUSD',
+  [VaultTypes.LUSD]: {
+    name: 'LUSD',
     icon: './images/icons/alusd_med.svg',
     useGateway: false,
     metaConfig: {
@@ -462,8 +462,8 @@ export const VaultTypesInfos = {
       },
     },
   },
-  [VaultTypes.alETH]: {
-    name: 'alETH',
+  [VaultTypes.LETH]: {
+    name: 'LETH',
     icon: './images/icons/aleth_med.svg',
     useGateway: true,
     metaConfig: {
@@ -658,6 +658,23 @@ export const vaultMessages = [
 // @ts-ignore
 export const chainIds = [
   {
+    id: '0x17871',
+    legacyId: 96369,
+    name: 'Lux Mainnet',
+    icon: 'lux',
+    abiPath: 'lux',
+    rpcUrl: 'https://api.lux.network/mainnet/ext/bc/C/rpc',
+    apiUrl: 'https://api.lux.network/mainnet/ext/bc/C/rpc',
+    explorer: 'https://explore.lux.network/',
+    token: {
+      symbol: 'LUX',
+      name: 'Lux',
+      decimals: 18,
+    },
+    vaultTypes: [VaultTypes.LUSD, VaultTypes.LETH],
+    connextId: 0,
+  },
+  {
     id: '0x1',
     legacyId: 1,
     name: 'Ethereum Mainnet',
@@ -672,7 +689,7 @@ export const chainIds = [
       name: 'Ethereum',
       decimals: 18,
     },
-    vaultTypes: [VaultTypes.alUSD, VaultTypes.alETH],
+    vaultTypes: [VaultTypes.LUSD, VaultTypes.LETH],
     connextId: 6648936,
   },
   {
@@ -689,7 +706,7 @@ export const chainIds = [
       name: 'Fantom',
       decimals: 18,
     },
-    vaultTypes: [VaultTypes.alUSD],
+    vaultTypes: [VaultTypes.LUSD],
     connextId: 0,
   },
   {
@@ -725,7 +742,7 @@ export const chainIds = [
       name: 'Optimism ETH',
       decimals: 18,
     },
-    vaultTypes: [VaultTypes.alUSD, VaultTypes.alETH],
+    vaultTypes: [VaultTypes.LUSD, VaultTypes.LETH],
     connextId: 1869640809,
   },
 ];

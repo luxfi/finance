@@ -7,7 +7,7 @@
   import Button from '@components/elements/Button.svelte';
 
   import { getData, getAllowance, stake, unstake } from '@stores/v2/wrapperActions';
-  import { addressStore, balancesStore } from '@stores/v2/alcxStore';
+  import { addressStore, balancesStore } from '@stores/v2/liquidStore';
   import { signer } from '@stores/v2/derived';
   import { utils, BigNumber } from 'ethers';
   import { getTokenDataFromBalancesBySymbol } from '@stores/v2/helpers';
@@ -22,7 +22,7 @@
   let allowanceAmount = BigNumber.from(0);
   let userInput = '';
   let alcxData;
-  let galcxData;
+  let gluxData;
   let infiniteAllowance = false;
 
   const switchMode = () => {
@@ -39,7 +39,7 @@
     await stake(userInputBN, allowanceAmount, infiniteAllowance, $signer).then(() => {
       Promise.all([
         fetchBalanceByAddress(alcxData.address, [$signer]),
-        fetchBalanceByAddress(galcxData.address, [$signer]),
+        fetchBalanceByAddress(gluxData.address, [$signer]),
         refreshData(),
       ]);
     });
@@ -50,21 +50,21 @@
     await unstake(userInputBN, $signer).then(() => {
       Promise.all([
         fetchBalanceByAddress(alcxData.address, [$signer]),
-        fetchBalanceByAddress(galcxData.address, [$signer]),
+        fetchBalanceByAddress(gluxData.address, [$signer]),
         refreshData(),
       ]);
     });
   };
 
   const setMax = () => {
-    userInput = unwrap ? utils.formatEther(galcxData.balance) : utils.formatEther(alcxData.balance);
+    userInput = unwrap ? utils.formatEther(gluxData.balance) : utils.formatEther(alcxData.balance);
   };
 
   const refreshData = async () => {
     userInput = '';
     unwrap = false;
     alcxData = undefined;
-    galcxData = undefined;
+    gluxData = undefined;
     await initData();
   };
 
@@ -73,8 +73,8 @@
     totalSupply = data.supply;
     exchangeRate = data.exchangeRate;
     allowanceAmount = (await getAllowance([$addressStore, $signer])).allowance;
-    alcxData = getTokenDataFromBalancesBySymbol('ALCX', [$balancesStore]);
-    galcxData = getTokenDataFromBalancesBySymbol(data.symbol, [$balancesStore]);
+    alcxData = getTokenDataFromBalancesBySymbol('LUX', [$balancesStore]);
+    gluxData = getTokenDataFromBalancesBySymbol(data.symbol, [$balancesStore]);
   };
 
   $: wrappedSupply = totalSupply.mul(exchangeRate).div(BigNumber.from(10).pow(18));
@@ -100,7 +100,7 @@
 <ContainerWithHeader canToggle="{true}" isVisible="{true}">
   <div slot="header" class="text-sm flex flex-row justify-between">
     <div class="flex flex-row items-center space-x-4">
-      <p>{$_('galcx.title')}</p>
+      <p>{$_('glux.title')}</p>
     </div>
   </div>
   <div slot="body" class="py-4 px-6 flex flex-col space-y-8">
@@ -119,7 +119,7 @@
             <label for="depositInput" class="text-sm text-lightgrey10">
               {$_('available')}
               {unwrap
-                ? `${utils.formatEther(galcxData?.balance || 0)} ${galcxData?.symbol || ''}`
+                ? `${utils.formatEther(gluxData?.balance || 0)} ${gluxData?.symbol || ''}`
                 : `${utils.formatEther(alcxData?.balance || 0)} ${alcxData?.symbol || ''}`}
             </label>
 
@@ -139,7 +139,7 @@
               <InputNumber
                 id="depositInput"
                 bind:value="{userInput}"
-                placeholder="~0.00 {unwrap ? 'gALCX' : 'ALCX'}"
+                placeholder="~0.00 {unwrap ? 'gLUX' : 'LUX'}"
                 class=" rounded appearance-none text-xl w-full text-right h-full p-4 {$settings.invertColors
                   ? 'bg-grey3inverse'
                   : 'bg-grey3'}"
@@ -177,7 +177,7 @@
               <p class="self-center w-full text-sm text-lightgrey10 text-right">
                 {unwrap
                   ? `${projectedAlcx() || 0} ${alcxData?.symbol}`
-                  : `${projectedGalcx() || 0} ${galcxData?.symbol}`}
+                  : `${projectedGalcx() || 0} ${gluxData?.symbol}`}
               </p>
             </div>
           </div>
@@ -221,11 +221,11 @@
               ? 'border-grey10inverse bg-grey10inverse'
               : 'border-grey10 bg-grey10'} w-full p-4"
           >
-            <p class="mb-4">{$_('galcx.leading')}</p>
+            <p class="mb-4">{$_('glux.leading')}</p>
             <p class="text-sm mb-2">
-              {$_('galcx.p_1')}
+              {$_('glux.p_1')}
             </p>
-            <p class="text-sm">{$_('galcx.p_2')}</p>
+            <p class="text-sm">{$_('glux.p_2')}</p>
           </div>
 
           <div
@@ -235,7 +235,7 @@
           >
             <div class="flex-col">
               <div class="text-bronze3 mr-2 uppercase text-sm whitespace-nowrap">
-                {$_('galcx.galcx_supply')}
+                {$_('glux.glux_supply')}
               </div>
               <div class="flex">
                 <div class="flex mr-2">{utils.formatEther(totalSupply)}</div>
@@ -243,7 +243,7 @@
             </div>
             <div class="flex-col">
               <div class="text-bronze3 mr-2 uppercase text-sm whitespace-nowrap">
-                {$_('galcx.wrapped_alcx')}
+                {$_('glux.wrapped_alcx')}
               </div>
               <div class="flex">
                 <div class="flex mr-2">{utils.formatEther(wrappedSupply)}</div>

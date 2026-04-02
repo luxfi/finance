@@ -11,7 +11,7 @@
     fetchBalanceByAddress,
     fetchUpdateVaultByAddress,
   } from '@stores/v2/asyncMethods';
-  import { vaultsStore, balancesStore, networkStore, addressStore } from '@stores/v2/alcxStore';
+  import { vaultsStore, balancesStore, networkStore, addressStore } from '@stores/v2/liquidStore';
   import { signer } from '@stores/v2/derived';
   import { VaultTypesInfos } from '@stores/v2/constants';
   import { getTokenDataFromBalances } from '@stores/v2/helpers';

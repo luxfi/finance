@@ -10,7 +10,7 @@
   // Navigation links
   const navLinks = [
     { label: 'Vaults', href: '/vaults' },
-    { label: 'Transmuter', href: '/transmuter' },
+    { label: 'Redeemer', href: '/transmuter' },
     { label: 'Farms', href: '/farms' },
     { label: 'Governance', href: '/governance' },
   ];

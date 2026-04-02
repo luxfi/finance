@@ -1,5 +1,5 @@
 import { getProvider } from './walletManager';
-import { networkStore } from '@stores/v2/alcxStore';
+import { networkStore } from '@stores/v2/liquidStore';
 import { get } from 'svelte/store';
 
 export async function reverseLookup(address: string) {

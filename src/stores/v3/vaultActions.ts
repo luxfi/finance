@@ -10,7 +10,7 @@ import {
   setLoadingState,
   addPosition,
   addTransmuterPosition,
-} from '@stores/v3/alcxStore';
+} from '@stores/v3/liquidStore';
 import type {
   VaultTypes,
   PositionNFTType,
@@ -113,7 +113,7 @@ export const getPositionNFTContract = (signer: Signer, contractAddress: string) 
 /**
  * Get Transmuter V3 contract instance
  */
-export const getTransmuterV3Contract = (signer: Signer, contractAddress: string) => {
+export const getRedeemerV3Contract = (signer: Signer, contractAddress: string) => {
   const abi = [
     // View functions
     'function version() view returns (string)',
@@ -388,7 +388,7 @@ export const createRedemptionV3 = async (
   signer: Signer,
   transmuterAddress: string,
 ): Promise<{ tx: ethers.ContractTransaction; nftId: ethers.BigNumber }> => {
-  const transmuter = getTransmuterV3Contract(signer, transmuterAddress);
+  const transmuter = getRedeemerV3Contract(signer, transmuterAddress);
 
   const tx = await transmuter.createRedemption(depositAmount);
   const receipt = await tx.wait();
@@ -407,7 +407,7 @@ export const claimRedemptionV3 = async (
   signer: Signer,
   transmuterAddress: string,
 ): Promise<{ tx: ethers.ContractTransaction; amountClaimed: ethers.BigNumber }> => {
-  const transmuter = getTransmuterV3Contract(signer, transmuterAddress);
+  const transmuter = getRedeemerV3Contract(signer, transmuterAddress);
 
   const tx = await transmuter.claimRedemption(positionId);
   const receipt = await tx.wait();
@@ -506,7 +506,7 @@ export const fetchTransmuterPositionV3 = async (
   signer: Signer,
   transmuterAddress: string,
 ): Promise<TransmuterPositionType> => {
-  const transmuter = getTransmuterV3Contract(signer, transmuterAddress);
+  const transmuter = getRedeemerV3Contract(signer, transmuterAddress);
   const position = await transmuter.getPosition(positionId);
   const currentBlock = await signer.provider?.getBlockNumber();
 

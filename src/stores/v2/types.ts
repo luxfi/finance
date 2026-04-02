@@ -1,8 +1,8 @@
 import type { ethers } from 'ethers';
 
 export enum VaultTypes {
-  alUSD = 0,
-  alETH = 1,
+  LUSD = 0,
+  LETH = 1,
 }
 
 export enum FarmTypes {

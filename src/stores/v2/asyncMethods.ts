@@ -30,7 +30,7 @@ import { contractWrapper } from '@helpers/contractWrapper';
 import { TransmuterConstants, VaultConstants, chainIds, HiddenVaults } from '@stores/v2/constants';
 import { FarmTypes, VaultTypes } from '@stores/v2/types';
 import type { ethers } from 'ethers';
-import type { TokensType } from './alcxStore';
+import type { TokensType } from './liquidStore';
 
 export async function fetchVaultTokens(vaultId: VaultTypes, [signer]: [ethers.Signer], _network: string) {
   if (!signer) {

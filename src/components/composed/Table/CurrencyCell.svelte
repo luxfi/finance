@@ -1,7 +1,7 @@
 <script>
   import global from '../../../stores/global';
   import settings from '../../../stores/settings';
-  import { tokenPriceStore } from '@stores/v2/alcxStore';
+  import { tokenPriceStore } from '@stores/v2/liquidStore';
   import { utils } from 'ethers';
   import numeral from 'numeral';
 

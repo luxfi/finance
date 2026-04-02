@@ -11,7 +11,7 @@ export * from './types';
 export * from './constants';
 
 // Stores
-export * from './alcxStore';
+export * from './liquidStore';
 
 // Actions
 export * from './vaultActions';

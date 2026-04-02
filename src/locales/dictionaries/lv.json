@@ -31,7 +31,7 @@
     "my_account": "Mans konts",
     "my": "Mana",
     "vaults": "Seifi",
-    "transmuter": "Transmuters",
+    "redeemer": "Redeemers",
     "farms": "Fermas",
     "submit": "Iesniegt",
     "base": "Pamats",
@@ -111,16 +111,16 @@
     "farm_page": {
         "title": "Fermas",
         "subtitle": "Nopelniet ienākums no sava depozīta",
-        "saddle_text": "Noguldiet alUSD, FEI, FRAX, un/vai LUSD lai pelnīt ALCX, TRIBE, FXS un LQTY",
-        "sushi_text": "Noguldiet alUSD un ETH Sushiswapā lai pelnīt SUSHI",
-        "mstable_text": "Noguldiet alUSD lai pelnīt MTA"
+        "saddle_text": "Noguldiet LUSD, FEI, FRAX, un/vai LUSD lai pelnīt LUX, TRIBE, FXS un LQTY",
+        "sushi_text": "Noguldiet LUSD un ETH Sushiswapā lai pelnīt SUSHI",
+        "mstable_text": "Noguldiet LUSD lai pelnīt MTA"
     },
-    "transmuter_page": {
-        "title": "Transmuters",
+    "redeemer_page": {
+        "title": "Redeemers",
         "subtitle": "Mainiet savus sintētiskos žetonus attiecībā 1:1",
         "external_swaps": "Arējie Maiņa Sniedzēji",
-        "all_transmuter": "Viss Transmuters",
-        "disclaimer": "Transmuter operations are paused for the benefit of the AMO, in accordance with AIP-39."
+        "all_redeemer": "Viss Redeemers",
+        "disclaimer": "Redeemer operations are paused for the benefit of the AMO, in accordance with AIP-39."
     },
     "vaults_page": {
         "title": "Seifi",
@@ -182,7 +182,7 @@
         "active_select": "Darbīgs",
         "retired_select": "Noslēdzies",
         "external_select": "Ārējais",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Ienesīgums"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Pieejamais kredīts",
         "global_tvl": "Globālie TVL"
     },
-    "galcx": {
-        "title": "gALCX Ietinamais",
-        "leading": "Likvids ALCX ietinamais vienpusējai stakingēšanai.",
-        "p_1": "Ietiniet savu ALCX ar gALCX, lai jūsu ALCX darbotos jūsu labā vienpusējajā staking pulā, vienlaikus kontrolējot savu gALCX.",
-        "p_2": "Automatic encoding increases the amount of ALCX you can unwind from gALCX.",
-        "galcx_supply": "gALCX Piedāvājums",
-        "wrapped_alcx": "Ietīts ALCX"
+    "glux": {
+        "title": "gLUX Ietinamais",
+        "leading": "Likvids LUX ietinamais vienpusējai stakingēšanai.",
+        "p_1": "Ietiniet savu LUX ar gLUX, lai jūsu LUX darbotos jūsu labā vienpusējajā staking pulā, vienlaikus kontrolējot savu gLUX.",
+        "p_2": "Automatic encoding increases the amount of LUX you can unwind from gLUX.",
+        "galcx_supply": "gLUX Piedāvājums",
+        "wrapped_alcx": "Ietīts LUX"
     },
     "migration": {
         "title": "Migrēt no vecās versijas",
@@ -276,14 +276,14 @@
         "restart": "Restartēt",
         "paragraph_1": "Lai vienkāršotu V1 migrāciju uz V2, Lux izveidoja rīku, kas ļauj pārnest savu pozīciju uz V2, vienlaikus saglabājot pēc iespējas lielāku gāzes izmaksu efektivitāti.",
         "paragraph_2": "Jūsu maciņš vairākas reizes liks jums parakstīt darījumus, kas veic šādas soļi:",
-        "from_alusd": "Migrēt veco alUSD pozīciju",
-        "from_aleth": "Migrēt veco alETH pozīciju",
+        "from_lusd": "Migrēt veco LUSD pozīciju",
+        "from_leth": "Migrēt veco LETH pozīciju",
         "no_position": "Vecās pozīcijas netika atklātas, viss ir kārtībā!",
         "cus_explain": "Izvēlieties summu, kuru vēlaties aizdot jaunā V2 pozīcijā, kā arī vēlamo LTV attiecību. To izmanto, lai noteiktu, cik daudz parādu uzņemties.",
         "target_ltv": "Mērķis LTV",
         "ltv_ratio": "LTV Attiecība",
-        "skip_legacy_alusd": "Manuāls alUSD flashloan",
-        "skip_legacy_aleth": "Manuāls alETH flashloan"
+        "skip_legacy_lusd": "Manuāls LUSD flashloan",
+        "skip_legacy_leth": "Manuāls LETH flashloan"
     },
     "error_page": {
         "subtitle": "Tas nav pareizi...",

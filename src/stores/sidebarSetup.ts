@@ -32,7 +32,7 @@ export function sidebarSetup() {
     {
       label: 'governance',
       path: 'governance',
-      icon: 'alcx_med.svg',
+      icon: 'lux_med.svg',
       supportedChains: ['0x1', '0xfa', '0xa4b1', '0xa'],
     },
     {

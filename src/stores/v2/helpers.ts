@@ -5,7 +5,7 @@ import {
   erc20Contract,
   externalContractWrapper,
 } from '@helpers/contractWrapper';
-import type { BalanceType, BodyVaultType, TransmuterType, AdapterType } from '@stores/v2/alcxStore';
+import type { BalanceType, BodyVaultType, TransmuterType, AdapterType } from '@stores/v2/liquidStore';
 import type { CurveFarmType, InternalFarmType, SushiFarmType, VaultTypes } from './types';
 import { getVaultApy } from '@middleware/yearn';
 import { getVaultApr as getRocketApr } from '@middleware/rocketPool';
@@ -113,7 +113,7 @@ export async function fetchDataForVault(
       apy = 0;
     }
   }
-  // reduce values by 10% cut taken by Lux
+  // reduce values by 10% cut taken by Liquid protocol
   apy *= 0.9;
 
   return {
@@ -270,14 +270,14 @@ export async function fetchDataForInternalFarm(
     rewards: [
       {
         iconName: 'lux',
-        tokenName: 'ALCX',
+        tokenName: 'LUX',
       },
     ],
     tokenSymbol,
     userDeposit,
     isActive: rewardRate.gt(BigNumber.from(0)),
     rewardRate,
-    rewardToken: 'ALCX',
+    rewardToken: 'LUX',
     userUnclaimed: [uUnclaimed],
     tvl,
     poolId,
@@ -310,12 +310,12 @@ export async function fetchDataForSushiFarm(
   const tokenBalance = await lpTokenInstance.balanceOf(accountAddress);
 
   const rewardsSushi = await masterchefInstance.pendingSushi(0, accountAddress);
-  const rewardsAlcx = await onsenInstance.pendingToken(0, accountAddress);
+  const rewardsLux = await onsenInstance.pendingToken(0, accountAddress);
 
   const userDeposit = await masterchefInstance.userInfo(0, accountAddress);
   const totalDeposit = await lpInstance.balanceOf(masterchefAddress);
 
-  const alcxPerBlock = await onsenInstance.tokenPerBlock();
+  const luxPerBlock = await onsenInstance.tokenPerBlock();
   const sushiPerBlock = await masterchefInstance.sushiPerBlock();
 
   const underlying0 = await lpInstance.token0();
@@ -328,7 +328,7 @@ export async function fetchDataForSushiFarm(
     rewards: [
       {
         iconName: 'lux',
-        tokenName: 'ALCX',
+        tokenName: 'LUX',
       },
       {
         iconName: 'sushi',
@@ -341,10 +341,10 @@ export async function fetchDataForSushiFarm(
     totalDeposit: totalDeposit,
     tokenAddress: masterchefAddress,
     slpTotalSupply: lpTotalSupply,
-    isActive: alcxPerBlock.add(sushiPerBlock).gt(BigNumber.from(0)),
-    rewardRates: [alcxPerBlock, sushiPerBlock],
+    isActive: luxPerBlock.add(sushiPerBlock).gt(BigNumber.from(0)),
+    rewardRates: [luxPerBlock, sushiPerBlock],
     userDeposit: userDeposit.amount,
-    userUnclaimed: [rewardsAlcx, rewardsSushi],
+    userUnclaimed: [rewardsLux, rewardsSushi],
     poolTokenAddress: lpAddress,
     tvl: [reserve._reserve0, reserve._reserve1],
   };
@@ -382,7 +382,7 @@ export async function fetchDataForCrvFarm(
   const tokenBalance = await lpTokenInstance.balanceOf(accountAddress);
 
   const rewardsCrv = await depositGaugeInstance.claimable_reward(accountAddress, crvToken);
-  const rewardsAlcx = await depositGaugeInstance.claimable_reward(accountAddress, rewardToken);
+  const rewardsLux = await depositGaugeInstance.claimable_reward(accountAddress, rewardToken);
 
   return {
     uuid: uuidv4(),
@@ -393,11 +393,11 @@ export async function fetchDataForCrvFarm(
     isActive: false,
     lpTokenAddress: lpToken,
     tvl: totalSupply.mul(virtualPrice).div(BigNumber.from(10).pow(18)),
-    userUnclaimed: [rewardsAlcx, rewardsCrv],
+    userUnclaimed: [rewardsLux, rewardsCrv],
     rewards: [
       {
         iconName: 'lux',
-        tokenName: 'ALCX',
+        tokenName: 'LUX',
       },
       {
         iconName: 'crv',

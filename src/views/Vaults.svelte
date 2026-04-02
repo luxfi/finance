@@ -17,7 +17,7 @@
   import AccountOperations from '@components/composed/AccountOperations.svelte';
 
   import settings from '@stores/settings';
-  import { balancesStore, vaultsStore, networkStore, tokenPriceStore } from '@stores/v2/alcxStore';
+  import { balancesStore, vaultsStore, networkStore, tokenPriceStore } from '@stores/v2/liquidStore';
   import { VaultTypes } from '@stores/v2/types';
   import { VaultTypesInfos, chainIds } from '@stores/v2/constants';
   import { makeSelectorStore } from '@stores/v2/selectorStore';

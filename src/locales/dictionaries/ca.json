@@ -31,7 +31,7 @@
     "my_account": "Els Meus Comptes",
     "my": "El meu",
     "vaults": "Caixes Fortes",
-    "transmuter": "Transmutador",
+    "redeemer": "Transmutador",
     "farms": "Granges",
     "submit": "Presentar",
     "base": "Base",
@@ -111,15 +111,15 @@
     "farm_page": {
         "title": "Granges",
         "subtitle": "Aconsegueix rendiments amb els teus dipòsits",
-        "saddle_text": "Diposita alUSD, FEI, FRAX i/o LUSD per guanyar ALCX, TRIBE, FXS i LQTY",
-        "sushi_text": "Diposita alUSD i ETH a Sushiswap per guanyar SUSHI",
-        "mstable_text": "Diposita alUSD per guanyar MTA"
+        "saddle_text": "Diposita LUSD, FEI, FRAX i/o LUSD per guanyar LUX, TRIBE, FXS i LQTY",
+        "sushi_text": "Diposita LUSD i ETH a Sushiswap per guanyar SUSHI",
+        "mstable_text": "Diposita LUSD per guanyar MTA"
     },
-    "transmuter_page": {
+    "redeemer_page": {
         "title": "Transmutador",
         "subtitle": "Converteix els teus tokens sintètics en els seus homòlegs 1:1",
         "external_swaps": "Proveïdors d'Intercanvi Externs",
-        "all_transmuter": "Tots els Transmutadors",
+        "all_redeemer": "Tots els Transmutadors",
         "disclaimer": "Les operacions del transmutador es troben en pausa a benefici de l'AMO, segons el vot AIP-39."
     },
     "vaults_page": {
@@ -182,7 +182,7 @@
         "active_select": "Actiu",
         "retired_select": "Retirada",
         "external_select": "Extern",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Rendiment"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Crèdit Disponible",
         "global_tvl": "TVL Global"
     },
-    "galcx": {
-        "title": "Embolcall gALCX",
-        "leading": "Un embolcall líquid ALCX per fer staking d'un únic actiu.",
-        "p_1": "Emboliqui el seu ALCX en gALCX i fes que el seu ALCX tingui rendibilitat a la piscina d'un únic actiu mentre manté el control del seu gALCX.",
-        "p_2": "La reinversió automàtica augmenta la quantitat d'ALCX que te un gALCX quant es desembolica.",
-        "galcx_supply": "Tokens totals de gALCX",
-        "wrapped_alcx": "ALCX embolicat"
+    "glux": {
+        "title": "Embolcall gLUX",
+        "leading": "Un embolcall líquid LUX per fer staking d'un únic actiu.",
+        "p_1": "Emboliqui el seu LUX en gLUX i fes que el seu LUX tingui rendibilitat a la piscina d'un únic actiu mentre manté el control del seu gLUX.",
+        "p_2": "La reinversió automàtica augmenta la quantitat d'LUX que te un gLUX quant es desembolica.",
+        "galcx_supply": "Tokens totals de gLUX",
+        "wrapped_alcx": "LUX embolicat"
     },
     "migration": {
         "title": "Migració Vestigial",
@@ -276,14 +276,14 @@
         "restart": "Reiniciar",
         "paragraph_1": "Per simplificar al màxim possible la migració de les vostres caixes fortes antigues a la V2, Lux ofereix una eina de migració que us permet transferir la vostra posició a la V2 d'una forma eficient en gas",
         "paragraph_2": "El vostre moneder us demanarà unes quantes vegades que signeu transaccions que tenen en consideració els passos següents:",
-        "from_alusd": "Migrar la posició antiga d'alUSD",
-        "from_aleth": "Migrar la posició antiga d'alETH",
+        "from_lusd": "Migrar la posició antiga d'LUSD",
+        "from_leth": "Migrar la posició antiga d'LETH",
         "no_position": "No s'han detectat posicions antigues, tot està bé!",
         "cus_explain": "Trieu una quantitat que voleu per un préstec instantani (flashloan) per pasar-ho a una nova posició V2, així com l'import LTV desitjat que s'utilitzarà per determinar quant deute cal assumir per cada token creat.",
         "target_ltv": "Objectiu LTV",
         "ltv_ratio": "Ràtio LTV",
-        "skip_legacy_alusd": "Préstec ràpid manual alUSD",
-        "skip_legacy_aleth": "Préstec ràpid manual alUSD"
+        "skip_legacy_lusd": "Préstec ràpid manual LUSD",
+        "skip_legacy_leth": "Préstec ràpid manual LUSD"
     },
     "error_page": {
         "subtitle": "Això no sembla correcte...",

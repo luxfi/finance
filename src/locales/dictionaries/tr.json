@@ -31,7 +31,7 @@
     "my_account": "Benim hesaplarım",
     "my": "Benim",
     "vaults": "Kasalar",
-    "transmuter": "Transmuter",
+    "redeemer": "Redeemer",
     "farms": "Farmlar",
     "submit": "Gönder",
     "base": "Baz",
@@ -111,16 +111,16 @@
     "farm_page": {
         "title": "Farmlar",
         "subtitle": "Yatırdığınız para üzerinden kazanc edinin",
-        "saddle_text": "AlUSD, FEI, FRAX ve/veya LUSD yatırıN, ALCX, TRIBE, FXS ve LQTY kazanın",
+        "saddle_text": "AlUSD, FEI, FRAX ve/veya LUSD yatırıN, LUX, TRIBE, FXS ve LQTY kazanın",
         "sushi_text": "AlUSD ve alET'ini Sushiswap'a yatır, SUSHI kazan",
         "mstable_text": "AlUSD yatır, MTA kazan"
     },
-    "transmuter_page": {
-        "title": "Transmuter",
+    "redeemer_page": {
+        "title": "Redeemer",
         "subtitle": "Sentetik tokenlarını 1:1 oranda karşılığı olan tokena donustur",
         "external_swaps": "3. Parti Swap servis sağlayıcılar",
-        "all_transmuter": "Transmuter - Ana",
-        "disclaimer": "Transmuter operations are paused for the benefit of the AMO, in accordance with AIP-39."
+        "all_redeemer": "Redeemer - Ana",
+        "disclaimer": "Redeemer operations are paused for the benefit of the AMO, in accordance with AIP-39."
     },
     "vaults_page": {
         "title": "Kasalar",
@@ -182,7 +182,7 @@
         "active_select": "Aktif",
         "retired_select": "Emekli edilmiş",
         "external_select": "Dış",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Kazanç"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Mevcut Kredi",
         "global_tvl": "Toplam TVL"
     },
-    "galcx": {
-        "title": "gALCX Wrapper",
-        "leading": "Tek taraflı stake etmek için likit bir ALCX wrapperi.",
-        "p_1": "ALCX'ini gALCX e wrap et ve ALCX'in staking havuzunda senin için çalışmaya başlasın.",
-        "p_2": "GALCX'ini unwrap et ve bileşik faiz ile kazandığın ALCX'lerini cüzdanına indir.",
-        "galcx_supply": "gALCX Token Supply",
-        "wrapped_alcx": "Wrapped ALCX"
+    "glux": {
+        "title": "gLUX Wrapper",
+        "leading": "Tek taraflı stake etmek için likit bir LUX wrapperi.",
+        "p_1": "LUX'ini gLUX e wrap et ve LUX'in staking havuzunda senin için çalışmaya başlasın.",
+        "p_2": "GLUX'ini unwrap et ve bileşik faiz ile kazandığın LUX'lerini cüzdanına indir.",
+        "galcx_supply": "gLUX Token Supply",
+        "wrapped_alcx": "Wrapped LUX"
     },
     "migration": {
         "title": "Eski sürümden taşın",
@@ -276,14 +276,14 @@
         "restart": "Tekrar başla",
         "paragraph_1": "Eski versiyondan transferinizi en hızlı ve kolay hale getirmek için bir Taşıma Aracı geliştirdik. Bu araç ile V1 varlıklarınızı düşük gaz fiyatlarıyla V2'ye taşıyabilirsiniz.",
         "paragraph_2": "Cüzdanınız sizi bırkaç kez aşağıdaki adımları tamamlamanız için uyaracak:",
-        "from_alusd": "Eski alUSD pozisyonunu taşı",
-        "from_aleth": "Eski alETH pozisyonunu taşı",
+        "from_lusd": "Eski LUSD pozisyonunu taşı",
+        "from_leth": "Eski LETH pozisyonunu taşı",
         "no_position": "Hiç eski pozisyon bulunamadı. Hadi yine iyisin!",
         "cus_explain": "V2 ya geçiş için dilediğin miktarı ve LTV yi belirle. Bu ayarlar, V2de flashloan ile borç pozisyonunu yaratmak için kullanılacak.",
         "target_ltv": "Hedef LTV",
         "ltv_ratio": "LTV oranı",
-        "skip_legacy_alusd": "Manuel alETH flashloan",
-        "skip_legacy_aleth": "Manuel alETH flashloan"
+        "skip_legacy_lusd": "Manuel LETH flashloan",
+        "skip_legacy_leth": "Manuel LETH flashloan"
     },
     "error_page": {
         "subtitle": "Bu dogru gorunmuyor",

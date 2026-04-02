@@ -8,7 +8,7 @@
   import ComplexInput from '@components/composed/Inputs/ComplexInput.svelte';
 
   import { VaultTypesInfos } from '@stores/v2/constants';
-  import { addressStore, balancesStore, vaultsStore, networkStore } from '@stores/v2/alcxStore';
+  import { addressStore, balancesStore, vaultsStore, networkStore } from '@stores/v2/liquidStore';
   import { getTokenDataFromBalances } from '@stores/v2/helpers';
   import { burn, repay } from '@stores/v2/vaultActions';
   import { signer } from '@stores/v2/derived';

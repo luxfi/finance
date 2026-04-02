@@ -1,7 +1,7 @@
 <script>
   import settings from '@stores/settings';
   import { VaultTypesInfos, chainIds, VaultConstants } from '@stores/v2/constants';
-  import { networkStore } from '@stores/v2/alcxStore';
+  import { networkStore } from '@stores/v2/liquidStore';
   import getAddress from '@helpers/getContract';
 
   export let vault;

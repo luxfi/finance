@@ -31,7 +31,7 @@
     "my_account": "Mis Cuentas",
     "my": "Mi",
     "vaults": "Cajas Fuertes",
-    "transmuter": "Transmutador",
+    "redeemer": "Transmutador",
     "farms": "Granjas",
     "submit": "Enviar",
     "base": "Base",
@@ -111,15 +111,15 @@
     "farm_page": {
         "title": "Granjas",
         "subtitle": "Obtener un rendimiento de sus depósitos",
-        "saddle_text": "Deposite alUSD, FEI, FRAX y/o LUSD para ganar ALCX, TRIBE, FXS y LQTY",
-        "sushi_text": "Deposite alUSD y ETH en Sushiswap para ganar SUSHI",
-        "mstable_text": "Deposite alUSD para ganar MTA"
+        "saddle_text": "Deposite LUSD, FEI, FRAX y/o LUSD para ganar LUX, TRIBE, FXS y LQTY",
+        "sushi_text": "Deposite LUSD y ETH en Sushiswap para ganar SUSHI",
+        "mstable_text": "Deposite LUSD para ganar MTA"
     },
-    "transmuter_page": {
+    "redeemer_page": {
         "title": "Transmutador",
         "subtitle": "Convierta sus tokens sintéticos en su contraparte en una proporción de 1: 1",
         "external_swaps": "Proveedores de Intercambio Externos",
-        "all_transmuter": "Todos los Transmutadores",
+        "all_redeemer": "Todos los Transmutadores",
         "disclaimer": "Las operaciones del transmutador se encuentran en pausa para beneficio del AMO, según el voto AIP-39."
     },
     "vaults_page": {
@@ -182,7 +182,7 @@
         "active_select": "Activas",
         "retired_select": "Retiradas",
         "external_select": "Externas",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Rendimiento"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Crédito Disponible",
         "global_tvl": "TVL Global"
     },
-    "galcx": {
-        "title": "Envoltura gALCX",
-        "leading": "Una envoltura líquida de ALCX para staking de un solo lado.",
-        "p_1": "Envuelva su ALCX en gALCX y haga que su ALCX genere intereses via staking de un solo activo sin perder el control de su gALCX.",
-        "p_2": "Los interéses compuestos automaticamente aumentan la cantidad de ALCX que se puede desenvolver en gALCX.",
-        "galcx_supply": "Suministro de Tokens gALCX",
-        "wrapped_alcx": "ALCX Envuelto"
+    "glux": {
+        "title": "Envoltura gLUX",
+        "leading": "Una envoltura líquida de LUX para staking de un solo lado.",
+        "p_1": "Envuelva su LUX en gLUX y haga que su LUX genere intereses via staking de un solo activo sin perder el control de su gLUX.",
+        "p_2": "Los interéses compuestos automaticamente aumentan la cantidad de LUX que se puede desenvolver en gLUX.",
+        "galcx_supply": "Suministro de Tokens gLUX",
+        "wrapped_alcx": "LUX Envuelto"
     },
     "migration": {
         "title": "Migración Antigua",
@@ -276,14 +276,14 @@
         "restart": "Reiniciar",
         "paragraph_1": "Para que sea lo más simple posible migrar sus depósitos de sus cajas fuertes heredadas a V2, Lux proporciona una herramienta de migración que le permite transferir su posición a V2 mientras se mantiene lo más eficiente posible en terminos de gas.",
         "paragraph_2": "Su monedero le pedirá varias veces que firme transacciones que se encarguen de los siguientes pasos:",
-        "from_alusd": "Migrar posición heredada de alUSD",
-        "from_aleth": "Migrar posición heredada de alETH",
+        "from_lusd": "Migrar posición heredada de LUSD",
+        "from_leth": "Migrar posición heredada de LETH",
         "no_position": "No se detectaron posiciones heredadas, ¡todo está bien!",
         "cus_explain": "Elija una cantidad para hacer un flashloan para obtener una nueva posición V2, así como la cantidad LTV deseada que se utilizará para determinar cuánta deuda asumir con cada moneda de token de deuda.",
         "target_ltv": "LTV Objetivo",
         "ltv_ratio": "Ratio LTV",
-        "skip_legacy_alusd": "Préstamo rápido manual alUSD",
-        "skip_legacy_aleth": "Préstamo rápido manual alETH"
+        "skip_legacy_lusd": "Préstamo rápido manual LUSD",
+        "skip_legacy_leth": "Préstamo rápido manual LETH"
     },
     "error_page": {
         "subtitle": "Esto no parece correcto...",

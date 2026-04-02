@@ -5,7 +5,7 @@
   import cn from 'classnames';
   import { Circle } from 'svelte-loading-spinners';
   import { chainIds } from '@stores/v2/constants';
-  import { networkStore } from '@stores/v2/alcxStore';
+  import { networkStore } from '@stores/v2/liquidStore';
 
   import ToastIconButton from './ToastIconButton.svelte';
 

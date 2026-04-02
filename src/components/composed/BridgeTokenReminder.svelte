@@ -2,8 +2,8 @@
   import settings from '@stores/settings';
 
   const supportedTokens = {
-    gALCX: {
-      name: 'gALCX',
+    gLUX: {
+      name: 'gLUX',
       address: {
         ethereum: '0x93Dede06AE3B5590aF1d4c111BC54C3f717E4b35',
         fantom: {
@@ -13,8 +13,8 @@
       },
       selector: 'CrossChainCanonicalGALCX',
     },
-    alUSD: {
-      name: 'alUSD',
+    LUSD: {
+      name: 'LUSD',
       address: {
         ethereum: '0xbc6da0fe9ad5f3b0d58160288917aa56653660e9',
         fantom: {

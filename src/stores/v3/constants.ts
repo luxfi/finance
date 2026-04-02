@@ -28,7 +28,7 @@ export const VaultConstantsV3 = {
   [VaultTypes.xLUX]: {
     alchemistContractSelector: 'AlchemistV3_xLUX',
     positionNFTSelector: 'AlchemistV3Position_xLUX',
-    transmuterSelector: 'TransmuterV3_LUX',
+    transmuterSelector: 'RedeemerV3_LUX',
     mytVaultSelector: 'AlchemistETHVault_LUX',
     curatorSelector: 'AlchemistCurator_LUX',
     allocatorSelector: 'AlchemistAllocator_LUX',
@@ -40,7 +40,7 @@ export const VaultConstantsV3 = {
   [VaultTypes.xETH]: {
     alchemistContractSelector: 'AlchemistV3_xETH',
     positionNFTSelector: 'AlchemistV3Position_xETH',
-    transmuterSelector: 'TransmuterV3_ETH',
+    transmuterSelector: 'RedeemerV3_ETH',
     mytVaultSelector: 'AlchemistETHVault_ETH',
     curatorSelector: 'AlchemistCurator_ETH',
     allocatorSelector: 'AlchemistAllocator_ETH',
@@ -52,7 +52,7 @@ export const VaultConstantsV3 = {
   [VaultTypes.xUSD]: {
     alchemistContractSelector: 'AlchemistV3_xUSD',
     positionNFTSelector: 'AlchemistV3Position_xUSD',
-    transmuterSelector: 'TransmuterV3_USD',
+    transmuterSelector: 'RedeemerV3_USD',
     mytVaultSelector: 'AlchemistTokenVault_USD',
     curatorSelector: 'AlchemistCurator_USD',
     allocatorSelector: 'AlchemistAllocator_USD',
@@ -64,7 +64,7 @@ export const VaultConstantsV3 = {
   [VaultTypes.xZOO]: {
     alchemistContractSelector: 'AlchemistV3_xZOO',
     positionNFTSelector: 'AlchemistV3Position_xZOO',
-    transmuterSelector: 'TransmuterV3_ZOO',
+    transmuterSelector: 'RedeemerV3_ZOO',
     mytVaultSelector: 'AlchemistETHVault_ZOO',
     curatorSelector: 'AlchemistCurator_ZOO',
     allocatorSelector: 'AlchemistAllocator_ZOO',
@@ -76,7 +76,7 @@ export const VaultConstantsV3 = {
   [VaultTypes.xAI]: {
     alchemistContractSelector: 'AlchemistV3_xAI',
     positionNFTSelector: 'AlchemistV3Position_xAI',
-    transmuterSelector: 'TransmuterV3_AI',
+    transmuterSelector: 'RedeemerV3_AI',
     mytVaultSelector: 'AlchemistETHVault_AI',
     curatorSelector: 'AlchemistCurator_AI',
     allocatorSelector: 'AlchemistAllocator_AI',
@@ -88,7 +88,7 @@ export const VaultConstantsV3 = {
   [VaultTypes.xPARS]: {
     alchemistContractSelector: 'AlchemistV3_xPARS',
     positionNFTSelector: 'AlchemistV3Position_xPARS',
-    transmuterSelector: 'TransmuterV3_PARS',
+    transmuterSelector: 'RedeemerV3_PARS',
     mytVaultSelector: 'AlchemistETHVault_PARS',
     curatorSelector: 'AlchemistCurator_PARS',
     allocatorSelector: 'AlchemistAllocator_PARS',
@@ -104,32 +104,32 @@ export const VaultConstantsV3 = {
  */
 export const TransmuterConstantsV3 = {
   [VaultTypes.xLUX]: {
-    transmuterContractSelectors: ['TransmuterV3_LUX'],
+    transmuterContractSelectors: ['RedeemerV3_LUX'],
     fixedDuration: true,
     defaultDurationDays: 90,
   },
   [VaultTypes.xETH]: {
-    transmuterContractSelectors: ['TransmuterV3_ETH'],
+    transmuterContractSelectors: ['RedeemerV3_ETH'],
     fixedDuration: true,
     defaultDurationDays: 90,
   },
   [VaultTypes.xUSD]: {
-    transmuterContractSelectors: ['TransmuterV3_USD'],
+    transmuterContractSelectors: ['RedeemerV3_USD'],
     fixedDuration: true,
     defaultDurationDays: 90,
   },
   [VaultTypes.xZOO]: {
-    transmuterContractSelectors: ['TransmuterV3_ZOO'],
+    transmuterContractSelectors: ['RedeemerV3_ZOO'],
     fixedDuration: true,
     defaultDurationDays: 90,
   },
   [VaultTypes.xAI]: {
-    transmuterContractSelectors: ['TransmuterV3_AI'],
+    transmuterContractSelectors: ['RedeemerV3_AI'],
     fixedDuration: true,
     defaultDurationDays: 90,
   },
   [VaultTypes.xPARS]: {
-    transmuterContractSelectors: ['TransmuterV3_PARS'],
+    transmuterContractSelectors: ['RedeemerV3_PARS'],
     fixedDuration: true,
     defaultDurationDays: 90,
   },

@@ -35,8 +35,8 @@ const defaults = {
       percentChanged: 2.82,
       percentChangedIsIncrease: true,
     },
-    alcxValue: {
-      label: 'ALCX value',
+    luxValue: {
+      label: 'LUX value',
       value: 1463,
       metric: METRICS.billions,
       currency: CURRENCIES.dollar,

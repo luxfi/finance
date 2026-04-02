@@ -13,7 +13,7 @@
   import { signer } from '@stores/v2/derived';
   import { fetchBalanceByAddress } from '@stores/v2/asyncMethods';
   import settings from '@stores/settings';
-  import { addressStore } from '@stores/v2/alcxStore';
+  import { addressStore } from '@stores/v2/liquidStore';
 
   let mode = 0;
   let processing = false;
@@ -81,7 +81,7 @@
       </p>
       <div class="flex flex-row justify-between space-x-4 mb-4">
         <div class="rounded w-full p-4 {$settings.invertColors ? 'bg-grey15inverse' : 'bg-grey15'}">
-          <p class="text-lg">Alchemist: alUSD</p>
+          <p class="text-lg">Liquid Vault: LUSD</p>
           <p class="text-sm mb-4 {$settings.invertColors ? 'text-lightgrey10inverse' : 'text-lightgrey10'}">
             Your Balance: <span class="{$settings.invertColors ? 'text-white2inverse' : 'text-white2'}"
               >{alUSDAmount} DAI</span
@@ -103,7 +103,7 @@
           </div>
         </div>
         <div class="rounded w-full p-4 {$settings.invertColors ? 'bg-grey15inverse' : 'bg-grey15'}">
-          <p class="text-lg">Alchemist: alETH</p>
+          <p class="text-lg">Liquid Vault: LETH</p>
           <p class="text-sm mb-4 {$settings.invertColors ? 'text-lightgrey10inverse' : 'text-lightgrey10'}">
             Your Balance: <span class="{$settings.invertColors ? 'text-white2inverse' : 'text-white2'}"
               >{alETHAmount} ETH</span

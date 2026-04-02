@@ -8,11 +8,11 @@
   import ContainerWithHeader from '@components/elements/ContainerWithHeader.svelte';
   import Button from '@components/elements/Button.svelte';
   import ExternalFarms from '@components/composed/Table/farms/ExternalFarms.svelte';
-  import GAlcxWrapper from '@components/composed/GAlcxWrapper.svelte';
+  import GLuxWrapper from '@components/composed/GLuxWrapper.svelte';
   import FarmEntry from '@components/composed/FarmEntry.svelte';
   import LiquidityMigration from '@components/composed/LiquidityMigration.svelte';
 
-  import { addressStore, farmsStore, networkStore, tokenPriceStore } from '@stores/v2/alcxStore';
+  import { addressStore, farmsStore, networkStore, tokenPriceStore } from '@stores/v2/liquidStore';
   import { signer } from '@stores/v2/derived';
   import { fetchCrvFarm, fetchInternalFarms, fetchSushiFarm } from '@stores/v2/asyncMethods';
   import { ExternalFarmsMetadata, InternalFarmsMetadata } from '@stores/v2/farmsConstants';
@@ -179,7 +179,7 @@
   </div>
 
   <div class="w-full mb-8">
-    <GAlcxWrapper />
+    <GLuxWrapper />
   </div>
 
   <div class="w-full mb-8">

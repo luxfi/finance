@@ -31,7 +31,7 @@
     "my_account": "Saját fiók",
     "my": "Saját",
     "vaults": "Széfek",
-    "transmuter": "Átalakító",
+    "redeemer": "Átalakító",
     "farms": "Farmok",
     "submit": "Küldés",
     "base": "Alap",
@@ -111,16 +111,16 @@
     "farm_page": {
         "title": "Farmok",
         "subtitle": "Generálj hozamot a befektetéseiddel",
-        "saddle_text": "Fizess be alUSD, FEI, FRAX és/vagy LUSD-t és keress ALCX, TRIBE, FXS és LQTY-t",
-        "sushi_text": "Fizess be alUSD-t és ETH-et Sushiswapon és keress SUSHI-t",
-        "mstable_text": "Fizess be alUSD-t és keress MTA-t"
+        "saddle_text": "Fizess be LUSD, FEI, FRAX és/vagy LUSD-t és keress LUX, TRIBE, FXS és LQTY-t",
+        "sushi_text": "Fizess be LUSD-t és ETH-et Sushiswapon és keress SUSHI-t",
+        "mstable_text": "Fizess be LUSD-t és keress MTA-t"
     },
-    "transmuter_page": {
+    "redeemer_page": {
         "title": "Átalakító",
         "subtitle": "Alakítsd át a szintetikus tokenjeidet az eredeti megfelelőjükre 1:1 arányban",
         "external_swaps": "Külső váltók",
-        "all_transmuter": "Átalakító",
-        "disclaimer": "Transmuter operations are paused for the benefit of the AMO, in accordance with AIP-39."
+        "all_redeemer": "Átalakító",
+        "disclaimer": "Redeemer operations are paused for the benefit of the AMO, in accordance with AIP-39."
     },
     "vaults_page": {
         "title": "Széfek",
@@ -182,7 +182,7 @@
         "active_select": "Aktív",
         "retired_select": "Megszüntetett",
         "external_select": "Külső",
-        "galcx": "gALCX",
+        "glux": "gLUX",
         "yield": "Hozam"
     },
     "expanded": {
@@ -252,13 +252,13 @@
         "open_credit": "Elérhető Hitelkeret",
         "global_tvl": "Globális TVL"
     },
-    "galcx": {
-        "title": "gALCX Wrapper",
-        "leading": "Likvid ALCX wrapper egyoldalú stakeléshez.",
-        "p_1": "Wrappeld az ALCX-edet gALCX-é és hagyd hogy az ALCX-ed neked dolgozzon az egyoldalú staking poolban miközben te a gALCX-ednek birtokában maradsz.",
-        "p_2": "Az automatikus újrabefektetés növeli azt az ALCX mennyiséget amit unwrapelni tudsz gALCX-enként.",
-        "galcx_supply": "gALCX Token Kínálat",
-        "wrapped_alcx": "Wrapped ALCX"
+    "glux": {
+        "title": "gLUX Wrapper",
+        "leading": "Likvid LUX wrapper egyoldalú stakeléshez.",
+        "p_1": "Wrappeld az LUX-edet gLUX-é és hagyd hogy az LUX-ed neked dolgozzon az egyoldalú staking poolban miközben te a gLUX-ednek birtokában maradsz.",
+        "p_2": "Az automatikus újrabefektetés növeli azt az LUX mennyiséget amit unwrapelni tudsz gLUX-enként.",
+        "galcx_supply": "gLUX Token Kínálat",
+        "wrapped_alcx": "Wrapped LUX"
     },
     "migration": {
         "title": "Migrálás korábbi verzióról",
@@ -276,14 +276,14 @@
         "restart": "Újraindít",
         "paragraph_1": "Ahhoz, hogy a már meglévő széfekben letétbe helyezett egyenlegek migrálása a lehető legegyszerűbben történjen, Lux rendelkezésre bocsájt egy migrációs eszközt ami lehetővé teszi a már meglévő pozíció mozgatását V2-be gas szempontjából leggazdaságosabb módon.",
         "paragraph_2": "A pénztácád meg fog kérni, hogy hagyj jóvá pár tranzakciót amik a következő lépéseket fogják végrehajtani:",
-        "from_alusd": "Meglévő alUSD pozíció migrálása",
-        "from_aleth": "Meglévő alETH pozíció migrálása",
+        "from_lusd": "Meglévő LUSD pozíció migrálása",
+        "from_leth": "Meglévő LETH pozíció migrálása",
         "no_position": "Nincs meglévő régi pozíció észlelve, nincs további dolgod!",
         "cus_explain": "Válaszd ki azt a mennyiséget amit át szeretnél tenni az új V2 pozícióba, illetve a kívánt LTV hányadot ami meg fogja határozni, hogy mennyi hitelt tudsz felvenni az egyes tokenjeidre.",
         "target_ltv": "Hitelfedezeti cél",
         "ltv_ratio": "Hitelfedezeti arány",
-        "skip_legacy_alusd": "Manuális alUSD flashloan",
-        "skip_legacy_aleth": "Manuális alETH flashloan"
+        "skip_legacy_lusd": "Manuális LUSD flashloan",
+        "skip_legacy_leth": "Manuális LETH flashloan"
     },
     "error_page": {
         "subtitle": "Valami nem sikerült...",

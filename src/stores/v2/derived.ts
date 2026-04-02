@@ -2,7 +2,7 @@ import { derived } from 'svelte/store';
 import { BigNumber } from 'ethers';
 
 import { arrayDoubleCheck } from '@helpers/arrayHelpers';
-import { balancesStore, providerStore, tokensStore, vaultsStore, networkStore } from './alcxStore';
+import { balancesStore, providerStore, tokensStore, vaultsStore, networkStore } from './liquidStore';
 import account from '../account';
 import { poolLookup, additionalTokens } from '@stores/stakingPools';
 import { calculateVaultDebt, getTokenDataFromBalances, normalizeAmount } from './helpers';

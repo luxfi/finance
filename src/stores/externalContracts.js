@@ -45,22 +45,22 @@ const externalContracts = {
     {
       abi: [...genericAbi],
       address: '0xdbdb4d16eda451d0503b854cf79d55697f90c8df',
-      symbol: 'ALCX',
+      symbol: 'LUX',
     },
     {
       abi: [...genericAbi],
       address: '0xBC6DA0FE9aD5f3b0d58160288917AA56653660E9',
-      symbol: 'ALUSD',
+      symbol: 'LUSD',
     },
     {
       abi: [...genericAbi],
       address: '0x0100546F2cD4C9D97f798fFC9755E47865FF7Ee6',
-      symbol: 'ALETH',
+      symbol: 'LETH',
     },
     {
       abi: [...genericAbi],
       address: '0xc9da65931abf0ed1b74ce5ad8c041c4220940368',
-      symbol: 'saddlealETH',
+      symbol: 'saddleLETH',
     },
     // {
     //   abi: [...genericAbi],

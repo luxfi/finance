@@ -6,7 +6,7 @@
   import Button from '@components/elements/Button.svelte';
   import FarmNameCell from '@components/composed/Table/farms/FarmNameCell.svelte';
   import CurrencyCell from '@components/composed/Table/CurrencyCell.svelte';
-  import ExpandedTransmuter from '@components/composed/Table/transmuter/ExpandedTransmuter.svelte';
+  import ExpandedRedeemer from '@components/composed/Table/transmuter/ExpandedRedeemer.svelte';
 
   export let transmuter;
   $: nameConf = transmuter.col2;
@@ -80,7 +80,7 @@
           : 'border-grey10 bg-grey15'}"
         transition:slide|local
       >
-        <ExpandedTransmuter transmuterData="{expandConf.transmuterData}" />
+        <ExpandedRedeemer transmuterData="{expandConf.transmuterData}" />
       </div>
     {/if}
   </div>

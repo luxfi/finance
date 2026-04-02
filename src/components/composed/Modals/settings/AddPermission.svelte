@@ -9,7 +9,7 @@
   import Dropdown from '../../../elements/Dropdown.svelte';
 
   let riskAccepted = false;
-  let token = 'alUSD';
+  let token = 'LUSD';
   let allowance;
   let eoa;
   let eoaValid = false;
@@ -58,10 +58,10 @@
           <p>▾</p>
         </div>
         <ul class="w-full" slot="options">
-          <li class="cursor-pointer h-14 px-3 py-1 hover:bg-grey10" on:click="{() => setToken('alUSD')}">
+          <li class="cursor-pointer h-14 px-3 py-1 hover:bg-grey10" on:click="{() => setToken('LUSD')}">
             <p class="text-center text-opacity-50 hover:text-opacity-100 h-14 w-full">alUSD</p>
           </li>
-          <li class="cursor-pointer h-14 px-3 py-1 hover:bg-grey10" on:click="{() => setToken('alETH')}">
+          <li class="cursor-pointer h-14 px-3 py-1 hover:bg-grey10" on:click="{() => setToken('LETH')}">
             <p class="text-center text-opacity-50 hover:text-opacity-100 h-14 w-full">alETH</p>
           </li>
         </ul>

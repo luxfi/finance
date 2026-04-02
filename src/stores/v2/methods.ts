@@ -16,7 +16,7 @@ import {
   networkStore,
   controllerStore,
   tokenPriceStore,
-} from '@stores/v2/alcxStore';
+} from '@stores/v2/liquidStore';
 import type { ethers, providers } from 'ethers';
 import type { VaultTypes } from '@stores/v2/types';
 

@@ -10,7 +10,7 @@
   import network from '@stores/network';
   import settings from '@stores/settings';
   import { chainIds } from '@stores/v2/constants';
-  import { networkStore } from '@stores/v2/alcxStore';
+  import { networkStore } from '@stores/v2/liquidStore';
 
   let indicatorColor;
   let balanceCollapsed = true;

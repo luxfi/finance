@@ -3,7 +3,7 @@
   import BalanceEntry from '../elements/BalanceEntry.svelte';
   import settings from '@stores/settings';
 
-  import { balancesStore } from '@stores/v2/alcxStore';
+  import { balancesStore } from '@stores/v2/liquidStore';
   import { BigNumber, ethers } from 'ethers';
 </script>
 

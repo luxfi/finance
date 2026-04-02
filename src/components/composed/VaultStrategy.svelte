@@ -5,7 +5,7 @@
   import { fetchTokenEnabledStatus } from '@stores/v2/asyncMethods';
 
   import settings from '@stores/settings';
-  import { vaultsStore, networkStore } from '@stores/v2/alcxStore';
+  import { vaultsStore, networkStore } from '@stores/v2/liquidStore';
   import { signer } from '@stores/v2/derived';
   import { vaultMessages, VaultConstants } from '@stores/v2/constants';
   import { getTokenPriceInEth } from '@middleware/llama';
@@ -82,7 +82,7 @@
     100 / parseFloat(utils.formatEther($vaultsStore[strategy?.col5.vault.type]?.ratio || BigNumber.from(0)));
   $: messages = vaultMessages.filter((item) => item.vault === strategy?.limit.yieldTokenAddress);
   $: hasMessage = messages.length > 0;
-  $: alToken = VaultConstants[strategy?.limit.vaultType].alToken;
+  $: lToken = VaultConstants[strategy?.limit.vaultType].lToken;
 
   const getPausedStatus = async () => {
     isPaused = !(await fetchTokenEnabledStatus(
@@ -94,7 +94,7 @@
   };
   $: totalYield = ((strategy?.col4.yieldRate * 100 + bonusYieldRate * 100) / 100).toFixed(2);
 
-  $: if (alToken !== undefined) getPausedStatus();
+  $: if (lToken !== undefined) getPausedStatus();
 
   const toggleExpanded = () => {
     isExpanded = !isExpanded;

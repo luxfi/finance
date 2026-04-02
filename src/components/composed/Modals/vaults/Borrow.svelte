@@ -10,7 +10,7 @@
   import ComplexInput from '@components/composed/Inputs/ComplexInput.svelte';
 
   import { VaultTypesInfos } from '@stores/v2/constants';
-  import { addressStore, balancesStore, vaultsStore, networkStore } from '@stores/v2/alcxStore';
+  import { addressStore, balancesStore, vaultsStore, networkStore } from '@stores/v2/liquidStore';
   import { signer, vaultsAggregatedDebt } from '@stores/v2/derived';
   import { mint } from '@stores/v2/vaultActions';
   import { fetchBalanceByAddress, fetchVaultDebt, fetchVaultRatio } from '@stores/v2/asyncMethods';

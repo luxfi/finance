@@ -19,7 +19,7 @@
     selectedPositionStore,
     networkStore,
     providerStore,
-  } from '@stores/v3/alcxStore';
+  } from '@stores/v3/liquidStore';
   import { VaultTypesInfosV3, V3_MIN_COLLATERALIZATION } from '@stores/v3/constants';
   import { modalReset } from '@stores/modal';
   import settings from '@stores/settings';

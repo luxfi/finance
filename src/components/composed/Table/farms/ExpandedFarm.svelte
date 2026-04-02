@@ -14,7 +14,7 @@
   import InputNumber from '../../../elements/inputs/InputNumber.svelte';
 
   import { getTokenDataFromBalances } from '@stores/v2/helpers';
-  import { addressStore, balancesStore } from '@stores/v2/alcxStore';
+  import { addressStore, balancesStore } from '@stores/v2/liquidStore';
   import { contractWrapper, erc20Contract } from '@helpers/contractWrapper';
   import { signer } from '@stores/v2/derived';
   import { fetchBalanceByAddress, fetchInternalFarmByUuid } from '@stores/v2/asyncMethods';

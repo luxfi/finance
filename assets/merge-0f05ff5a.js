@@ -1,0 +1,1 @@
+import{c5 as c,c6 as o,c7 as t,c8 as m,c9 as u,ca as g}from"./index-a9dcc3b6.js";function p(){for(var r=[],e=0;e<arguments.length;e++)r[e]=arguments[e];var n=c(r),s=o(r,1/0),a=r;return a.length?a.length===1?m(a[0]):u(s)(g(a,n)):t}export{p as m};
